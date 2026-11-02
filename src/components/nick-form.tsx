@@ -8,7 +8,6 @@ import {
   IconButton,
   Input,
   SimpleGrid,
-  Text,
   Tooltip,
   useToast,
 } from '@chakra-ui/react';
@@ -115,11 +114,6 @@ export function NickForm({
       <Button type="submit" size="lg" isLoading={isSaving}>
         {submitLabel}
       </Button>
-
-      <Text fontSize="sm" color="app.muted" textAlign="center">
-        Conteúdo adulto e humor pesado. É só piada, nunca agressão. Ao entrar,
-        você confirma ter 18 anos ou mais.
-      </Text>
     </Flex>
   );
 }
