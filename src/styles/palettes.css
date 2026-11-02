@@ -1,0 +1,122 @@
+/*
+ * Cores da interface: um par claro/escuro para cada tema. `data-theme` é o
+ * atributo do color mode do Chakra e `data-palette` é o nosso (useAppTheme).
+ * As cartas ficam fora daqui: são pretas e brancas em qualquer tema.
+ */
+
+:root,
+[data-palette='classic'] {
+  --app-bg: #ffffff;
+  --app-surface: #f4f4f5;
+  --app-text: #111111;
+  --app-muted: #5c5c66;
+  --app-accent: #000000;
+  --app-on-accent: #ffffff;
+  --app-border: #111111;
+  --app-shadow: #d4d4d8;
+}
+
+[data-theme='dark'],
+[data-theme='dark'][data-palette='classic'] {
+  --app-bg: #121214;
+  --app-surface: #1e1e22;
+  --app-text: #f4f4f5;
+  --app-muted: #a8a8b3;
+  --app-accent: #ffffff;
+  --app-on-accent: #000000;
+  --app-border: #71717a;
+  --app-shadow: #3f3f46;
+}
+
+[data-palette='neon'] {
+  --app-bg: #fbf8ff;
+  --app-surface: #f0eaff;
+  --app-text: #1b1033;
+  --app-muted: #5b4f73;
+  --app-accent: #6d28d9;
+  --app-on-accent: #ffffff;
+  --app-border: #1b1033;
+  --app-shadow: #cbb8f5;
+}
+
+[data-theme='dark'][data-palette='neon'] {
+  --app-bg: #0b0716;
+  --app-surface: #181029;
+  --app-text: #f3edff;
+  --app-muted: #b6a8d6;
+  --app-accent: #22e6c8;
+  --app-on-accent: #04201c;
+  --app-border: #7c5cff;
+  --app-shadow: #3b2a6b;
+}
+
+[data-palette='blood'] {
+  --app-bg: #fff7f5;
+  --app-surface: #fde8e4;
+  --app-text: #2a0a0a;
+  --app-muted: #6e3a36;
+  --app-accent: #b3121d;
+  --app-on-accent: #ffffff;
+  --app-border: #2a0a0a;
+  --app-shadow: #f0b9b2;
+}
+
+[data-theme='dark'][data-palette='blood'] {
+  --app-bg: #140606;
+  --app-surface: #241010;
+  --app-text: #fbeeee;
+  --app-muted: #c9a5a2;
+  --app-accent: #ef3340;
+  --app-on-accent: #160304;
+  --app-border: #a8272f;
+  --app-shadow: #4a1518;
+}
+
+[data-palette='casino'] {
+  --app-bg: #f4fbf6;
+  --app-surface: #e2f2e7;
+  --app-text: #08241a;
+  --app-muted: #3f5f52;
+  --app-accent: #0b6b3a;
+  --app-on-accent: #ffffff;
+  --app-border: #08241a;
+  --app-shadow: #b5dcc3;
+}
+
+[data-theme='dark'][data-palette='casino'] {
+  --app-bg: #06170f;
+  --app-surface: #0f2a1d;
+  --app-text: #f5efd9;
+  --app-muted: #b9c2a8;
+  --app-accent: #e3b341;
+  --app-on-accent: #1a1300;
+  --app-border: #a8842e;
+  --app-shadow: #1f4631;
+}
+
+html,
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+
+/* Componentes do Chakra com fundo fixo de claro/escuro. */
+.chakra-modal__content,
+.chakra-popover__content,
+.chakra-menu__menu-list {
+  background: var(--app-surface) !important;
+  color: var(--app-text);
+  border-color: var(--app-border) !important;
+}
+
+.chakra-alert {
+  background: var(--app-accent) !important;
+  color: var(--app-on-accent) !important;
+}
+
+.chakra-alert svg,
+.chakra-alert .chakra-alert__title,
+.chakra-alert .chakra-alert__desc,
+.chakra-alert button {
+  color: var(--app-on-accent) !important;
+}

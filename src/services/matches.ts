@@ -21,15 +21,13 @@ import {
 import { getRandomItem } from '@/utils/get-random-item';
 import { shuffle } from '@/utils/shuffle';
 
-import { ServerMaintanceError } from '@/lib/ServerMaintanceError';
 import { withTimeout } from '@/utils/with-timeout';
 import { getCard, getCards } from './cards';
 import { createAny, getAny, mapValue, streamAny } from './core';
-import { getGeneral } from './general';
 import { getUser } from './users';
 
-interface SetAwnserData {
-  awnsers: string[];
+interface SetAnswerData {
+  answers: string[];
   user: string;
 }
 
@@ -68,12 +66,6 @@ export async function getMatch(id: string): Promise<MatchType> {
 }
 
 export async function newMatch(ownerId: string): Promise<string> {
-  const { canPlay } = await withTimeout(getGeneral());
-
-  if (!canPlay) {
-    throw new ServerMaintanceError();
-  }
-
   const ownerDoc = doc(usersCollection, ownerId);
 
   return withTimeout(
@@ -222,7 +214,7 @@ export async function sortPlayersDecks({
   cardsPerPlayer = 4,
   keepCards = true,
 }: SortPlayersDecksParams): Promise<DeckType[]> {
-  const awnsers = cards.filter(({ type }) => type === 'WHITE');
+  const answers = cards.filter(({ type }) => type === 'WHITE');
 
   const decks: DeckType[] = [];
 
@@ -235,12 +227,12 @@ export async function sortPlayersDecks({
   // nunca encontrava uma carta livre e travava a aba (loop infinito / estouro
   // de pilha). Agora, quando o baralho acaba, o jogador simplesmente recebe uma
   // mão menor e o jogo continua.
-  const drawPile = shuffle(awnsers);
+  const drawPile = shuffle(answers);
   const usedCardIds = new Set<string>();
 
   let drawIndex = 0;
 
-  function drawAwnser(): CardType | null {
+  function drawAnswer(): CardType | null {
     while (drawIndex < drawPile.length) {
       const card = drawPile[drawIndex];
       drawIndex += 1;
@@ -284,7 +276,7 @@ export async function sortPlayersDecks({
     const newCards = [];
 
     for (let i = 0; i < cardsNeeded; i += 1) {
-      const card = drawAwnser();
+      const card = drawAnswer();
 
       if (!card) {
         incompleteHands += 1;
@@ -305,7 +297,7 @@ export async function sortPlayersDecks({
 
     console.warn(
       `Cartas brancas insuficientes: ${incompleteHands} jogador(es) ficaram com a mão incompleta. ` +
-        `Disponíveis: ${awnsers.length}, necessárias: ${needed}.`
+        `Disponíveis: ${answers.length}, necessárias: ${needed}.`
     );
   }
 
@@ -417,14 +409,14 @@ export async function setShouldShowCardOwner(
 
 export async function setAnswerToActiveRound(
   id: string,
-  { awnsers, user }: SetAwnserData
+  { answers, user }: SetAnswerData
 ): Promise<void> {
   const matchDoc = doc(matchesCollection, id);
   const playedUser = doc(usersCollection, user);
 
-  const newAnswers = awnsers.map((awnser) => ({
+  const newAnswers = answers.map((answer) => ({
     user: playedUser,
-    card: doc(cardsCollection, awnser),
+    card: doc(cardsCollection, answer),
   }));
 
   await updateDoc(matchDoc, {

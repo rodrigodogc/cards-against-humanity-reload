@@ -5,7 +5,6 @@ import { convertMatchSummary, getLastMatches } from '@/services/matches';
 import { useBoolean } from '@/hooks/useBoolean';
 import { useToast } from '@chakra-ui/react';
 import { getErrorMessage } from '@/utils/get-error-message';
-import { useAuth } from '@/contexts/AuthContext';
 
 interface UseLastMatchesReturn {
   matches: MatchConvertedType[];
@@ -14,7 +13,6 @@ interface UseLastMatchesReturn {
 }
 
 export function useLastMatches(size = 10): UseLastMatchesReturn {
-  const { isAdmin } = useAuth();
   const [loading, , stopLoading] = useBoolean(true);
   const [matches, setMatches] = useState<MatchConvertedType[]>([]);
   const toast = useToast();
@@ -22,7 +20,7 @@ export function useLastMatches(size = 10): UseLastMatchesReturn {
   useEffect(() => {
     async function loadMatches(): Promise<void> {
       try {
-        const matches = await getLastMatches(size, !isAdmin);
+        const matches = await getLastMatches(size);
 
         const convertedMatches = await Promise.all(
           matches.map(convertMatchSummary)
@@ -40,25 +38,20 @@ export function useLastMatches(size = 10): UseLastMatchesReturn {
         toast({
           description,
           title: 'Aconteceu um erro',
-          variant: 'error',
+          status: 'error',
         });
       } finally {
         stopLoading();
       }
     }
 
-    if (loading) {
-      loadMatches();
-    }
-
-    return () => stopLoading();
-  }, [size, loading, stopLoading, toast, isAdmin]);
+    loadMatches();
+  }, [size, stopLoading, toast]);
 
   // O stream em tempo real desta tela foi REMOVIDO junto com `streamMatches`.
   // Ele abria um listener sobre todas as partidas não finalizadas: a cada
   // jogada de qualquer partida do site, todo cliente parado nesta tela recebia
-  // (e pagava) uma atualização. Se voltar, precisa ser sobre a coleção-índice
-  // `lobbies`, não sobre `matches`.
+  // (e pagava) uma atualização.
 
   return { matches, setMatches, loading };
 }

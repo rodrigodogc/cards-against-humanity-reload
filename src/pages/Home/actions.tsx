@@ -1,26 +1,12 @@
-import { LoginButton } from '@/components/login-button';
+import { InstallButton } from '@/components/install-button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useBoolean } from '@/hooks/useBoolean';
 import { QuotaExceededError } from '@/lib/QuotaExceededError';
-import { ServerMaintanceError } from '@/lib/ServerMaintanceError';
 import { newMatch } from '@/services/matches';
 import { getErrorMessage } from '@/utils/get-error-message';
-import {
-  Button,
-  Icon,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger,
-  VStack,
-  useToast,
-} from '@chakra-ui/react';
+import { Button, Icon, VStack, useToast } from '@chakra-ui/react';
 import { useCallback } from 'react';
-import { FaEllipsisH } from 'react-icons/fa';
-import { MdExitToApp } from 'react-icons/md';
+import { FaTrophy } from 'react-icons/fa';
 import { RiPhoneFindFill } from 'react-icons/ri';
 import { RxCardStackPlus } from 'react-icons/rx';
 import { TbCards } from 'react-icons/tb';
@@ -31,37 +17,14 @@ interface ActionsProps {
 }
 
 export function Actions({ onQuotaExceeded }: ActionsProps) {
-  const { isAdmin, user, handleLogout, authenticated } = useAuth();
+  const { user } = useAuth();
 
   const navigate = useNavigate();
   const toast = useToast();
 
   const [isCreating, startCreate, stopCreate] = useBoolean(false);
 
-  const handleShowLoginInfo = useCallback(() => {
-    toast({
-      title: 'Faça login',
-      description: 'Para jogar é necessário realizar login',
-      status: 'info',
-    });
-  }, [toast]);
-
-  function handleNavigateWithoutLogin(
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    if (!authenticated) {
-      event.preventDefault();
-
-      handleShowLoginInfo();
-    }
-  }
-
   const handleNewMatch = useCallback(async () => {
-    if (!authenticated) {
-      handleShowLoginInfo();
-      return;
-    }
-
     try {
       startCreate();
 
@@ -70,16 +33,6 @@ export function Actions({ onQuotaExceeded }: ActionsProps) {
       navigate(`/match/${id}`);
     } catch (error) {
       console.error('error', error);
-
-      if (error instanceof ServerMaintanceError) {
-        toast({
-          title: 'Limite alcançado',
-          description: error.message,
-          status: 'error',
-        });
-
-        return;
-      }
 
       if (
         error instanceof QuotaExceededError ||
@@ -103,35 +56,23 @@ export function Actions({ onQuotaExceeded }: ActionsProps) {
     } finally {
       stopCreate();
     }
-  }, [
-    authenticated,
-    navigate,
-    startCreate,
-    stopCreate,
-    toast,
-    user,
-    handleShowLoginInfo,
-    onQuotaExceeded,
-  ]);
-
-  const isLoading = isCreating;
+  }, [navigate, startCreate, stopCreate, toast, user, onQuotaExceeded]);
 
   return (
-    <VStack flex="1">
+    <VStack flex="1" spacing="3">
       <Button
         onClick={handleNewMatch}
-        isLoading={isLoading}
+        isLoading={isCreating}
         leftIcon={<Icon as={RxCardStackPlus} transform="auto" rotate="90" />}
         w="full"
+        size="lg"
       >
         Nova partida
       </Button>
 
       <Button
-        onClick={handleNavigateWithoutLogin}
         as={Link}
         to="/matches"
-        isLoading={isLoading}
         leftIcon={<Icon as={RiPhoneFindFill} />}
         w="full"
         variant="defaultOutlined"
@@ -141,8 +82,17 @@ export function Actions({ onQuotaExceeded }: ActionsProps) {
 
       <Button
         as={Link}
+        to="/ranking"
+        leftIcon={<Icon as={FaTrophy} />}
+        w="full"
+        variant="defaultOutlined"
+      >
+        Ranking
+      </Button>
+
+      <Button
+        as={Link}
         to="/cards"
-        isLoading={isLoading}
         leftIcon={<Icon as={TbCards} />}
         w="full"
         variant="defaultOutlined"
@@ -150,101 +100,7 @@ export function Actions({ onQuotaExceeded }: ActionsProps) {
         Ver cartas
       </Button>
 
-      {isAdmin && (
-        <Button
-          as={Link}
-          to="/new-card"
-          isLoading={isLoading}
-          leftIcon={<Icon as={RxCardStackPlus} transform="auto" rotate="90" />}
-          w="full"
-          variant="defaultOutlined"
-        >
-          Nova carta
-        </Button>
-      )}
-
-      <Popover>
-        <PopoverTrigger>
-          <Button
-            isLoading={isLoading}
-            leftIcon={<Icon as={FaEllipsisH} />}
-            w="full"
-            variant="defaultOutlined"
-          >
-            Mais opções
-          </Button>
-        </PopoverTrigger>
-        <PopoverContent>
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <PopoverHeader>Mais informações sobre o jogo</PopoverHeader>
-          <PopoverBody display="flex" flexDirection="column" gap="0.5rem">
-            <Button
-              as="a"
-              href="/sobre.html"
-              isLoading={isLoading}
-              w="full"
-              variant="defaultOutlined"
-            >
-              Sobre o jogo
-            </Button>
-
-            <Button
-              as="a"
-              href="/tutorial.html"
-              isLoading={isLoading}
-              w="full"
-              variant="defaultOutlined"
-            >
-              Tutorial
-            </Button>
-
-            <Button
-              as="a"
-              href="/faq.html"
-              isLoading={isLoading}
-              w="full"
-              variant="defaultOutlined"
-            >
-              Perguntas frequentes
-            </Button>
-
-            <Button
-              as="a"
-              href="/atualizacoes.html"
-              isLoading={isLoading}
-              w="full"
-              variant="defaultOutlined"
-            >
-              Atualizações
-            </Button>
-
-            <Button
-              as="a"
-              href="/doacoes.html"
-              isLoading={isLoading}
-              w="full"
-              variant="defaultOutlined"
-            >
-              Doações
-            </Button>
-          </PopoverBody>
-        </PopoverContent>
-      </Popover>
-
-      {authenticated ? (
-        <Button
-          isLoading={isLoading}
-          onClick={handleLogout}
-          leftIcon={<Icon as={MdExitToApp} />}
-          w="full"
-          variant="defaultOutlined"
-        >
-          Sair
-        </Button>
-      ) : (
-        <LoginButton w="full" />
-      )}
+      <InstallButton w="full" />
     </VStack>
   );
 }

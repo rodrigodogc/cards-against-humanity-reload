@@ -12,6 +12,7 @@ interface CardProps extends Omit<CardType, 'id'> {
   animationType?: 'off' | 'revert' | 'hover' | 'auto' | 'rotating' | 'click';
   animationDelay?: string;
   animationClickShowBack?: boolean;
+  isPressed?: boolean;
 }
 
 const animations = {
@@ -33,6 +34,7 @@ export function Card({
   frontClassName = '',
   backClassName = '',
   animationClickShowBack = false,
+  isPressed,
 }: CardProps): JSX.Element {
   const [clicked, setClicked] = useState(animationClickShowBack);
 
@@ -50,9 +52,8 @@ export function Card({
 
   function getFormatedMessage(): string {
     // Escapamos o texto ANTES de inserir o único HTML confiável (o span do
-    // token). O message vem do banco, que já foi comprometido antes; sem escape
-    // isso seria um vetor de XSS armazenado. CARD_TOKEN é '[?]', não contém
-    // caracteres HTML, então o replace continua funcionando após o escape.
+    // token). CARD_TOKEN é '[?]', não contém caracteres HTML, então o replace
+    // continua funcionando após o escape.
     const text = escapeHtml(message || '').replaceAll(
       CARD_TOKEN,
       `<span class="${styles.question}"></span>`
@@ -71,6 +72,8 @@ export function Card({
 
   return (
     <button
+      type="button"
+      aria-pressed={isPressed}
       onClick={toggleClicked}
       className={`${styles.card} ${isBlack ? styles.isBlack : ''} ${className}`}
     >
@@ -90,7 +93,10 @@ export function Card({
         </div>
 
         <div className={`${styles.cardBack} ${backClassName}`}>
-          <div dangerouslySetInnerHTML={{ __html: getFormatedMessage() }} />
+          <div
+            className={styles.cardMessage}
+            dangerouslySetInnerHTML={{ __html: getFormatedMessage() }}
+          />
           <Logo />
         </div>
       </div>

@@ -3,7 +3,7 @@ export const thinScrollbar = {
   '&::-webkit-scrollbar ': { width: '9px' },
   '&::-webkit-scrollbar-track': { bg: 'transparent' },
   '&::-webkit-scrollbar-thumb': {
-    bg: 'black',
+    bg: 'app.muted',
     border: 'transparent',
   },
 };

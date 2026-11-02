@@ -1,4 +1,3 @@
-import { useAuth } from '@/contexts/AuthContext';
 import {
   Box,
   Button,
@@ -9,36 +8,30 @@ import {
   Text,
   useToast,
 } from '@chakra-ui/react';
-import { useRef } from 'react';
+import { FormEvent, useRef } from 'react';
 
 import { FiSend } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
+const MATCH_ID = /[A-Za-z0-9]{20}/;
+
 export function JoinMatch() {
-  const { authenticated } = useAuth();
   const toast = useToast();
   const navigate = useNavigate();
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  function handleMatchJoin() {
-    if (!authenticated) {
-      toast({
-        title: 'Faça login',
-        description: 'Para jogar é necessário realizar login',
-        status: 'info',
-      });
+  function handleMatchJoin(event: FormEvent) {
+    event.preventDefault();
 
-      return;
-    }
+    // Aceita tanto o código quanto o link inteiro que o amigo mandou.
+    const code = inputRef.current?.value.trim().match(MATCH_ID)?.[0];
 
-    const code = inputRef.current?.value.trim();
-
-    if (!code || code.length !== 20) {
+    if (!code) {
       toast({
         title: 'Código inválido',
         status: 'info',
-        description: 'Insira um código de partida válido.',
+        description: 'Cole o link ou o código da partida.',
       });
 
       return;
@@ -54,25 +47,25 @@ export function JoinMatch() {
           Entre em uma partida
         </Heading>
 
-        <Text color="gray.600" fontSize="small">
-          Peça para seu amigo enviar o código da partida para que você possa
-          entrar na partida.
+        <Text color="app.muted" fontSize="sm">
+          Cole aqui o link ou o código que seu amigo enviou.
         </Text>
       </Box>
 
-      <Flex>
+      <Flex as="form" onSubmit={handleMatchJoin}>
         <Input
           ref={inputRef}
-          placeholder="Código da partida"
-          borderColor="black"
+          placeholder="Link ou código da partida"
+          aria-label="Link ou código da partida"
           roundedRight="0"
         />
 
         <Button
+          type="submit"
           px="8"
           roundedLeft="0"
+          flexShrink={0}
           rightIcon={<Icon as={FiSend} transform="auto" rotate="45" />}
-          onClick={handleMatchJoin}
         >
           Entrar
         </Button>

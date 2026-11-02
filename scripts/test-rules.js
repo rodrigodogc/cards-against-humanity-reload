@@ -25,7 +25,6 @@ const {
   getDoc,
   setDoc,
   updateDoc,
-  deleteField,
   increment,
 } = require('firebase/firestore');
 
@@ -53,7 +52,7 @@ async function main() {
     firestore: {
       rules: fs.readFileSync(path.resolve(__dirname, '../firestore.rules'), 'utf8'),
       host: 'localhost',
-      port: 8080,
+      port: 8085,
     },
   });
 
@@ -73,7 +72,6 @@ async function main() {
         photoURL: null,
         wins: 3,
         // resquício de documentos legados, que o login deve limpar
-        email: 'alice@example.com',
       });
 
       await setDoc(doc(db, 'users', BOB), {
@@ -101,16 +99,16 @@ async function main() {
     assertSucceeds(
       setDoc(
         doc(alice, 'users', ALICE),
-        { uid: ALICE, displayName: 'Alice II', photoURL: 'x', email: deleteField() },
+        { uid: ALICE, displayName: 'Alice II', photoURL: 'x' },
         { merge: true }
       )
     ));
 
   await seed();
-  await test('login preserva wins (merge) e apaga o email legado', async () => {
+  await test('editar o perfil preserva wins (merge)', async () => {
     await setDoc(
       doc(alice, 'users', ALICE),
-      { uid: ALICE, displayName: 'Alice', photoURL: null, email: deleteField() },
+      { uid: ALICE, displayName: 'Alice', photoURL: null },
       { merge: true }
     );
 
@@ -120,7 +118,6 @@ async function main() {
     });
 
     if (saved.wins !== 3) throw new Error(`wins virou ${saved.wins}, esperado 3`);
-    if ('email' in saved) throw new Error('email legado não foi removido');
   });
 
   await seed();
@@ -130,7 +127,7 @@ async function main() {
     return assertSucceeds(
       setDoc(
         doc(carol, 'users', 'carol'),
-        { uid: 'carol', displayName: 'Carol', photoURL: null, email: deleteField() },
+        { uid: 'carol', displayName: 'Carol', photoURL: null },
         { merge: true }
       )
     );
@@ -162,6 +159,27 @@ async function main() {
   await seed();
   await test('dono NÃO grava wins arbitrário em si mesmo', () =>
     assertFails(updateDoc(doc(alice, 'users', ALICE), { wins: 9999 })));
+
+  await seed();
+  await test('dono NÃO grava nick com menos de 2 caracteres', () =>
+    assertFails(updateDoc(doc(alice, 'users', ALICE), { displayName: 'A' })));
+
+  await seed();
+  await test('dono NÃO grava nick com mais de 16 caracteres', () =>
+    assertFails(updateDoc(doc(alice, 'users', ALICE), { displayName: 'A'.repeat(17) })));
+
+  await seed();
+  await test('dono NÃO grava ícone longo demais', () =>
+    assertFails(updateDoc(doc(alice, 'users', ALICE), { photoURL: 'x'.repeat(33) })));
+
+  await seed();
+  await test('login anônimo NÃO cria perfil sem nick válido', () => {
+    const carol = testEnv.authenticatedContext('carol').firestore();
+
+    return assertFails(
+      setDoc(doc(carol, 'users', 'carol'), { uid: 'carol', displayName: 'C', photoURL: 'rato' })
+    );
+  });
 
   await seed();
   await test('dono NÃO grava email', () =>

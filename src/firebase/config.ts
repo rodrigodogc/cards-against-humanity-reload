@@ -1,33 +1,43 @@
-import { getAnalytics } from 'firebase/analytics';
 import { initializeApp } from 'firebase/app';
 
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
-  UserCredential,
-} from 'firebase/auth';
+import { connectAuthEmulator, getAuth } from 'firebase/auth';
 
 import {
   collection,
   CollectionReference,
+  connectFirestoreEmulator,
   DocumentData,
   getFirestore,
 } from 'firebase/firestore';
 
+const useEmulators = import.meta.env.VITE_USE_EMULATORS === 'true';
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyCJh45lbjhCek0BP30K7YvSK-hG-8SeWa0',
-  authDomain: 'cards-against-humanity-16605.firebaseapp.com',
-  projectId: 'cards-against-humanity-16605',
-  storageBucket: 'cards-against-humanity-16605.appspot.com',
-  messagingSenderId: '1094359847041',
-  appId: '1:1094359847041:web:a8ecc0bd327d85ee5f3d80',
-  measurementId: 'G-2GNVB3MBHM',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-export const app = initializeApp(firebaseConfig);
+const missingVariables = Object.entries({
+  VITE_FIREBASE_API_KEY: firebaseConfig.apiKey,
+  VITE_FIREBASE_PROJECT_ID: firebaseConfig.projectId,
+  VITE_FIREBASE_APP_ID: firebaseConfig.appId,
+})
+  .filter(([, value]) => !value)
+  .map(([name]) => name);
 
-export const analytics = getAnalytics(app);
+if (missingVariables.length > 0) {
+  throw new Error(
+    `Configuração do Firebase ausente: ${missingVariables.join(
+      ', '
+    )}. Copie .env.example para .env e preencha os valores.`
+  );
+}
+
+export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 
@@ -37,14 +47,12 @@ export function createCollection<T = DocumentData>(
   return collection(db, collectionName) as CollectionReference<T>;
 }
 export const matchesCollection = createCollection<MatchType>('matches');
-export const generalCollection = createCollection<GeneralType>('general');
 export const cardsCollection = createCollection<CardType>('cards');
 export const usersCollection = createCollection<UserType>('users');
-export const adminsCollection = createCollection('admins');
 
-export const authProvider = new GoogleAuthProvider();
-export const auth = getAuth();
+export const auth = getAuth(app);
 
-export async function login(): Promise<UserCredential> {
-  return signInWithPopup(auth, authProvider);
+if (useEmulators) {
+  connectFirestoreEmulator(db, 'localhost', 8085);
+  connectAuthEmulator(auth, 'http://localhost:9099', { disableWarnings: true });
 }

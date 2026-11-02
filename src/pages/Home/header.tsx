@@ -1,106 +1,114 @@
-import { WhiteLogo } from '@/components/Card/Logos';
-import { useAuth } from '@/contexts/AuthContext';
-
-import { MdExitToApp } from 'react-icons/md';
-
-import { getUserName } from '@/utils/get-user-name';
-
 import {
-  Avatar,
   Box,
   Button,
   Flex,
-  Icon,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
   Popover,
+  PopoverArrow,
   PopoverBody,
   PopoverContent,
   PopoverHeader,
   PopoverTrigger,
   Text,
+  useDisclosure,
 } from '@chakra-ui/react';
 
-import { LoginButton } from '@/components/login-button';
-import avatar from '../../assets/avatar.png';
+import { AppLogo } from '@/components/app-logo';
+import { NickForm } from '@/components/nick-form';
+import { PlayerAvatar } from '@/components/player-avatar';
+import { ThemeMenu } from '@/components/theme-menu';
+import { useAuth } from '@/contexts/AuthContext';
+import { getUserName } from '@/utils/get-user-name';
 
 export function Header(): JSX.Element {
-  const { user, handleLogout, authenticated } = useAuth();
+  const { user, handleLogout } = useAuth();
 
-  const userName = getUserName(user);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Flex align="center" justify="space-between" h="80px">
+    <Flex
+      as="header"
+      align="center"
+      justify="space-between"
+      gap="3"
+      minH="80px"
+    >
       <Box w={{ base: '120px', sm: '200px' }}>
-        <WhiteLogo />
+        <AppLogo />
       </Box>
 
-      {authenticated ? (
-        <Flex align="center" gap="2">
-          <Flex
-            gap="0"
-            direction="column"
-            textAlign="end"
-            display={{ base: 'none', md: 'flex' }}
-          >
-            <Text fontWeight="bold">{userName}</Text>
-            <Text fontSize="xx-small" color="gray.500">
-              {user.email}
-            </Text>
-          </Flex>
+      <Flex align="center" gap="3">
+        <ThemeMenu />
 
-          <Popover lazyBehavior="keepMounted" isLazy placement="bottom-start">
-            <>
+        <Flex
+          as="button"
+          type="button"
+          align="center"
+          gap="2"
+          onClick={onOpen}
+          aria-label="Editar perfil"
+        >
+          <Text
+            fontWeight="bold"
+            display={{ base: 'none', sm: 'block' }}
+            maxW="160px"
+            noOfLines={1}
+          >
+            {getUserName(user)}
+          </Text>
+
+          <PlayerAvatar user={user} />
+        </Flex>
+      </Flex>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+
+        <ModalContent mx="4">
+          <ModalHeader>Seu perfil</ModalHeader>
+          <ModalCloseButton />
+
+          <ModalBody pb="6">
+            <NickForm submitLabel="Salvar" onDone={onClose} />
+
+            <Popover>
               <PopoverTrigger>
-                <Avatar
-                  cursor="pointer"
-                  bg="black"
-                  color="white"
-                  src={user.photoURL || avatar}
-                  name={userName}
-                />
+                <Button variant="link" w="full" mt="4" color="app.muted">
+                  Sair desta conta
+                </Button>
               </PopoverTrigger>
 
               <PopoverContent>
-                <PopoverHeader>
-                  <Flex gap="2">
-                    <Avatar
-                      bg="black"
-                      color="white"
-                      size="sm"
-                      name={userName}
-                      src={user.photoURL || avatar}
-                    />
-
-                    <Flex direction="column" color="secondary">
-                      <Text fontWeight="bold">{userName}</Text>
-
-                      <Text fontSize="sm" mt="-1">
-                        {user.email}
-                      </Text>
-                    </Flex>
-                  </Flex>
+                <PopoverArrow />
+                <PopoverHeader fontWeight="bold">
+                  Suas vitórias serão perdidas
                 </PopoverHeader>
 
                 <PopoverBody>
-                  <Flex direction="column" align="start" gap="2" w="full">
-                    <Button
-                      w="full"
-                      size="sm"
-                      leftIcon={<Icon as={MdExitToApp} />}
-                      variant="solid"
-                      colorScheme="red"
-                      onClick={handleLogout}
-                    >
-                      Sair
-                    </Button>
-                  </Flex>
+                  <Text mb="3" fontSize="sm">
+                    Sua conta só existe neste navegador. Ao sair, não há como
+                    voltar a ela, e o histórico no ranking fica para trás.
+                  </Text>
+
+                  <Button
+                    w="full"
+                    variant="solid"
+                    colorScheme="red"
+                    onClick={handleLogout}
+                  >
+                    Sair mesmo assim
+                  </Button>
                 </PopoverBody>
               </PopoverContent>
-            </>
-          </Popover>
-        </Flex>
-      ) : (
-        <LoginButton size="sm" fontSize={{ base: 'xx-small', sm: 'small' }} />
-      )}
+            </Popover>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Flex>
   );
 }

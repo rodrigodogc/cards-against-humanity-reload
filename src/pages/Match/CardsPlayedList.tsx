@@ -1,13 +1,14 @@
+import { CSSProperties } from 'react';
+
 import { Card } from '@/components/Card';
+import { PlayerAvatar } from '@/components/player-avatar';
 
 import { getUserName } from '@/utils/get-user-name';
 import {
-  Avatar,
   Box,
   Button,
   Center,
   Flex,
-  HStack,
   Heading,
   Icon,
   Text,
@@ -57,15 +58,6 @@ export function CardsPlayedList({ match }: CardsPlayedListProps) {
 
   async function confirmVote(votedUser: string) {
     try {
-      if (userAlreadyVoted) {
-        toast({
-          title: 'Você já votou',
-          status: 'info',
-        });
-
-        return;
-      }
-
       setTrueVoting();
 
       const data = {
@@ -92,111 +84,86 @@ export function CardsPlayedList({ match }: CardsPlayedListProps) {
     }
   }
 
-  function renderCard(card: CardType, isActive: boolean): JSX.Element {
-    return (
-      <Card
-        animationClickShowBack={isActive}
-        key={card.id}
-        {...card}
-        animationType="click"
-        className={styles.card}
-        frontClassName={styles.cardFront}
-        backClassName={styles.cardBack}
-        messageClassName={styles.cardText}
-      />
-    );
-  }
-
-  function renderAnswers(
-    group: GroupedAnswersType,
-    index: number
-  ): JSX.Element | null {
-    const name = getUserName(group.user);
+  function renderAnswers(group: GroupedAnswersType): JSX.Element {
     const isMyGroup = group.user.uid === user?.uid;
+    const showOwner = match.shouldShowCardOwner || isMyGroup;
+    const votes =
+      match.actualRound?.usersWhoVoted.filter(
+        ({ votedUser }) => group.user.uid === votedUser.uid
+      ) || [];
 
     return (
-      <Flex key={group.user.uid} gap="4" align="center">
-        <Flex flexDir="column" gap="4">
-          <Flex gap="2" alignItems="center">
-            <Avatar
-              bg="black"
-              color="white"
-              name={match.shouldShowCardOwner || isMyGroup ? name : 'Anônimo'}
-              src={
-                match.shouldShowCardOwner || isMyGroup
-                  ? group.user.photoURL!
-                  : undefined
-              }
-            />
+      <div
+        key={group.user.uid}
+        className={styles.answerGroup}
+        data-cards={group.cards.length}
+      >
+        <Flex gap="2" align="center" minH="8">
+          <PlayerAvatar
+            size="sm"
+            user={group.user}
+            anonymous={!showOwner}
+            flexShrink={0}
+          />
 
-            <Flex direction="column" color="secondary" w="full">
-              <Text
-                fontWeight="bold"
-                overflow="hidden"
-                whiteSpace="nowrap"
-                maxW="80%"
-                textOverflow="ellipsis"
-              >
-                {match.shouldShowCardOwner || isMyGroup ? name : 'Anônimo'}
+          <Box minW="0">
+            <Text fontWeight="bold" noOfLines={1}>
+              {showOwner ? getUserName(group.user) : 'Anônimo'}
+            </Text>
+
+            {showOwner && (
+              <Text fontSize="xs" color="app.muted">
+                {match?.points.find((point) => point.userId === group.user.uid)
+                  ?.value || 0}{' '}
+                pts
               </Text>
-
-              {(match.shouldShowCardOwner || isMyGroup) && (
-                <Text fontSize="smaller" color="gray.500" mt="-1">
-                  Pontos:{' '}
-                  {match?.points.find(
-                    (point) => point.userId === group.user.uid
-                  )?.value || 0}
-                </Text>
-              )}
-            </Flex>
-          </Flex>
-
-          {!isMyGroup ? (
-            <Button
-              mx="auto"
-              isLoading={isVoting}
-              isDisabled={Boolean(userAlreadyVoted)}
-              fontSize="sm"
-              leftIcon={<Icon as={FaVoteYea} />}
-              onClick={() => confirmVote(group.user.uid)}
-            >
-              {userAlreadyVoted
-                ? `${
-                    userAlreadyVoted.votedUser.uid === group.user.uid
-                      ? 'Você votou nessa'
-                      : 'Você já votou'
-                  }`
-                : 'Votar nessa'}
-            </Button>
-          ) : (
-            <Box h="10" />
-          )}
-
-          <HStack>{group.cards.map((card) => renderCard(card, true))}</HStack>
-
-          <Center mx="auto" gap="1" flexWrap="wrap" maxW="200px" minH="6">
-            {match.actualRound?.usersWhoVoted
-              .filter(({ votedUser }) => group.user.uid === votedUser.uid)
-              .map(({ votedUser }) => {
-                return (
-                  <Center
-                    key={votedUser.uid}
-                    bgColor="black"
-                    w="6"
-                    h="6"
-                    rounded="full"
-                  >
-                    <Icon as={FaStar} color="white" fontSize="sm" />
-                  </Center>
-                );
-              })}
-          </Center>
+            )}
+          </Box>
         </Flex>
 
-        {index !== groupedAnswers.length - 1 && (
-          <Box h="320px" w="3px" bg="gray.200" mr="2" />
+        <div
+          className={styles.answerCards}
+          style={{ '--cards': group.cards.length } as CSSProperties}
+        >
+          {group.cards.map((card) => (
+            <Card
+              key={card.id}
+              {...card}
+              className={styles.card}
+              frontClassName={styles.cardFront}
+              backClassName={styles.cardBack}
+              messageClassName={styles.cardText}
+            />
+          ))}
+        </div>
+
+        <Center gap="1" flexWrap="wrap" minH="6">
+          {votes.map(({ user: voter }) => (
+            <Center key={voter.uid} bg="app.accent" w="6" h="6" rounded="full">
+              <Icon as={FaStar} color="app.onAccent" fontSize="sm" />
+            </Center>
+          ))}
+        </Center>
+
+        {!isMyGroup && (
+          <Button
+            isLoading={isVoting}
+            isDisabled={Boolean(userAlreadyVoted)}
+            fontSize="xs"
+            px="2"
+            leftIcon={<Icon as={FaVoteYea} />}
+            onClick={() => confirmVote(group.user.uid)}
+          >
+            {userAlreadyVoted
+              ? `${
+                  userAlreadyVoted.votedUser.uid === group.user.uid
+                    ? 'Seu voto'
+                    : 'Você já votou'
+                }`
+              : 'Votar nessa'}
+          </Button>
         )}
-      </Flex>
+      </div>
     );
   }
 
@@ -207,14 +174,12 @@ export function CardsPlayedList({ match }: CardsPlayedListProps) {
   }
 
   return (
-    <Flex flexDir="column" w="full" mt="4">
-      <Heading as="h2" fontSize="2xl" mb="4" ml="4">
-        Respostas:
+    <Flex flexDir="column" w="full" gap="3" minW="0">
+      <Heading as="h2" fontSize="xl" textAlign="center">
+        Respostas
       </Heading>
 
-      <HStack overflowX="scroll" overflowY="visible" px="4" py="8">
-        {groupedAnswers.map((group, index) => renderAnswers(group, index))}
-      </HStack>
+      <div className={styles.answers}>{groupedAnswers.map(renderAnswers)}</div>
     </Flex>
   );
 }

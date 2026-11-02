@@ -5,7 +5,7 @@ export class QuotaExceededError extends Error {
 
   constructor() {
     super(
-      'O limite diário de uso do servidor foi atingido. Tente novamente amanhã a partir das 9 horas.'
+      'O limite diário de uso do servidor foi atingido. Tente novamente mais tarde.'
     );
 
     this.name = 'QuotaExceededError';

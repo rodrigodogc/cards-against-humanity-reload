@@ -131,3 +131,11 @@ ol {
   width: 100%;
   padding: 1rem 2rem;
 }
+
+/* Acompanha o tema escuro do sistema. As páginas estáticas não carregam o app. */
+@media (prefers-color-scheme: dark) {
+  html, body { background-color: #121214; color: #f4f4f5; }
+  main { background: #1e1e22; }
+  small { color: #a8a8b3; }
+  a { color: #7ab8ff; }
+}

@@ -1,43 +1,96 @@
-<h1 align="center">Cartas contra a humanidade</h1>
+<h1 align="center">Cartas Contra a Humanidade</h1>
 
-<p align="center">
-Jogo cartas contra a humanidade online em português.
-</p>
+<p align="center">Jogo de cartas on-line em português, com humor adulto, para jogar com os amigos. Não oficial.</p>
 
-<p align="center">
-  <img width=100 src="./src/favicon.png" />
-</p>
+<p align="center"><img width="100" src="./public/favicon.png" /></p>
 
-## Tecnologias usadas :rocket:
+- Entrada só com nick e ícone, sem cadastro.
+- Partidas em tempo real, com convite por link e chat.
+- Tema claro, escuro e automático, com quatro temas de cor.
+- Ranking de vitórias, suporte a celular e instalação como app (PWA).
 
-- [React](https://pt-br.reactjs.org/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [React Router](https://reactrouter.com/)
-- [BlueprintJS](https://blueprintjs.com/)
-- [Sass](https://sass-lang.com/)
-- [Firebase](https://firebase.google.com)
+Feito com React, Vite, Chakra UI e Firebase (Firestore e Auth anônimo).
 
-## Imagens :sparkles:
+## Rodando localmente
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/59753526/164973933-b4687e62-f594-4f0c-94bb-1ef738e95b63.png" />
-  <img src="https://user-images.githubusercontent.com/59753526/164973938-29476573-bfdb-4f6a-ace1-219a07adc454.png" />
-</p>
+Precisa de Node 22 (`.nvmrc`) e, para os emuladores, Java 21+.
 
-![image](https://user-images.githubusercontent.com/59753526/164974018-45cba896-cd84-49dc-8ebe-1edd71a2ded6.png)
-![image](https://user-images.githubusercontent.com/59753526/164973889-ad3a3630-e3e0-49a0-b589-5161295b3fb4.png)
-![image](https://user-images.githubusercontent.com/59753526/164973982-3dc64e91-e209-4d3d-9375-be2d552e4fed.png)
-![image](https://user-images.githubusercontent.com/59753526/164973999-716ed8f1-4779-48bf-bb24-f7ba16e58824.png)
-![image](https://user-images.githubusercontent.com/59753526/164974037-24b3dfdb-843d-4d45-bd3c-2d9fd0101e06.png)
-![image](https://user-images.githubusercontent.com/59753526/164974043-fb381ce5-8120-41ff-b8bc-cccc5b6bcddd.png)
-![image](https://user-images.githubusercontent.com/59753526/164974052-36227ea5-5da2-45dd-b321-7329318adea6.png)
-![image](https://user-images.githubusercontent.com/59753526/164974061-686fba0f-4c63-49ac-bee7-7a6598f9d068.png)
+```bash
+npm install
+```
 
-## Atenção :warning:
+```bash
+cp .env.example .env
+```
 
-Este projeto foi desenvolvido com propósito humorístico, caso você se ofenda facilmente, aconselho a não entrar no site.
+Em `.env`, preencha `VITE_FIREBASE_PROJECT_ID=demo-cah`, `VITE_FIREBASE_API_KEY=demo`, `VITE_FIREBASE_APP_ID=demo` e `VITE_USE_EMULATORS=true`. Depois, em dois terminais:
 
-## Agradecimentos :heart:
+```bash
+npm run emulators
+```
 
-- [PDF em português do jogo](https://www.ludopedia.com.br/jogo/cards-against-humanity/anexos/104033)
-- [Site oficial](https://www.cardsagainsthumanity.com/)
+```bash
+npm run dev
+```
+
+## Deploy
+
+### 1. Firebase
+
+1. Crie um projeto em [console.firebase.google.com](https://console.firebase.google.com). O plano gratuito Spark basta.
+2. Em **Firestore Database**, crie o banco.
+3. Em **Authentication > Sign-in method**, ative **Anônimo**.
+4. Em **Configurações do projeto > Seus apps**, crie um app Web e guarde a configuração.
+5. Publique as regras:
+
+```bash
+npx firebase login
+```
+
+```bash
+npx firebase use --add
+```
+
+```bash
+npm run deploy:rules
+```
+
+### 2. Vercel
+
+1. Importe o seu repositório. O preset Vite é detectado sozinho.
+2. Em **Environment Variables**, cadastre as variáveis de `.env.example` com os valores do passo anterior. Deixe `VITE_USE_EMULATORS` de fora.
+3. Faça o deploy.
+4. No Firebase, em **Authentication > Settings > Authorized domains**, adicione o domínio da Vercel.
+
+### 3. Limpeza automática
+
+Os workflows em `.github/workflows` encerram partidas abandonadas e apagam as antigas. Sem isso, o banco cresce até estourar a cota gratuita. No seu repositório GitHub, crie o secret `FIREBASE_SERVICE_ACCOUNT_KEY` com o JSON de uma conta de serviço (**Configurações do projeto > Contas de serviço**). `prune-matches` só roda à mão, com `dry_run` ligado por padrão.
+
+## Cartas
+
+O baralho fica no repositório e não consome leituras do banco:
+
+- `src/data/cards.json`: baralho original, gerado por `scripts/export-cards.js`.
+- `src/data/cards-extra.json`: cartas autorais, listadas em `docs/cartas-novas.md`.
+
+Para adicionar uma carta, inclua `{ "id", "type", "message" }` no JSON e faça um novo deploy. `type` é `WHITE` (resposta) ou `BLACK` (pergunta), e `[?]` marca uma lacuna. Não reaproveite ids: partidas em andamento apontam para eles.
+
+## Testes
+
+```bash
+npm run test:rules
+```
+
+## Segurança
+
+As regras permitem que qualquer jogador conectado edite qualquer partida, e o placar é calculado no navegador. Isso basta para jogar entre amigos, mas o ranking pode ser fraudado e partidas podem ser adulteradas. Trate isso em `firestore.rules` antes de abrir o jogo ao público.
+
+## Créditos e licença
+
+- Jogo original: [Cards Against Humanity](https://www.cardsagainsthumanity.com/), sob licença Creative Commons BY-NC-SA: **sem uso comercial**. O nome é marca registrada de seus donos, e este projeto não tem vínculo com eles.
+- Código original: [SilvanoGPM/cards-against-humanity](https://github.com/SilvanoGPM/cards-against-humanity).
+- [PDF em português do jogo](https://www.ludopedia.com.br/jogo/cards-against-humanity/anexos/104033).
+
+## Atenção
+
+Conteúdo adulto, para maiores de 18 anos. É só humor, nunca agressão.

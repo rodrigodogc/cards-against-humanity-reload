@@ -2,10 +2,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useAuth } from '@/contexts/AuthContext';
 import { useBoolean } from '@/hooks/useBoolean';
-import { finishAllMatches, newMatch } from '@/services/matches';
+import { newMatch } from '@/services/matches';
 
 import {
-  Avatar,
   Box,
   Button,
   Card,
@@ -13,26 +12,18 @@ import {
   Flex,
   Heading,
   Icon,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger,
   SimpleGrid,
   Text,
   useToast,
 } from '@chakra-ui/react';
 
-import { FaSearch, FaTimes } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { RxCardStackPlus } from 'react-icons/rx';
 
 import { FinishMatchButton } from '@/components/finish-match-button';
-import { ServerMaintanceError } from '@/lib/ServerMaintanceError';
-import { getFirstString } from '@/utils/get-first-string';
-import { getUserName } from '@/utils/get-user-name';
+import { PlayerAvatar } from '@/components/player-avatar';
 import { getErrorMessage } from '@/utils/get-error-message';
+import { getUserName } from '@/utils/get-user-name';
 
 interface LastMatchesProps {
   matches: MatchConvertedType[];
@@ -45,10 +36,7 @@ export function LastMatches({
 }: LastMatchesProps): JSX.Element {
   const navigate = useNavigate();
   const toast = useToast();
-  const { user, isAdmin } = useAuth();
-
-  const [finishingMatch, startFinishingMatch, stopFinishingMatch] =
-    useBoolean(false);
+  const { user } = useAuth();
 
   const [creatingMatch, startCreate, stopCreate] = useBoolean(false);
 
@@ -62,19 +50,9 @@ export function LastMatches({
     } catch (error) {
       console.error('error', error);
 
-      if (error instanceof ServerMaintanceError) {
-        toast({
-          title: 'Servidor em manutenção',
-          description: error.message,
-          status: 'error',
-        });
-
-        return;
-      }
-
       const description = getErrorMessage(
         error,
-        'Não foi possível criar a partida'
+        'Não foi possível criar a partida.'
       );
 
       toast({
@@ -87,32 +65,6 @@ export function LastMatches({
     }
   }
 
-  async function handleFinishAllMatches(): Promise<void> {
-    try {
-      startFinishingMatch();
-
-      await finishAllMatches(matches);
-
-      onMatchesChange([]);
-
-      toast({
-        title: 'Partidas finalizadas',
-        description: 'Todas as partidas foram finalizadas!',
-        status: 'success',
-      });
-    } catch (error) {
-      console.error('error', error);
-
-      toast({
-        title: 'Aconteceu um erro',
-        description: 'Não foi possível finalizar as partidas',
-        status: 'error',
-      });
-    } finally {
-      stopFinishingMatch();
-    }
-  }
-
   return (
     <Flex flexDir="column">
       {matches.length === 0 ? (
@@ -120,13 +72,11 @@ export function LastMatches({
           <Icon as={FaSearch} fontSize="4xl" />
 
           <Box textAlign="center">
-            <Heading as="h2" fontSize="2xl">
-              Nenhuma partida rolando 😢
+            <Heading as="h1" fontSize="2xl">
+              Nenhuma partida pública no momento
             </Heading>
 
-            <Text color="gray.500">
-              Inicie uma agora e jogue com seus amigos!
-            </Text>
+            <Text color="app.muted">Crie uma agora e chame seus amigos.</Text>
           </Box>
 
           <Button isLoading={creatingMatch} onClick={handleNewMatch}>
@@ -135,100 +85,38 @@ export function LastMatches({
         </Center>
       ) : (
         <>
-          <Flex
-            align="center"
-            justify="space-between"
-            gap="4"
-            direction={{ base: 'column', md: 'row' }}
-            mb="12"
-          >
-            <Heading as="h2" fontSize="2xl">
-              Últimas partidas
-            </Heading>
+          <Heading as="h1" fontSize="2xl" mb="6">
+            Partidas públicas
+          </Heading>
 
-            {isAdmin && (
-              <Popover>
-                <PopoverTrigger>
-                  <Button
-                    leftIcon={<Icon as={FaTimes} />}
-                    isLoading={finishingMatch}
-                  >
-                    Encerrar todas as partidas
-                  </Button>
-                </PopoverTrigger>
-
-                <PopoverContent>
-                  <PopoverArrow />
-                  <PopoverCloseButton />
-                  <PopoverHeader>Finalizar todas as partidas?</PopoverHeader>
-                  <PopoverBody>
-                    <Button
-                      w="full"
-                      variant="solid"
-                      colorScheme="red"
-                      onClick={handleFinishAllMatches}
-                      isLoading={finishingMatch}
-                    >
-                      Sim, tenho certeza.
-                    </Button>
-                  </PopoverBody>
-                </PopoverContent>
-              </Popover>
-            )}
-          </Flex>
-
-          <SimpleGrid
-            pos="relative"
-            zIndex="1"
-            w="full"
-            maxW="full"
-            spacing={4}
-            minChildWidth={{ base: '100%', md: '300px', lg: '250px' }}
-            alignItems="center"
-          >
-            {matches.map(({ id, owner, rounds, createdAt }) => (
+          <SimpleGrid w="full" spacing={4} minChildWidth="260px">
+            {matches.map(({ id, owner, rounds }) => (
               <Card
-                h={isAdmin ? '200px' : '190px'}
                 key={id}
-                bg="white"
-                shadow="2xl"
+                bg="app.surface"
+                color="app.text"
                 p="4"
                 rounded="md"
                 border="1px"
-                borderColor="black"
+                borderColor="app.border"
               >
-                <Flex mb="4" gap="2">
-                  <Avatar
-                    bg="black"
-                    color="white"
-                    name={getUserName(owner)}
-                    src={owner.photoURL!}
-                  />
+                <Flex mb="4" gap="2" align="center">
+                  <PlayerAvatar user={owner} />
 
-                  <Box>
-                    <Text
-                      fontWeight="bold"
-                      overflow="hidden"
-                      whiteSpace="nowrap"
-                      textOverflow="ellipsis"
-                      maxW={{ base: '150px', md: '400px', lg: '200px' }}
-                    >
-                      Dono: {getFirstString(owner.displayName)}
+                  <Box minW="0">
+                    <Text fontWeight="bold" noOfLines={1}>
+                      Anfitrião: {getUserName(owner)}
                     </Text>
 
-                    <Text color="gray.600" fontSize="small">
-                      Rounds: {rounds}
+                    <Text color="app.muted" fontSize="sm">
+                      {rounds === 0
+                        ? 'Na sala de espera'
+                        : `Rodadas: ${rounds}`}
                     </Text>
-
-                    {isAdmin && createdAt && (
-                      <Text color="gray.600" fontSize="small">
-                        Criado em: {createdAt.toDate().toLocaleString('pt-BR')}
-                      </Text>
-                    )}
                   </Box>
                 </Flex>
 
-                <Flex flexDir="column" gap="2" justify="center" flex="1">
+                <Flex flexDir="column" gap="2" justify="end" flex="1">
                   <Button
                     leftIcon={
                       <Icon as={RxCardStackPlus} transform="auto" rotate="90" />
@@ -240,15 +128,13 @@ export function LastMatches({
                     Entrar na partida
                   </Button>
 
-                  {(isAdmin || owner.uid === user.uid) && (
+                  {owner.uid === user.uid && (
                     <FinishMatchButton
                       matchId={id}
-                      afterFinish={(id) => {
-                        const newMatches = matches.filter(
-                          (match) => match.id !== id
+                      afterFinish={(finishedId) => {
+                        onMatchesChange(
+                          matches.filter((match) => match.id !== finishedId)
                         );
-
-                        onMatchesChange([...newMatches]);
                       }}
                     />
                   )}

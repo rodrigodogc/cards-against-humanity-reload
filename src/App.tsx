@@ -1,26 +1,24 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { PrivateRoute } from '@/components/PrivateRoute';
+import { AppStatus } from '@/components/app-status';
+import { ThemeSync } from '@/components/theme-menu';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { Cards } from '@/pages/Cards';
 import { Home } from '@/pages/Home';
 import { Match } from '@/pages/Match';
 import { Matches } from '@/pages/Matches';
-import { NewCard } from '@/pages/NewCard';
-
-import { Maintance } from './components/Maintenance';
-import { IS_MAINTANCE } from './constants/globals';
+import { Ranking } from '@/pages/Ranking';
 
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/700.css';
 
 export function App() {
-  if (IS_MAINTANCE) {
-    return <Maintance />;
-  }
-
   return (
     <AuthProvider>
+      <ThemeSync />
+      <AppStatus />
+
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -42,16 +40,16 @@ export function App() {
           }
         />
 
-        <Route path="/cards" element={<Cards />} />
-
         <Route
-          path="/new-card"
+          path="/ranking"
           element={
-            <PrivateRoute onlyAdmins>
-              <NewCard />
+            <PrivateRoute>
+              <Ranking />
             </PrivateRoute>
           }
         />
+
+        <Route path="/cards" element={<Cards />} />
       </Routes>
     </AuthProvider>
   );

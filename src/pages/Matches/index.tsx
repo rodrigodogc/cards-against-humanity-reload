@@ -15,11 +15,11 @@ export function Matches(): JSX.Element {
         message="Carregando as últimas partidas..."
       />
 
-      <Box pos="absolute" top="-12" left="4">
-        <GoBack />
-      </Box>
+      <Container as="main" maxW="1100px" py="4">
+        <Box mb="6">
+          <GoBack toHome />
+        </Box>
 
-      <Container as="main" maxW="1100px" mt="16" flexDir="column">
         <LastMatches matches={matches} onMatchesChange={setMatches} />
       </Container>
     </>

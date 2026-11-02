@@ -1,9 +1,6 @@
 import {
-  Avatar,
-  AvatarBadge,
   Box,
   Button,
-  Center,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -14,25 +11,27 @@ import {
   Heading,
   Icon,
   Input,
-  SimpleGrid,
   Text,
   VStack,
+  useBreakpointValue,
   useToast,
 } from '@chakra-ui/react';
 
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 
-import { WhiteLogo } from '@/components/Card/Logos';
+import { AppLogo } from '@/components/app-logo';
 import { FinishMatchButton } from '@/components/finish-match-button';
-import { PixQRCode } from '@/components/pix-qrcode';
+import { ThemeMenu } from '@/components/theme-menu';
 import { useAuth } from '@/contexts/AuthContext';
 import { useBoolean } from '@/hooks/useBoolean';
 import { addMessageToMatch } from '@/services/matches';
 import { getErrorMessage } from '@/utils/get-error-message';
 import { getUserName } from '@/utils/get-user-name';
-import { FaCrown } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
 import { MatchLinkInput } from './match-link-input';
+import { Scoreboard } from './scoreboard';
+
+const MAX_MESSAGE_LENGTH = 300;
 
 interface SettingsDrawerProps {
   match: MatchConvertedType | null;
@@ -54,8 +53,12 @@ function SettingsDrawerBase(
   const toast = useToast();
   const { user } = useAuth();
 
+  const size = useBreakpointValue({ base: 'full', md: 'md' });
+
   const inputRef = useRef<HTMLInputElement>(null);
   const stackRef = useRef<HTMLDivElement>(null);
+
+  const isOwner = match?.owner?.uid === user?.uid;
 
   useImperativeHandle(ref, () => ({
     openDrawer,
@@ -65,12 +68,6 @@ function SettingsDrawerBase(
     const message = inputRef.current?.value.trim();
 
     if (!message || !match) {
-      toast({
-        title: 'Mensagem muito curta',
-        description: 'Insira uma mensagem de pelo menos 1 caractere.',
-        status: 'info',
-      });
-
       return;
     }
 
@@ -80,7 +77,6 @@ function SettingsDrawerBase(
       await addMessageToMatch(match.id, {
         message,
         userName: getUserName(user),
-        userAvatar: user.photoURL || undefined,
       });
 
       if (inputRef.current) {
@@ -91,7 +87,7 @@ function SettingsDrawerBase(
 
       const description = getErrorMessage(
         error,
-        'Não foi possível enviar mensagem.'
+        'Não foi possível enviar a mensagem.'
       );
 
       toast({
@@ -117,86 +113,101 @@ function SettingsDrawerBase(
     }
   }, [isOpen, messagesLength]);
 
+  const messages = [...(match?.messages || [])].sort(
+    (a, b) => a.createdAt.toMillis() - b.createdAt.toMillis()
+  );
+
   return (
-    <Drawer isOpen={isOpen} placement="right" size="lg" onClose={closeDrawer}>
+    <Drawer isOpen={isOpen} placement="right" size={size} onClose={closeDrawer}>
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>
-          <Box w="200px">
-            <WhiteLogo />
-          </Box>
+          <Flex align="center" gap="3" pr="8">
+            <Box w="160px">
+              <AppLogo />
+            </Box>
+
+            <ThemeMenu />
+          </Flex>
         </DrawerHeader>
 
-        <DrawerBody>
-          <Flex w="full" flexDir="column" gap="8">
-            <Flex flexDir="column" gap="4">
-              <Heading as="h3" fontSize="2xl">
-                Link da partida:
+        <DrawerBody pb="calc(1.5rem + env(safe-area-inset-bottom))">
+          <Flex w="full" flexDir="column" gap="6">
+            <Flex flexDir="column" gap="2">
+              <Heading as="h3" fontSize="lg">
+                Convide os amigos
               </Heading>
 
               <MatchLinkInput />
             </Flex>
 
-            <Flex flexDir="column" gap="4">
-              <Heading as="h3" fontSize="2xl">
-                Chat:
+            <Flex flexDir="column" gap="2">
+              <Heading as="h3" fontSize="lg">
+                Placar
+              </Heading>
+
+              <Text fontSize="sm" color="app.muted">
+                Ganha quem fizer {match?.pointsToWin || 0} pontos.
+              </Text>
+
+              {match && <Scoreboard match={match} />}
+            </Flex>
+
+            <Flex flexDir="column" gap="2">
+              <Heading as="h3" fontSize="lg">
+                Chat
               </Heading>
 
               <VStack
-                maxH="300px"
-                shadow="2xl"
-                h="300px"
+                h="240px"
                 border="1px"
-                spacing="0"
-                borderColor="black"
+                spacing="1"
+                borderColor="app.border"
                 rounded="md"
-                mb="2"
-                p="4"
-                overflowY="scroll"
+                p="3"
+                overflowY="auto"
                 ref={stackRef}
               >
-                {match?.messages
-                  .sort((a, b) => {
-                    return a.createdAt.toMillis() - b.createdAt.toMillis();
-                  })
-                  .map((message) => ({
-                    ...message,
-                    createdAt: message.createdAt.toDate() as Date,
-                  }))
-                  ?.map((message) => {
-                    const hours = String(message.createdAt.getHours()).padStart(
-                      2,
-                      '0'
-                    );
+                {messages.length === 0 && (
+                  <Text color="app.muted" fontSize="sm">
+                    Ninguém falou nada ainda. Comece a provocação.
+                  </Text>
+                )}
 
-                    const minutes = message.createdAt.getMinutes();
+                {messages.map((message) => {
+                  const createdAt: Date = message.createdAt.toDate();
 
-                    return (
-                      <Flex key={message.id} w="full" align="start">
-                        <Text
-                          color="gray.600"
-                          wordBreak="break-word"
-                          textAlign="start"
-                        >
-                          <Text as="span" fontSize="x-small">
-                            {hours}:{minutes}
-                          </Text>{' '}
-                          <Text as="span" fontWeight="bold" color="black">
-                            {message.userName}:
-                          </Text>{' '}
-                          {message.message}
-                        </Text>
-                      </Flex>
-                    );
-                  })}
+                  const time = createdAt.toLocaleTimeString('pt-BR', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  });
+
+                  return (
+                    <Text
+                      key={message.id}
+                      w="full"
+                      color="app.muted"
+                      wordBreak="break-word"
+                    >
+                      <Text as="span" fontSize="xs">
+                        {time}
+                      </Text>{' '}
+                      <Text as="span" fontWeight="bold" color="app.text">
+                        {message.userName}:
+                      </Text>{' '}
+                      {message.message}
+                    </Text>
+                  );
+                })}
               </VStack>
 
               <Flex>
                 <Input
                   ref={inputRef}
-                  placeholder="Insira sua mensagem..."
-                  borderColor="black"
+                  aria-label="Mensagem"
+                  placeholder="Escreva sua mensagem..."
+                  maxLength={MAX_MESSAGE_LENGTH}
                   roundedRight="0"
                   onKeyDown={(event) => {
                     if (event.key === 'Enter') {
@@ -206,8 +217,9 @@ function SettingsDrawerBase(
                 />
 
                 <Button
-                  px="8"
+                  px="6"
                   roundedLeft="0"
+                  flexShrink={0}
                   rightIcon={<Icon as={FiSend} transform="auto" rotate="45" />}
                   onClick={handleSendMessage}
                   isLoading={isSendingMessage}
@@ -217,102 +229,7 @@ function SettingsDrawerBase(
               </Flex>
             </Flex>
 
-            <Flex flexDir="column" gap="4">
-              <Flex flexDir="column" gap="1">
-                <Heading as="h3" fontSize="2xl">
-                  Jogadores:
-                </Heading>
-
-                <Text fontSize="sm" color="gray.500">
-                  Ganha quem fizer {match?.pointsToWin || 0} pontos
-                </Text>
-              </Flex>
-
-              <SimpleGrid
-                pos="relative"
-                zIndex="1"
-                w="full"
-                maxW="full"
-                spacing={4}
-                minChildWidth="200px"
-                alignItems="start"
-              >
-                {match?.users
-                  .sort((a) => {
-                    if (a.uid === match.owner.uid) {
-                      return -1;
-                    }
-
-                    return 1;
-                  })
-                  .map((user) => {
-                    const isOwner = user.uid === match.owner.uid;
-
-                    const userName = getUserName(user);
-
-                    return (
-                      <Center
-                        gap="2"
-                        key={user.uid}
-                        flexDir="column"
-                        bg="white"
-                        shadow="2xl"
-                        p="4"
-                        rounded="md"
-                        border="1px"
-                        borderColor="black"
-                        textAlign="center"
-                      >
-                        <Avatar
-                          bg="black"
-                          color="white"
-                          size="lg"
-                          name={userName}
-                          src={user.photoURL!}
-                        >
-                          {isOwner && (
-                            <AvatarBadge
-                              boxSize="1.25em"
-                              border="0"
-                              bottom="none"
-                              right="none"
-                              top="-24px"
-                              left="8px"
-                            >
-                              <Icon as={FaCrown} color="yellow.600" />
-                            </AvatarBadge>
-                          )}
-                        </Avatar>
-
-                        <Flex direction="column" color="secondary">
-                          <Text fontWeight="bold">{userName}</Text>
-
-                          <Text fontSize="sm" mt="-1" color="gray.500">
-                            Pontos:{' '}
-                            {match?.points.find(
-                              (point) => point.userId === user.uid
-                            )?.value || 0}
-                          </Text>
-                        </Flex>
-                      </Center>
-                    );
-                  })}
-              </SimpleGrid>
-            </Flex>
-
-            <FinishMatchButton matchId={match?.id || ''} />
-
-            <Flex flexDir="column" textAlign="center">
-              <Heading as="h3" fontSize="2xl">
-                Doações:
-              </Heading>
-
-              <Text color="gray.500">
-                Deseja auxiliar no projeto? Considere me pagar um café 😊
-              </Text>
-
-              <PixQRCode copyMessage="show" maxW="300px" />
-            </Flex>
+            {isOwner && <FinishMatchButton matchId={match?.id || ''} />}
           </Flex>
         </DrawerBody>
       </DrawerContent>

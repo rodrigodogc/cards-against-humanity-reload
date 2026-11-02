@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#121214" />
 
-  <link rel="icon" type="image/svg+xml" href="/src/favicon.png" />
-  <title>Cartas Contra Humanidade em português</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>Cartas Contra a Humanidade em português</title>
 
-  <meta name="description" content="Jogo cartas contra a humanidade online em português (Não oficial).">
-  <meta name="keywords" content="Cards, Against, Humanity, Português, Cartas, Contra, Humanidade">
-  <link rel="canonical" href="https://cards-against-humanity-alpha.vercel.app">
-  <meta name="language" content="pt-br">
-  <meta name="author" content="Silvano Marques">
+  <meta name="description" content="Jogo de cartas online em português, com humor adulto, para jogar com os amigos (não oficial).">
+  <meta name="robots" content="noindex">
 
-  <meta property="og:title" content="Cartas Contra Humanidade em português" />
-  <meta property="og:description" content="Jogo cartas contra a humanidade online em português (Não oficial)." />
-  <meta property="og:image" content="https://cards-against-humanity-alpha.vercel.app/cover.png" />
-  <meta property="og:url" content="https://cards-against-humanity-alpha.vercel.app" />
-  <meta name="twitter:card" content="https://cards-against-humanity-alpha.vercel.app/cover.png" />
-  <meta name="twitter:title" content="Cartas Contra Humanidade em português" />
-  <meta name="twitter:description" content="Jogo cartas contra a humanidade online em português (Não oficial)." />
-  <meta name="twitter:image" content="https://cards-against-humanity-alpha.vercel.app/cover.png" />
+  <meta property="og:title" content="Cartas Contra a Humanidade em português" />
+  <meta property="og:description" content="Jogo de cartas online em português, com humor adulto, para jogar com os amigos (não oficial)." />
+  <meta property="og:image" content="/cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet" />
+  <!-- Aplica o tema antes do primeiro desenho, para não piscar. As chaves são as de hooks/useAppTheme. -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        var mode = localStorage.getItem('chakra-ui-color-mode') || 'system';
+        var palette = JSON.parse(localStorage.getItem('@CARDS_AGAINST_HUMANITY/PALETTE') || '"classic"');
 
+        if (mode === 'system') {
+          mode = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        root.dataset.theme = mode;
+        root.style.colorScheme = mode;
+        root.dataset.palette = palette;
+      } catch (error) {
+        // Sem localStorage, vale o tema padrão.
+      }
+    })();
+  </script>
 </head>
 
 <body>

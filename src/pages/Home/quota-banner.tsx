@@ -26,9 +26,8 @@ export function QuotaBanner({ onClose }: QuotaBannerProps): JSX.Element {
         <AlertTitle>Limite diário atingido</AlertTitle>
 
         <AlertDescription display="block">
-          Nosso servidor gratuito atingiu o limite de uso de hoje, por isso não
-          é possível criar ou entrar em partidas no momento. Tente novamente
-          amanhã a partir das 9 horas. Obrigado pela paciência! 💛
+          O servidor atingiu o limite de uso de hoje, por isso não é possível
+          criar ou entrar em partidas no momento. Tente novamente mais tarde.
         </AlertDescription>
       </Box>
 

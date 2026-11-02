@@ -1,4 +1,0 @@
-providers = ["staticfile"]
-
-[phases.setup]
-nixPkgs = ['nginx']

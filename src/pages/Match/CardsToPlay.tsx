@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { CSSProperties, useMemo, useState } from 'react';
 
 import { Card } from '@/components/Card';
 import { CARD_TOKEN } from '@/constants/globals';
@@ -7,20 +7,9 @@ import { useBoolean } from '@/hooks/useBoolean';
 import { setAnswerToActiveRound } from '@/services/matches';
 import { countString } from '@/utils/count-string';
 
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  HStack,
-  Heading,
-  Icon,
-  IconButton,
-  useToast,
-} from '@chakra-ui/react';
-import { FaChevronLeft, FaChevronRight, FaCheckCircle } from 'react-icons/fa';
+import { Box, Button, Flex, Icon, Text, useToast } from '@chakra-ui/react';
+import { FaCheck, FaCheckCircle } from 'react-icons/fa';
 import { getErrorMessage } from '@/utils/get-error-message';
-import { useFetchDeck } from './useFetchDeck';
 
 import styles from './styles.module.scss';
 
@@ -38,52 +27,23 @@ export function CardsToPlay({
   const { user } = useAuth();
   const toast = useToast();
 
-  const { deck } = useFetchDeck(match, isFirstTime);
-
   const [selectedCardsId, setSelectedCardsId] = useState<string[]>([]);
   const [sending, setTrueSending, setFalseSending] = useBoolean(false);
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const cardsPerPlayer = match.cardsPerPlayer || 4;
 
-  const updateScrollButtons = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 0);
-    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
-  }, []);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    updateScrollButtons();
-
-    el.addEventListener('scroll', updateScrollButtons);
-    const observer = new ResizeObserver(() => updateScrollButtons());
-    observer.observe(el);
-
-    // eslint-disable-next-line consistent-return
-    return () => {
-      el.removeEventListener('scroll', updateScrollButtons);
-      observer.disconnect();
-    };
-  }, [updateScrollButtons, deck]);
-
-  function scroll(direction: 'left' | 'right') {
-    const el = scrollRef.current;
-    if (!el) return;
-    const amount = el.clientWidth * 0.6;
-    el.scrollBy({
-      left: direction === 'left' ? -amount : amount,
-      behavior: 'smooth',
-    });
-  }
+  const deck = useMemo(
+    () =>
+      match.actualRound?.decks
+        .find((playerDeck) => playerDeck.user.uid === user.uid)
+        ?.cards.slice(0, cardsPerPlayer) || [],
+    [match, user, cardsPerPlayer]
+  );
 
   const { question } = match.actualRound!;
 
   const totalOfPlays = countString(question.message, CARD_TOKEN) || 1;
+  const missingCards = totalOfPlays - selectedCardsId.length;
 
   function selectCard(cardId: string): () => void {
     return () => {
@@ -110,37 +70,11 @@ export function CardsToPlay({
 
   async function confirmPlay(): Promise<void> {
     try {
-      if (selectedCardsId.length !== totalOfPlays) {
-        toast({
-          title: 'Escolha as cartas',
-          description: `Selecione ${totalOfPlays} cartas para jogar!`,
-          status: 'info',
-        });
-
-        return;
-      }
-
       setTrueSending();
-
-      const containsSomeCard = match.actualRound?.answers.find(
-        (lastAwnser) =>
-          selectedCardsId.some((awnser) => awnser === lastAwnser.card.id) &&
-          user.uid === lastAwnser.user.uid
-      );
-
-      if (containsSomeCard) {
-        toast({
-          title: 'Carta já adicionada',
-          description: `Você já adicionou essa carta!`,
-          status: 'info',
-        });
-
-        return;
-      }
 
       const data = {
         user: user.uid,
-        awnsers: selectedCardsId,
+        answers: selectedCardsId,
       };
 
       await setAnswerToActiveRound(match.id, data);
@@ -151,7 +85,7 @@ export function CardsToPlay({
 
       const description = getErrorMessage(
         error,
-        'Não foi possível realizar jogada.'
+        'Não foi possível realizar a jogada.'
       );
 
       toast({
@@ -169,16 +103,28 @@ export function CardsToPlay({
     .map((card) => card.id);
 
   function renderCard(card: CardType): JSX.Element {
-    const isSelected = selectedCardsId.includes(card.id);
+    const selectedIndex = selectedCardsId.indexOf(card.id);
+    const isSelected = selectedIndex !== -1;
     const isNewCard = newCardIds.has(card.id);
     const newCardIndex = newCardOrder.indexOf(card.id);
 
     return (
-      <Box key={card.id} onClick={selectCard(card.id)}>
+      <Box
+        key={card.id}
+        className={styles.handItem}
+        onClick={selectCard(card.id)}
+      >
+        {isSelected && (
+          <span className={styles.selectionBadge}>
+            {totalOfPlays > 1 ? selectedIndex + 1 : <Icon as={FaCheck} />}
+          </span>
+        )}
+
         <Card
           {...card}
+          isPressed={isSelected}
           animationType={isNewCard ? 'auto' : 'off'}
-          animationDelay={isNewCard ? `${(newCardIndex + 2) * 500}ms` : '0ms'}
+          animationDelay={isNewCard ? `${newCardIndex * 150}ms` : '0ms'}
           className={`${styles.card} ${isSelected ? styles.isSelected : ''}`}
           frontClassName={styles.cardFront}
           backClassName={`${styles.cardBack} ${
@@ -194,65 +140,41 @@ export function CardsToPlay({
     return null;
   }
 
+  if (deck.length === 0) {
+    return (
+      <Text textAlign="center" fontWeight="bold">
+        {isFirstTime
+          ? 'Você joga a partir da próxima rodada.'
+          : 'Você recebe suas cartas na próxima rodada.'}
+      </Text>
+    );
+  }
+
   return (
-    <Flex w="full" flexDir="column" gap="8">
-      <Flex align="center" gap="2">
-        <IconButton
-          aria-label="Scroll para esquerda"
-          icon={<Icon as={FaChevronLeft} />}
-          onClick={() => scroll('left')}
-          variant="ghost"
-          size="sm"
-          height="280px"
-          flexShrink={0}
-          visibility={canScrollLeft ? 'visible' : 'hidden'}
-        />
+    <Flex w="full" flexDir="column" align="center">
+      <div
+        className={styles.hand}
+        style={{ '--cards': deck.length } as CSSProperties}
+      >
+        {deck.map(renderCard)}
+      </div>
 
-        <HStack
-          ref={scrollRef}
-          w="full"
-          overflowX="auto"
-          py="4"
-          px="8"
-          justifyContent={{
-            base: 'start',
-            md: deck.length >= 5 ? 'start' : 'center',
-          }}
-        >
-          {deck.map(renderCard)}
-        </HStack>
-
-        <IconButton
-          aria-label="Scroll para direita"
-          icon={<Icon as={FaChevronRight} />}
-          onClick={() => scroll('right')}
-          variant="ghost"
-          size="sm"
-          height="280px"
-          flexShrink={0}
-          visibility={canScrollRight ? 'visible' : 'hidden'}
-        />
-      </Flex>
-
-      {isFirstTime && (
-        <Heading as="h3" fontSize="xl" textAlign="center">
-          Você joga na próxima rodada...
-        </Heading>
-      )}
-
-      <Center>
+      <div className={styles.actionBar}>
         <Button
           w="full"
           maxW="500px"
           leftIcon={<Icon as={FaCheckCircle} />}
           isLoading={sending}
+          isDisabled={missingCards > 0}
           onClick={confirmPlay}
-          transform="auto"
-          scale={selectedCardsId.length === totalOfPlays ? '1' : '0'}
         >
-          Confirmar
+          {missingCards > 0
+            ? `Selecione ${missingCards} ${
+                missingCards === 1 ? 'carta' : 'cartas'
+              }`
+            : 'Confirmar jogada'}
         </Button>
-      </Center>
+      </div>
     </Flex>
   );
 }

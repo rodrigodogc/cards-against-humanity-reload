@@ -105,18 +105,27 @@
     text-align: left;
   }
 
+  &Message {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
   svg {
     width: 60%;
+    flex-shrink: 0;
   }
 }
 
 .message {
-  line-height: 2.5rem;
+  line-height: 1.35;
 }
 
 .question {
   display: inline-block;
-  width: 90%;
+  width: 4.5em;
+  max-width: 90%;
   height: 2px;
   background-color: var(--color);
 }

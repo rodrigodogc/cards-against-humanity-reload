@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Card } from '@/components/Card';
 import { GoBack } from '@/components/GoBack';
 import { SomeLoading } from '@/components/SomeLoading';
+import { PlayerAvatar } from '@/components/player-avatar';
 import { useAuth } from '@/contexts/AuthContext';
 import {
   changeCardsPerPlayer,
@@ -12,7 +13,6 @@ import {
   changeVisibility,
   finishMatch,
 } from '@/services/matches';
-import { getFirstString } from '@/utils/get-first-string';
 
 import { ShowCardsOwnerButton } from '@/components/show-cards-owner-button';
 import { fireworks } from '@/utils/fireworks';
@@ -24,25 +24,31 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogOverlay,
-  Avatar,
   AvatarGroup,
   Box,
   Button,
   Center,
-  Container,
   Flex,
+  FormControl,
+  FormLabel,
+  Heading,
   Icon,
   IconButton,
   Select,
+  SimpleGrid,
   Tag,
+  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { FaArrowRight, FaBars, FaFlag, FaHome, FaPlay } from 'react-icons/fa';
 import { CardsPlayedList } from './CardsPlayedList';
 import { CardsToPlay } from './CardsToPlay';
-import { SettingsDrawer } from './SettingsDrawer';
-import { UsersListHandles } from './UsersList';
+import { SettingsDrawer, SettingsDrawerHandles } from './SettingsDrawer';
+import { MatchLinkInput } from './match-link-input';
+import { Scoreboard } from './scoreboard';
 import { useSetupMatch } from './useSetupMatch';
+
+import styles from './styles.module.scss';
 
 export function Match() {
   const { id } = useParams<{ id: string }>();
@@ -61,7 +67,7 @@ export function Match() {
 
   const navigate = useNavigate();
 
-  const menuRef = useRef<UsersListHandles>(null);
+  const menuRef = useRef<SettingsDrawerHandles>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);
   const leaveCancelRef = useRef<HTMLButtonElement>(null);
   const {
@@ -86,20 +92,48 @@ export function Match() {
     (otherUser) => otherUser.user.uid === user?.uid
   );
 
+  const userAlreadyVoted = match?.actualRound?.usersWhoVoted?.find(
+    (otherUser) => otherUser.user.uid === user?.uid
+  );
+
   // Só faz sentido esperar por quem recebeu cartas nesta rodada. Quem entrou
   // com a partida em andamento não tem deck e nunca vai jogar — comparar com
   // `match.users` deixava `allPlayersPlayed` falso para sempre, e o alerta de
   // "nem todos jogaram" aparecia em todo avanço de rodada.
   const playersInRound = match?.actualRound?.decks || [];
 
+  const playersWhoPlayed = playersInRound.filter((deck) =>
+    match?.actualRound?.usersWhoPlayed.some(
+      (played) => played.user.uid === deck.user.uid
+    )
+  ).length;
+
   const allPlayersPlayed =
     matchStarted &&
     playersInRound.length > 0 &&
-    playersInRound.every((deck) =>
-      match?.actualRound?.usersWhoPlayed.some(
-        (played) => played.user.uid === deck.user.uid
-      )
-    );
+    playersWhoPlayed === playersInRound.length;
+
+  function getRoundStatus(): string {
+    if (!userAlreadyPlayed) {
+      return 'Escolha a resposta mais engraçada que você tiver.';
+    }
+
+    if (!allPlayersPlayed) {
+      const missing = playersInRound.length - playersWhoPlayed;
+
+      return `Aguardando ${missing} de ${playersInRound.length} ${
+        playersInRound.length === 1 ? 'jogador' : 'jogadores'
+      }.`;
+    }
+
+    if (!userAlreadyVoted) {
+      return 'Vote na melhor resposta.';
+    }
+
+    return isOwner
+      ? 'Quando todos votarem, passe para a próxima rodada.'
+      : 'Voto registrado. Aguardando a próxima rodada.';
+  }
 
   function handleOpenDrawer(): void {
     setHasNewMessases(false);
@@ -140,230 +174,251 @@ export function Match() {
   }, [hasWinner]);
 
   return (
-    <Container maxW="1100px" p="8">
+    <div className={styles.shell}>
       <SomeLoading
         loading={isLoading || loadingNext}
         message={isLoading ? 'Carregando partida...' : 'Carregando rodada...'}
       />
 
       {hasWinner && (
-        <Center w="full" mt="16" flexDir="column" gap="16">
+        <Center flex="1" flexDir="column" gap="6" py="6">
+          <Heading as="h1" fontSize="2xl" textAlign="center">
+            {getUserName(match.winner!)} venceu a partida!
+          </Heading>
+
           <Card
             animationType="rotating"
             animationDelay="0s"
-            message={`${getUserName(match.winner!)} foi o vencedor da partida!`}
+            message={`${getUserName(match.winner!)} venceu a partida!`}
             type="WHITE"
+            className={styles.questionCard}
+            frontClassName={styles.questionFront}
+            backClassName={styles.questionBack}
           />
+
+          <Box w="full" maxW="480px">
+            <Scoreboard match={match} />
+          </Box>
 
           <Button
             w={{ base: 'full', md: 'auto' }}
-            isLoading={loadingNext}
             rightIcon={<Icon as={FaHome} />}
-            onClick={() => {
-              window.location.href = '/';
-            }}
+            onClick={() => navigate('/')}
           >
-            Voltar para Home
+            Voltar para o início
           </Button>
         </Center>
       )}
 
-      {!hasWinner && !isLoading && !loadingNext && (
+      {!hasWinner && !isLoading && !loadingNext && match && (
         <>
-          {matchStarted && (
-            <Center w="full" mt="16">
-              <Card
-                {...match!.actualRound!.question}
-                animationDelay={loadingNext ? '0s' : '0.5s'}
-                animationType={loadingNext ? 'revert' : 'auto'}
-              />
-            </Center>
-          )}
+          <Flex as="header" align="center" gap="2" mb="2">
+            {/* O anfitrião não encerra mais a partida de todo mundo só por
+                clicar na seta de voltar: agora escolhe explicitamente. */}
+            {isOwner ? <GoBack onClick={onLeaveOpen} /> : <GoBack toHome />}
 
-          {/* O anfitrião não encerra mais a partida de todo mundo só por
-              clicar na seta de voltar: agora escolhe explicitamente. */}
-          <Box pos="absolute" top="4" left="4">
-            {isOwner ? <GoBack onClick={onLeaveOpen} /> : <GoBack />}
-          </Box>
+            {matchStarted && (
+              <Tag bg="app.accent" color="app.onAccent" flexShrink={0}>
+                <Icon as={FaFlag} mr="2" /> {round}ª rodada
+              </Tag>
+            )}
 
-          {matchStarted && !userAlreadyPlayed && (
-            <CardsToPlay
-              match={match!}
-              isFirstTime={isFirstTime}
-              newCardIds={newCardIds}
-            />
-          )}
+            <Flex flex="1" justify="end" align="center" gap="2" minW="0">
+              <AvatarGroup size="sm" max={4}>
+                {match.users?.map((player) => (
+                  <PlayerAvatar key={player.uid} user={player} />
+                ))}
+              </AvatarGroup>
 
-          {matchStarted && <CardsPlayedList match={match!} />}
+              <Box pos="relative">
+                <IconButton
+                  aria-label="Abrir menu da partida"
+                  onClick={handleOpenDrawer}
+                  icon={<Icon as={FaBars} />}
+                />
 
-          <SettingsDrawer ref={menuRef} match={match!} />
-
-          <Flex gap="2" pos="fixed" top="4" right="4">
-            <AvatarGroup
-              size="sm"
-              max={4}
-              display={{ base: 'none', md: 'flex' }}
-            >
-              {match?.users?.map((user) => {
-                const name = getUserName(user);
-
-                return (
-                  <Avatar
-                    bg="black"
-                    color="white"
-                    key={user.uid}
-                    title={name}
-                    name={name}
-                    src={user.photoURL!}
-                  />
-                );
-              })}
-            </AvatarGroup>
-
-            <Box pos="relative">
-              <IconButton
-                aria-label="Abrir menu"
-                onClick={handleOpenDrawer}
-                icon={<Icon as={FaBars} />}
-              />
-
-              <Box
-                boxSize="10px"
-                rounded="full"
-                bg="red.500"
-                pos="absolute"
-                top="-1"
-                right="-1"
-                transform="auto"
-                transition="0.2s ease-in-out"
-                scale={hasNewMessages ? '1' : '0'}
-              />
-            </Box>
+                <Box
+                  boxSize="10px"
+                  rounded="full"
+                  bg="red.500"
+                  pos="absolute"
+                  top="-1"
+                  right="-1"
+                  transform="auto"
+                  transition="0.2s ease-in-out"
+                  scale={hasNewMessages ? '1' : '0'}
+                />
+              </Box>
+            </Flex>
           </Flex>
 
+          <SettingsDrawer ref={menuRef} match={match} />
+
           {matchStarted && (
-            <Tag
-              bg="black"
-              color="white"
-              w="fit-content"
-              pos="absolute"
-              top="6"
-              left="16"
-            >
-              <Icon as={FaFlag} mr="2" /> {round}° Rodada
-            </Tag>
-          )}
+            <Flex as="main" flex="1" direction="column" align="center" gap="3">
+              <Text fontWeight="bold" textAlign="center" role="status">
+                {getRoundStatus()}
+              </Text>
 
-          {!matchStarted && match && (
-            <Center w="full" mt="16">
-              <Box
-                as={Card}
-                message={
-                  isOwner
-                    ? 'Inicie a partida a qualquer momento.'
-                    : `Esperando <strong>${getFirstString(
-                        match!.owner.displayName
-                      )}</strong> iniciar a partida!`
-                }
-                type="WHITE"
-                animationType="rotating"
-                animationDelay="0s"
-                w="250px"
-                h="300px"
-              />
-            </Center>
-          )}
-
-          {isOwner && (
-            <Flex
-              gap="4"
-              justify={matchStarted ? 'end' : 'center'}
-              mt={matchStarted ? '8' : '16'}
-              flexDirection={matchStarted ? 'row' : 'column'}
-              align="center"
-              wrap="wrap"
-            >
-              {matchStarted && (
-                <ShowCardsOwnerButton
-                  matchId={id || ''}
-                  w={{ base: 'full', md: 'auto' }}
-                />
-              )}
-
-              {!matchStarted && (
-                <>
-                  <Select
-                    w={{ base: 'full', md: '200px' }}
-                    placeholder="Selecione a duração da partida"
-                    defaultValue="20"
-                    _selected={{ background: 'black', color: 'white' }}
-                    onChange={(e) => {
-                      const value = Number(e.target.value) || 20;
-
-                      changePointsToWin(id!, value);
-                    }}
-                  >
-                    <option value="10">Rápida (10 pontos)</option>
-                    <option value="20">Normal (20 pontos)</option>
-                    <option value="40">Longa (40 pontos)</option>
-                  </Select>
-
-                  <Select
-                    w={{ base: 'full', md: '200px' }}
-                    placeholder="Selecione a visibilidade da partida"
-                    defaultValue="PRIVATE"
-                    onChange={(e) => {
-                      const { value } = e.target;
-
-                      if (value === 'PRIVATE' || value === 'PUBLIC') {
-                        changeVisibility(
-                          id!,
-                          e.target.value as 'PUBLIC' | 'PRIVATE'
-                        );
-                      }
-                    }}
-                  >
-                    <option value="PUBLIC">Pública</option>
-                    <option value="PRIVATE">Privada</option>
-                  </Select>
-
-                  <Select
-                    w={{ base: 'full', md: '200px' }}
-                    defaultValue="4"
-                    onChange={(e) => {
-                      const value = Number(e.target.value) || 4;
-                      changeCardsPerPlayer(id!, value);
-                    }}
-                  >
-                    <option value="4">4 cartas por jogador</option>
-                    <option value="5">5 cartas por jogador</option>
-                    <option value="6">6 cartas por jogador</option>
-                  </Select>
-
-                  <Select
-                    w={{ base: 'full', md: '200px' }}
-                    defaultValue="keep"
-                    onChange={(e) => {
-                      changeKeepCards(id!, e.target.value === 'keep');
-                    }}
-                  >
-                    <option value="keep">Manter cartas entre rodadas</option>
-                    <option value="random">
-                      Cartas aleatórias toda rodada
-                    </option>
-                  </Select>
-                </>
-              )}
-
-              <Button
-                w={{ base: 'full', md: '200px' }}
-                onClick={handleNextRound}
-                isLoading={loadingNext}
-                rightIcon={<Icon as={matchStarted ? FaArrowRight : FaPlay} />}
+              {/* Depois de jogar, a pergunta vai para o lado e deixa a largura
+                  da tela para as respostas. */}
+              <div
+                className={styles.round}
+                data-phase={userAlreadyPlayed ? 'answers' : 'hand'}
               >
-                {matchStarted ? 'Próximo round' : 'Iniciar partida'}
-              </Button>
+                <Card
+                  {...match.actualRound!.question}
+                  animationDelay="0.2s"
+                  animationType="auto"
+                  className={styles.questionCard}
+                  frontClassName={styles.questionFront}
+                  backClassName={styles.questionBack}
+                />
+
+                {!userAlreadyPlayed && (
+                  <CardsToPlay
+                    match={match}
+                    isFirstTime={isFirstTime}
+                    newCardIds={newCardIds}
+                  />
+                )}
+
+                <CardsPlayedList match={match} />
+              </div>
+
+              {isOwner && (
+                <div className={styles.actionBar}>
+                  <ShowCardsOwnerButton
+                    matchId={id || ''}
+                    w={{ base: 'full', md: 'auto' }}
+                  />
+
+                  <Button
+                    w={{ base: 'full', md: '240px' }}
+                    onClick={handleNextRound}
+                    isLoading={loadingNext}
+                    rightIcon={<Icon as={FaArrowRight} />}
+                  >
+                    Próxima rodada
+                  </Button>
+                </div>
+              )}
             </Flex>
+          )}
+
+          {!matchStarted && (
+            <Center as="main" flex="1" py="4">
+              <Flex direction="column" gap="6" w="full" maxW="720px">
+                <Box textAlign="center">
+                  <Heading as="h1" fontSize="2xl">
+                    Sala de espera
+                  </Heading>
+
+                  <Text color="app.muted">
+                    {isOwner
+                      ? 'Chame a galera e comece quando quiser.'
+                      : `Esperando ${getUserName(
+                          match.owner
+                        )} iniciar a partida.`}
+                  </Text>
+                </Box>
+
+                <Flex direction="column" gap="2">
+                  <Heading as="h2" fontSize="lg">
+                    Convide os amigos
+                  </Heading>
+
+                  <MatchLinkInput />
+                </Flex>
+
+                <Flex direction="column" gap="2">
+                  <Heading as="h2" fontSize="lg">
+                    Jogadores ({match.users?.length || 0})
+                  </Heading>
+
+                  <Scoreboard match={match} />
+                </Flex>
+
+                {isOwner && (
+                  <>
+                    <SimpleGrid columns={{ base: 1, md: 2 }} spacing="4">
+                      <FormControl>
+                        <FormLabel>Duração</FormLabel>
+                        <Select
+                          value={match.pointsToWin}
+                          onChange={(e) => {
+                            changePointsToWin(id!, Number(e.target.value));
+                          }}
+                        >
+                          <option value="10">Rápida (10 pontos)</option>
+                          <option value="20">Normal (20 pontos)</option>
+                          <option value="40">Longa (40 pontos)</option>
+                        </Select>
+                      </FormControl>
+
+                      <FormControl>
+                        <FormLabel>Visibilidade</FormLabel>
+                        <Select
+                          value={match.type}
+                          onChange={(e) => {
+                            changeVisibility(
+                              id!,
+                              e.target.value as 'PUBLIC' | 'PRIVATE'
+                            );
+                          }}
+                        >
+                          <option value="PRIVATE">
+                            Privada (só com o link)
+                          </option>
+                          <option value="PUBLIC">
+                            Pública (aparece na busca)
+                          </option>
+                        </Select>
+                      </FormControl>
+
+                      <FormControl>
+                        <FormLabel>Cartas na mão</FormLabel>
+                        <Select
+                          value={match.cardsPerPlayer}
+                          onChange={(e) => {
+                            changeCardsPerPlayer(id!, Number(e.target.value));
+                          }}
+                        >
+                          <option value="4">4 cartas por jogador</option>
+                          <option value="5">5 cartas por jogador</option>
+                          <option value="6">6 cartas por jogador</option>
+                        </Select>
+                      </FormControl>
+
+                      <FormControl>
+                        <FormLabel>A cada rodada</FormLabel>
+                        <Select
+                          value={match.keepCards ? 'keep' : 'random'}
+                          onChange={(e) => {
+                            changeKeepCards(id!, e.target.value === 'keep');
+                          }}
+                        >
+                          <option value="keep">Manter as cartas da mão</option>
+                          <option value="random">Receber cartas novas</option>
+                        </Select>
+                      </FormControl>
+                    </SimpleGrid>
+
+                    <div className={styles.actionBar}>
+                      <Button
+                        w="full"
+                        size="lg"
+                        onClick={handleNextRound}
+                        isLoading={loadingNext}
+                        rightIcon={<Icon as={FaPlay} />}
+                      >
+                        Iniciar partida
+                      </Button>
+                    </div>
+                  </>
+                )}
+              </Flex>
+            </Center>
           )}
 
           <AlertDialog
@@ -384,13 +439,21 @@ export function Match() {
                 </AlertDialogBody>
 
                 <AlertDialogFooter gap="3" flexWrap="wrap">
-                  <Button ref={leaveCancelRef} onClick={onLeaveClose}>
+                  <Button
+                    ref={leaveCancelRef}
+                    variant="defaultOutlined"
+                    onClick={onLeaveClose}
+                  >
                     Cancelar
                   </Button>
                   <Button onClick={handleLeaveWithoutFinishing}>
                     Sair sem encerrar
                   </Button>
-                  <Button colorScheme="red" onClick={handleFinishMatch}>
+                  <Button
+                    variant="solid"
+                    colorScheme="red"
+                    onClick={handleFinishMatch}
+                  >
                     Encerrar partida
                   </Button>
                 </AlertDialogFooter>
@@ -411,14 +474,22 @@ export function Match() {
 
                 <AlertDialogBody>
                   Alguns jogadores ainda não fizeram suas jogadas. Deseja
-                  avançar para o próximo round mesmo assim?
+                  avançar para a próxima rodada mesmo assim?
                 </AlertDialogBody>
 
                 <AlertDialogFooter gap="3">
-                  <Button ref={cancelRef} onClick={onAlertClose}>
+                  <Button
+                    ref={cancelRef}
+                    variant="defaultOutlined"
+                    onClick={onAlertClose}
+                  >
                     Cancelar
                   </Button>
-                  <Button colorScheme="red" onClick={handleConfirmNextRound}>
+                  <Button
+                    variant="solid"
+                    colorScheme="red"
+                    onClick={handleConfirmNextRound}
+                  >
                     Avançar
                   </Button>
                 </AlertDialogFooter>
@@ -427,6 +498,6 @@ export function Match() {
           </AlertDialog>
         </>
       )}
-    </Container>
+    </div>
   );
 }

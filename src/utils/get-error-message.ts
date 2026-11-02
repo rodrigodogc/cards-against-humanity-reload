@@ -3,9 +3,10 @@ export function getErrorMessage(
   error: any,
   defaultMessage = 'Aconteceu um erro'
 ) {
-  if (error.code === 'resource-exhausted') {
-    return 'Limite diário do servidor foi atingido, volte amanhã a partir das 9 horas.';
+  if (error?.code === 'resource-exhausted') {
+    return 'O limite diário do servidor foi atingido. Tente novamente mais tarde.';
   }
 
-  return error?.message || defaultMessage;
+  // Mensagens do Firebase vêm em inglês e não ajudam quem está jogando.
+  return defaultMessage;
 }

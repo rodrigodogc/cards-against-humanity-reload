@@ -8,6 +8,7 @@ import {
   getMatch,
   streamMatch,
 } from '@/services/matches';
+import { forgetUsers } from '@/services/users';
 
 import { useAuth } from '@/contexts/AuthContext';
 import { useBoolean } from '@/hooks/useBoolean';
@@ -39,16 +40,13 @@ export function useSetupMatch(id = '') {
       try {
         const match = await getMatch(id);
 
-        const matchFinished = match?.status === 'FINISHED';
+        // `getAny` devolve {} quando o documento não existe.
+        const matchExists = Object.keys(match).length > 0;
 
-        if (
-          !match ||
-          Object.keys(match).length === 0 ||
-          (matchFinished && !match.winner)
-        ) {
+        if (!matchExists || (match.status === 'FINISHED' && !match.winner)) {
           navigate('/');
 
-          const message = !match
+          const message = !matchExists
             ? {
                 title: 'Partida não encontrada',
                 description: 'Não encontramos uma partida com esse código.',
@@ -65,6 +63,12 @@ export function useSetupMatch(id = '') {
 
           return;
         }
+
+        forgetUsers(
+          match.users
+            .map((innerUser) => innerUser.id)
+            .filter((uid) => uid !== user.uid)
+        );
 
         const userIsInTheMatch = match.users.find(
           (innerUser) => innerUser.id === user?.uid

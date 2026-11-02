@@ -1,0 +1,305 @@
+# Cartas novas
+
+Cartas autorais, separadas do baralho original, em `src/data/cards-extra.json`. Para cortar uma carta, apague a entrada desse arquivo: nenhum outro lugar depende dela, e partidas em andamento mostram "Carta indisponível" no lugar.
+
+## Perguntas (60)
+
+- `extra-b001` Meu terapeuta pediu demissão depois que contei sobre [?].
+- `extra-b002` O que a minha família chama de "fase", o juiz chama de [?].
+- `extra-b003` No meu velório, quero música boa, bebida liberada e [?].
+- `extra-b004` O novo plano de saúde cobre tudo, exceto [?].
+- `extra-b005` Segundo o meu horóscopo, hoje é um ótimo dia para [?].
+- `extra-b006` Currículo atualizado: cinco anos de experiência em [?].
+- `extra-b007` Qual foi o verdadeiro motivo do meu divórcio?
+- `extra-b008` O que tem no porão do síndico?
+- `extra-b009` [?] é a única coisa que ainda me faz levantar da cama.
+- `extra-b010` O coach garantiu que o segredo do sucesso é acordar às 5h e [?].
+- `extra-b011` Minha mãe não está brava, só está decepcionada com [?].
+- `extra-b012` Novo no streaming: um documentário de oito episódios sobre [?].
+- `extra-b013` O que o padre ouviu na confissão e nunca mais conseguiu esquecer?
+- `extra-b014` Reunião de condomínio de hoje. Pauta única: [?].
+- `extra-b015` Aos 30 anos, descobri que a vida adulta é basicamente [?] e boletos.
+- `extra-b016` O RH me chamou para uma conversa delicada sobre [?].
+- `extra-b017` Meu testamento é simples: deixo tudo para [?].
+- `extra-b018` O que você não quer ouvir do cirurgião logo antes da anestesia?
+- `extra-b019` Promoção de Black Friday: leve [?] e ganhe [?] de brinde.
+- `extra-b020` [?] + [?] = a minha vida amorosa.
+- `extra-b021` Se o meu casamento fosse um filme, ele se chamaria [?] e terminaria com [?].
+- `extra-b022` Primeiro veio [?]. Depois, inevitavelmente, [?].
+- `extra-b023` O que me disseram que ia passar com a idade, mas só piorou?
+- `extra-b024` O que o grupo da família compartilhou hoje às 6h da manhã?
+- `extra-b025` O aplicativo de namoro me recomendou alguém cujo único hobby é [?].
+- `extra-b026` A autópsia foi conclusiva: causa da morte, [?].
+- `extra-b027` Meu sonho de criança era ser astronauta. Hoje, trabalho com [?].
+- `extra-b028` O que o Brasil precisa para dar certo, segundo o tio do churrasco?
+- `extra-b029` Slogan da campanha: "Mais saúde, mais educação e mais [?]".
+- `extra-b030` O que achei no histórico do navegador do meu pai?
+- `extra-b031` Qual é o cheiro do fundo do poço?
+- `extra-b032` A polícia encontrou [?] no porta-malas, mas o que assustou mesmo foi [?].
+- `extra-b033` Psicóloga: "E como [?] faz você se sentir?"
+- `extra-b034` Bem-vindo ao inferno. Seu castigo eterno será [?].
+- `extra-b035` O que Deus pensa quando olha para mim?
+- `extra-b036` Minha crise dos 40 veio com um carro esportivo e [?].
+- `extra-b037` Chá revelação de hoje: é menino, é menina ou é [?]?
+- `extra-b038` O que o estagiário fez que derrubou a empresa inteira?
+- `extra-b039` Receita da vovó: para curar qualquer coisa, basta passar [?] no local.
+- `extra-b040` Minha autoestima foi enterrada ao lado de [?].
+- `extra-b041` Para economizar, cortei a academia, o streaming e [?].
+- `extra-b042` O que ninguém conta sobre envelhecer?
+- `extra-b043` A ouvidoria lamenta informar que [?] não tem cobertura.
+- `extra-b044` A última coisa que passou diante dos meus olhos antes de morrer foi [?].
+- `extra-b045` Manual do bom cidadão, capítulo 1: [?].
+- `extra-b046` Nunca subestime o poder de [?] numa festa da firma.
+- `extra-b047` O que fez o vizinho chamar a polícia de novo?
+- `extra-b048` Minha tia jura que é coisa do capeta, mas o médico receitou [?].
+- `extra-b049` Troco minha alma por [?]. Aceito parcelar.
+- `extra-b050` Este ano, o amigo secreto da firma me deu [?].
+- `extra-b051` O que o GPS disse que me fez repensar toda a minha vida?
+- `extra-b052` Antes de casar, é importante conversar sobre filhos, dinheiro e [?].
+- `extra-b053` O que há de errado comigo, segundo o meu ex?
+- `extra-b054` A ciência ainda não explica [?], mas minha tia garante que é inveja.
+- `extra-b055` Hoje na TV: [?] invade o programa da tarde e apresentadora chora ao vivo.
+- `extra-b056` Meu signo é a desgraça, com ascendente em [?].
+- `extra-b057` O que está escrito no meu atestado médico?
+- `extra-b058` O último desejo do condenado foi [?].
+- `extra-b059` Minha carreira acabou no dia em que mandei para o grupo errado [?].
+- `extra-b060` O que eu faria com um milhão de reais e nenhuma consequência?
+
+## Respostas (236)
+
+- `extra-w001` Chorar no banheiro da firma em horário comercial.
+- `extra-w002` Um boleto vencido com juros emocionais.
+- `extra-w003` Fingir que morri para não pagar a conta.
+- `extra-w004` Herdar uma dívida e a calvície do meu pai.
+- `extra-w005` O silêncio constrangedor depois do "eu te amo".
+- `extra-w006` Um coach de luto.
+- `extra-w007` Pedir desconto na funerária.
+- `extra-w008` Um caixão com porta-copos.
+- `extra-w009` Sair do velório para ver o resultado do jogo.
+- `extra-w010` Roubar flores do cemitério para o aniversário de namoro.
+- `extra-w011` A foto do falecido com filtro de cachorrinho.
+- `extra-w012` Ler o testamento em voz alta com tom de deboche.
+- `extra-w013` Colonoscopia ao vivo no Instagram.
+- `extra-w014` Googlar os sintomas e já escolher o caixão.
+- `extra-w015` Um exame de próstata com música ambiente.
+- `extra-w016` Uma hemorroida com nome e sobrenome.
+- `extra-w017` Descobrir um caroço bem na semana do pagamento.
+- `extra-w018` Soro na veia e fé no SUS.
+- `extra-w019` A enfermeira rindo do seu exame.
+- `extra-w020` Um atestado de óbito com erro de português.
+- `extra-w021` A calcinha da sua avó secando no ventilador.
+- `extra-w022` Sexo de reconciliação com a porta do guarda-roupa aberta.
+- `extra-w023` Uma transa de dois minutos e 45 de pedido de desculpas.
+- `extra-w024` Fingir um orgasmo para poder dormir logo.
+- `extra-w025` Mandar nude com o boleto aparecendo no fundo.
+- `extra-w026` Lubrificante vencido desde o governo passado.
+- `extra-w027` Um motel com cartão fidelidade.
+- `extra-w028` A cama do motel com cheiro de arrependimento.
+- `extra-w029` Broxar ao som de sertanejo universitário.
+- `extra-w030` Gemer o nome do ex com muita convicção.
+- `extra-w031` Um sex shop falido.
+- `extra-w032` Um vibrador que conecta no Wi-Fi da vizinha.
+- `extra-w033` Viagra vencido e muita esperança.
+- `extra-w034` O pé do seu sogro.
+- `extra-w035` Um relacionamento aberto só de um lado.
+- `extra-w036` Dar match com a própria chefe.
+- `extra-w037` Um casamento que terminou na fila do buffet.
+- `extra-w038` Um divórcio com divisão de milhas.
+- `extra-w039` Ser traído pelo personal trainer e ainda pagar o mês.
+- `extra-w040` A pensão atrasada desde a Copa de 2014.
+- `extra-w041` A sogra morando no quarto de hóspedes "só por uns dias".
+- `extra-w042` O seu cunhado explicando criptomoeda.
+- `extra-w043` O tio do pavê em estado terminal de piada.
+- `extra-w044` O primo que "trabalha com internet" e mora com a mãe.
+- `extra-w045` A tia que pergunta dos namoradinhos no velório.
+- `extra-w046` Um almoço de domingo que termina em boletim de ocorrência.
+- `extra-w047` Uma ceia de Natal com briga por herança antes da sobremesa.
+- `extra-w048` Descobrir o irmão secreto pelo teste de DNA de presente.
+- `extra-w049` Seu pai curtindo foto de biquíni no Facebook.
+- `extra-w050` Sua mãe descobrindo o que é "sugar daddy".
+- `extra-w051` A avó que manda áudio de 14 minutos.
+- `extra-w052` Um áudio do WhatsApp em velocidade 2x com choro.
+- `extra-w053` Reunião que podia ter sido um e-mail, e um e-mail que podia ter sido um processo.
+- `extra-w054` Pedir demissão por mensagem de voz, bêbado.
+- `extra-w055` O "somos uma família" do dono da empresa.
+- `extra-w056` Trabalhar doente para bater a meta do gerente.
+- `extra-w057` Uma pizza no lugar do décimo terceiro.
+- `extra-w058` Uma dinâmica de grupo com choro obrigatório.
+- `extra-w059` Um café da manhã motivacional às 6h.
+- `extra-w060` Um LinkedIn com lição de vida sobre a morte do cachorro.
+- `extra-w061` Ser demitido por um robô e ainda avaliar o atendimento.
+- `extra-w062` O estagiário com acesso de administrador.
+- `extra-w063` Apagar o banco de dados na sexta-feira às 17h58.
+- `extra-w064` O sistema que caiu bem na hora de bater o ponto.
+- `extra-w065` Um home office de cueca com a câmera ligada.
+- `extra-w066` Esquecer o microfone aberto enquanto fala do chefe.
+- `extra-w067` A reunião de alinhamento sobre o alinhamento.
+- `extra-w068` Uma pirâmide financeira com plano de carreira.
+- `extra-w069` Vender curso de como vender curso.
+- `extra-w070` O Pix errado para o ex.
+- `extra-w071` Fazer empréstimo para pagar o empréstimo.
+- `extra-w072` O nome no Serasa desde o ensino médio.
+- `extra-w073` Um cartão de crédito com limite emocional.
+- `extra-w074` Parcelar o aluguel em 12 vezes no rotativo.
+- `extra-w075` O gerente do banco rindo do seu saldo.
+- `extra-w076` Investir tudo em uma moeda com nome de cachorro.
+- `extra-w077` Ser milionário por 40 segundos no jogo do tigrinho.
+- `extra-w078` Hipotecar a casa da avó por uma bet.
+- `extra-w079` Comer miojo cru para fechar o mês.
+- `extra-w080` Fazer a feira com o troco do ônibus.
+- `extra-w081` Um cafezinho de R$ 38.
+- `extra-w082` O preço do ovo.
+- `extra-w083` Um político honesto, segundo ele mesmo.
+- `extra-w084` Dinheiro na cueca.
+- `extra-w085` Uma CPI que termina em pizza e com direito a borda recheada.
+- `extra-w086` Um santinho de candidato colado no para-brisa do carro funerário.
+- `extra-w087` A obra que está sendo inaugurada pela quarta vez.
+- `extra-w088` Um buraco na rua com mais tempo de carreira que eu.
+- `extra-w089` Discutir política no grupo da família até alguém ser removido.
+- `extra-w090` Um bloqueio na Marginal às 7h da manhã.
+- `extra-w091` O ônibus que passa lotado de propósito.
+- `extra-w092` O metrô parado por "problemas operacionais" há uma década.
+- `extra-w093` Um cuscuz de cinco dias.
+- `extra-w094` Pastel de vento com recheio de decepção.
+- `extra-w095` A água do feijão que ressuscita defunto.
+- `extra-w096` Um churrasco com carne de procedência duvidosa.
+- `extra-w097` Vinagrete de rodoviária.
+- `extra-w098` A coxinha de posto às 4 da manhã.
+- `extra-w099` A diarreia em viagem de excursão.
+- `extra-w100` O banheiro químico no terceiro dia de festival.
+- `extra-w101` Um peido em elevador lotado.
+- `extra-w102` Soltar um barro na casa do crush.
+- `extra-w103` O papel higiênico acabar bem na casa da sogra.
+- `extra-w104` Um ronco com sequestro de ar.
+- `extra-w105` A meia molhada no pé dentro do ônibus.
+- `extra-w106` O suor de quem subiu cinco andares para pagar uma dívida.
+- `extra-w107` Um chulé com consciência própria.
+- `extra-w108` Uma unha encravada com vontade de viver.
+- `extra-w109` A primeira ressaca depois dos 30.
+- `extra-w110` Vomitar no próprio aniversário antes do parabéns.
+- `extra-w111` Beber álcool 70 "porque mata tudo".
+- `extra-w112` Acordar sem um rim e com muitas perguntas.
+- `extra-w113` Ligar para o ex às 3h da manhã com a voz embargada.
+- `extra-w114` Corote na veia.
+- `extra-w115` Um tio bêbado discursando no casamento.
+- `extra-w116` O mesmo pecado toda semana, com desconto de fidelidade.
+- `extra-w117` Um dízimo pago no crédito.
+- `extra-w118` Pedir perdão a Deus parcelado em 10 vezes.
+- `extra-w119` Um milagre fora do prazo de garantia.
+- `extra-w120` Reencarnar como pernilongo.
+- `extra-w121` Bater na porta do céu e descobrir que é por agendamento.
+- `extra-w122` Ir para o inferno por conta de uma avaliação de uma estrela.
+- `extra-w123` O capeta pedindo o seu currículo.
+- `extra-w124` Ser exorcizado e voltar pior.
+- `extra-w125` A água benta com gosto de piscina.
+- `extra-w126` Rezar para o Wi-Fi voltar.
+- `extra-w127` Um exorcismo em 12 parcelas.
+- `extra-w128` Uma cartomante que previu tudo, menos o calote.
+- `extra-w129` O mapa astral que recomenda terapia.
+- `extra-w130` Mercúrio retrógrado como justificativa jurídica.
+- `extra-w131` Uma terapia paga com cartão de crédito da mãe.
+- `extra-w132` Chorar no Uber com cinco estrelas.
+- `extra-w133` Um burnout com nota fiscal.
+- `extra-w134` Ansiedade em tempo integral com hora extra.
+- `extra-w135` Tomar remédio tarja preta com energético.
+- `extra-w136` Uma crise existencial no corredor de iogurtes.
+- `extra-w137` Um surto na seção de frios.
+- `extra-w138` Fingir estar bem até o fim do expediente.
+- `extra-w139` Mandar "tudo bem sim e você?" enquanto a casa pega fogo.
+- `extra-w140` Ser o amigo problemático do grupo.
+- `extra-w141` Um pedido de ajuda disfarçado de meme.
+- `extra-w142` A autoestima de quem curte a própria foto.
+- `extra-w143` Ser deixado no vácuo por um golpista.
+- `extra-w144` Tomar golpe do falso sobrinho e ainda mandar um beijo.
+- `extra-w145` Um golpista com síndrome do impostor.
+- `extra-w146` Um príncipe estrangeiro me devendo uma herança.
+- `extra-w147` Assalto com maquininha de cartão.
+- `extra-w148` Um ladrão que devolve o celular de tão ruim.
+- `extra-w149` Ter o carro roubado e sentir alívio pelas parcelas.
+- `extra-w150` Um latrocínio no meu rendimento da poupança.
+- `extra-w151` O vizinho que faz furadeira às 7h de domingo.
+- `extra-w152` Um síndico com poderes absolutos.
+- `extra-w153` O vizinho do andar de cima arrastando móveis às 3h.
+- `extra-w154` Um corpo que não é seu no freezer da garagem.
+- `extra-w155` Enterrar o gato da vizinha e fingir procurar junto.
+- `extra-w156` Uma ata de condomínio escrita com sangue.
+- `extra-w157` A piscina do prédio com aquela cor suspeita.
+- `extra-w158` Dar ré em cima do próprio pé.
+- `extra-w159` Um carro financiado até o ano que vem do meu falecimento.
+- `extra-w160` A multa por andar de carro em São Paulo.
+- `extra-w161` Um flanelinha com CNPJ.
+- `extra-w162` Uma blitz na volta do churrasco.
+- `extra-w163` Cair de patinete elétrico de terno.
+- `extra-w164` Levar um tombo na academia e fingir que era um exercício.
+- `extra-w165` Aquele cara que grita na academia.
+- `extra-w166` Fazer dieta só até a hora da janta.
+- `extra-w167` Um shake de whey com sabor de ressentimento.
+- `extra-w168` Pagar a academia há 3 anos e ter ido duas vezes.
+- `extra-w169` Um personal que me pede desculpas pelo meu corpo.
+- `extra-w170` Um colágeno que só deixou minha conta mais flácida.
+- `extra-w171` Harmonização facial que deu errado.
+- `extra-w172` Uma calvície que chegou antes do diploma.
+- `extra-w173` Um implante capilar na Turquia com escala em Guarulhos.
+- `extra-w174` Ter o corpo de um sobrevivente de naufrágio aos 28.
+- `extra-w175` Dor nas costas por dormir de mau jeito há 12 anos.
+- `extra-w176` Fazer barulho toda vez que senta.
+- `extra-w177` Ir dormir às 21h e chamar isso de festa.
+- `extra-w178` Uma pochete cheia de remédios.
+- `extra-w179` A senha do banco anotada na testa.
+- `extra-w180` Reclamar da juventude com um joelho quebrado.
+- `extra-w181` Ser chamado de "senhor" por alguém com bigode.
+- `extra-w182` Um asilo com open bar.
+- `extra-w183` Fugir do asilo de andador em alta velocidade.
+- `extra-w184` O cheiro de casa de vó misturado com pomada de cavalo.
+- `extra-w185` A dentadura boiando no copo de cerveja.
+- `extra-w186` Morrer engasgado com um sonho de padaria.
+- `extra-w187` Ser atropelado pelo carro da funerária.
+- `extra-w188` Morrer de tédio em uma palestra sobre sinergia.
+- `extra-w189` Infarto ao ver a fatura.
+- `extra-w190` Ser velado com a camisa do time rebaixado.
+- `extra-w191` Um enterro patrocinado por uma bet.
+- `extra-w192` Virar adubo de maneira sustentável.
+- `extra-w193` Um obituário escrito pelo ChatGPT.
+- `extra-w194` Ser lembrado só no Facebook, uma vez por ano.
+- `extra-w195` Uma lápide com QR Code.
+- `extra-w196` Um fantasma que só assombra para cobrar dívida.
+- `extra-w197` A inteligência artificial me dizendo que vai ficar tudo bem.
+- `extra-w198` Uma atualização do celular que apagou minha vontade de viver.
+- `extra-w199` Aceitar todos os cookies e também o meu destino.
+- `extra-w200` Uma senha com oito caracteres, um símbolo e uma lágrima.
+- `extra-w201` Um influencer com curso de luto em sete passos.
+- `extra-w202` Um podcast de três homens que não sabem de nada.
+- `extra-w203` Um podcaster explicando o que uma mulher sente.
+- `extra-w204` Uma dancinha do TikTok no enterro.
+- `extra-w205` Ser cancelado por um tuíte de 2011.
+- `extra-w206` Viralizar pelo pior motivo possível.
+- `extra-w207` O vídeo de chá revelação que terminou em incêndio.
+- `extra-w208` Um terraplanista com plano de saúde.
+- `extra-w209` A garrafinha de água do bebê reborn.
+- `extra-w210` Levar o bebê reborn para a emergência.
+- `extra-w211` A prova de amor que virou prova judicial.
+- `extra-w212` Ser testemunha de defesa do próprio cachorro.
+- `extra-w213` Um advogado que aceita pagamento em coxinha.
+- `extra-w214` Uma delação premiada no grupo do futebol.
+- `extra-w215` Uma tornozeleira eletrônica com Bluetooth.
+- `extra-w216` Um juiz que dorme durante a sentença.
+- `extra-w217` A cadeia como opção de moradia acessível.
+- `extra-w218` Um processo trabalhista movido pelo meu próprio cachorro.
+- `extra-w219` Um pombo com intenção de matar.
+- `extra-w220` Uma barata voadora em plena declaração de amor.
+- `extra-w221` O gato derrubando as cinzas do vovô.
+- `extra-w222` O cachorro comendo o aparelho de surdez.
+- `extra-w223` Um papagaio que conta todas as traições na ceia.
+- `extra-w224` Dar nome de ex para o cachorro e gritar na rua.
+- `extra-w225` Sobreviver ao apocalipse só para pagar o IPTU.
+- `extra-w226` Pagar IPVA de um carro que já não existe.
+- `extra-w227` A Receita Federal me seguindo no Instagram.
+- `extra-w228` Cair na malha fina por causa de um brigadeiro.
+- `extra-w229` O fim do mundo adiado por falta de orçamento.
+- `extra-w230` Um meteoro que desistiu ao ver o Brasil.
+- `extra-w231` Uma vida inteira resumida em "boa tarde, tudo bem?".
+- `extra-w232` Ser o motivo da aposentadoria precoce do meu psiquiatra.
+- `extra-w233` Todos os meus sonhos de infância em uma caixa de papelão.
+- `extra-w234` O vazio existencial que nem o Pix resolve.
+- `extra-w235` Rir para não chorar, e acabar fazendo os dois no ônibus.
+- `extra-w236` Ser picado por um mosquito da dengue que pediu desculpas depois.

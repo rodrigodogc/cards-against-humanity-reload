@@ -3,9 +3,9 @@
     "rules": "firestore.rules"
   },
   "emulators": {
-    "firestore": { "port": 8080 },
+    "firestore": { "port": 8085 },
     "auth": { "port": 9099 },
-    "ui": { "enabled": true, "port": 4000 },
+    "ui": { "enabled": true, "port": 4040 },
     "singleProjectMode": true
   }
 }

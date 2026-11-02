@@ -1,4 +1,10 @@
-import { onAuthStateChanged, signOut, User } from 'firebase/auth';
+import {
+  onAuthStateChanged,
+  signInAnonymously,
+  signOut,
+  updateProfile,
+  User,
+} from 'firebase/auth';
 
 import {
   createContext,
@@ -9,22 +15,19 @@ import {
   useState,
 } from 'react';
 
-import { auth, login } from '@/firebase/config';
-import { useIsAdmin } from '@/hooks/useIsAdmin';
-import { newUser } from '@/services/users';
+import { auth } from '@/firebase/config';
+import { saveProfile } from '@/services/users';
 
-// Versões antigas persistiam o objeto User completo do Firebase (email +
-// accessToken/refreshToken) em texto plano no localStorage, acessível a
-// qualquer script na página. Não persistimos mais isso: a sessão passa a ser
-// gerenciada pelo próprio Firebase via onAuthStateChanged.
-const LEGACY_USER_KEY = '@CARDS_AGAINST_HUMANITY/USER';
+export interface Profile {
+  nick: string;
+  avatar: string;
+}
 
 export interface AuthContextProps {
-  user: User & { wins?: number };
+  user: UserType;
   authenticated: boolean;
-  isAdmin: boolean;
   isLoading: boolean;
-  handleLogin: () => Promise<void>;
+  handleEnter: (profile: Profile) => Promise<void>;
   handleLogout: () => Promise<void>;
 }
 
@@ -36,53 +39,54 @@ export const AuthContext = createContext<AuthContextProps>(
   {} as AuthContextProps
 );
 
+function toUser({ uid, displayName, photoURL }: User): UserType {
+  return { uid, displayName, photoURL };
+}
+
 export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
-  const [user, setUser] = useState<User>({} as User);
+  const [user, setUser] = useState<UserType>({} as UserType);
   const [isLoading, setIsLoading] = useState(true);
 
-  const authenticated = Boolean(user?.uid);
-
-  const { userIsAdmin, setUserIsAdmin } = useIsAdmin(user, authenticated);
+  // Quem fechou a aba entre o login anônimo e o nick ainda precisa escolher um.
+  const authenticated = Boolean(user?.uid && user?.displayName);
 
   useEffect(() => {
-    // Remove credenciais deixadas por versões antigas do app.
-    try {
-      localStorage.removeItem(LEGACY_USER_KEY);
-    } catch {
-      // Ignora: localStorage pode estar indisponível.
-    }
-
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-      setUser(firebaseUser ?? ({} as User));
+      setUser(firebaseUser ? toUser(firebaseUser) : ({} as UserType));
       setIsLoading(false);
     });
 
     return unsubscribe;
   }, []);
 
-  const handleLogin = useCallback(async () => {
-    const { user: loggedUser } = await login();
+  const handleEnter = useCallback(async ({ nick, avatar }: Profile) => {
+    const firebaseUser =
+      auth.currentUser || (await signInAnonymously(auth)).user;
 
-    await newUser(loggedUser);
-    // onAuthStateChanged atualiza o estado com o usuário logado.
+    await updateProfile(firebaseUser, { displayName: nick, photoURL: avatar });
+
+    const profile = toUser(firebaseUser);
+
+    await saveProfile(profile);
+
+    // `updateProfile` não dispara `onAuthStateChanged`.
+    setUser(profile);
   }, []);
 
   const handleLogout = useCallback(async () => {
     await signOut(auth);
-    setUser({} as User);
-    setUserIsAdmin(false);
-  }, [setUserIsAdmin]);
+    setUser({} as UserType);
+  }, []);
 
   const value = useMemo(
     () => ({
       user,
       authenticated,
-      handleLogin,
+      handleEnter,
       handleLogout,
-      isAdmin: userIsAdmin,
       isLoading,
     }),
-    [user, authenticated, handleLogin, handleLogout, userIsAdmin, isLoading]
+    [user, authenticated, handleEnter, handleLogout, isLoading]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

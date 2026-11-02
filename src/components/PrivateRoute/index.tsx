@@ -1,65 +1,19 @@
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-
+import { EntryScreen } from '@/components/entry-screen';
 import { useAuth } from '@/contexts/AuthContext';
-import { useBoolean } from '@/hooks/useBoolean';
-import { isAdmin } from '@/services/users';
-import { useToast } from '@chakra-ui/react';
-import { useEffect } from 'react';
 import { SomeLoading } from '../SomeLoading';
 
 interface CustomRouteProps {
   children: JSX.Element;
-  onlyAdmins?: boolean;
 }
 
-export function PrivateRoute({
-  children,
-  onlyAdmins = false,
-}: CustomRouteProps): JSX.Element {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { user, authenticated, isLoading } = useAuth();
-  const toast = useToast();
+export function PrivateRoute({ children }: CustomRouteProps): JSX.Element {
+  const { authenticated, isLoading } = useAuth();
 
-  const [admin, setTrueAdmin] = useBoolean(false);
-
-  useEffect(() => {
-    async function verifyIfIsAdmin(): Promise<void> {
-      const admin = await isAdmin(user.uid);
-
-      if (!admin) {
-        toast({
-          title: 'Sem permissão',
-          description: 'Você não possui permissão para acessar a página',
-          status: 'warning',
-        });
-
-        navigate('/');
-        return;
-      }
-
-      setTrueAdmin();
-    }
-
-    if (authenticated && onlyAdmins) {
-      verifyIfIsAdmin();
-    }
-  }, [authenticated, onlyAdmins, user, navigate, setTrueAdmin, toast]);
-
-  if (!authenticated && !isLoading && !user?.uid) {
-    return (
-      <Navigate
-        to="/"
-        state={{
-          path: location.pathname,
-        }}
-      />
-    );
+  if (isLoading) {
+    return <SomeLoading loading message="Carregando..." />;
   }
 
-  if (onlyAdmins && !admin) {
-    return <SomeLoading loading message="Verificando permissões..." />;
-  }
-
-  return children;
+  // Renderiza a entrada na própria rota, sem redirecionar: assim quem abre um
+  // link de convite cai direto na partida depois de escolher o nick.
+  return authenticated ? children : <EntryScreen />;
 }

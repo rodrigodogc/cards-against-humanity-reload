@@ -21,7 +21,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PROJECT_ID = process.env.FIRESTORE_PROJECT_ID || 'demo-cah';
-const HOST = process.env.FIRESTORE_EMULATOR_HOST || 'localhost:8080';
+const HOST = process.env.FIRESTORE_EMULATOR_HOST || 'localhost:8085';
 const RULES_PATH = path.resolve(__dirname, '../firestore.rules');
 
 async function main() {
