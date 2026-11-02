@@ -8,6 +8,7 @@ import { PlayerAvatar } from '@/components/player-avatar';
 import { useAuth } from '@/contexts/AuthContext';
 import {
   changeCardsPerPlayer,
+  changeHideVotes,
   changeKeepCards,
   changePointsToWin,
   changeVisibility,
@@ -114,6 +115,13 @@ export function Match() {
     playersWhoPlayed === playersInRound.length;
 
   function getRoundStatus(): string {
+    // Sem estrelas nas cartas, é por aqui que se sabe quando avançar a rodada.
+    const voteCount = match?.hideVotes
+      ? ` ${match.actualRound?.usersWhoVoted.length || 0} de ${
+          playersInRound.length
+        } votos.`
+      : '';
+
     if (!userAlreadyPlayed) {
       return 'Escolha a resposta mais engraçada que você tiver.';
     }
@@ -127,12 +135,12 @@ export function Match() {
     }
 
     if (!userAlreadyVoted) {
-      return 'Vote na melhor resposta.';
+      return `Vote na melhor resposta.${voteCount}`;
     }
 
     return isOwner
-      ? 'Quando todos votarem, passe para a próxima rodada.'
-      : 'Voto registrado. Aguardando a próxima rodada.';
+      ? `Quando todos votarem, passe para a próxima rodada.${voteCount}`
+      : `Voto registrado. Aguardando a próxima rodada.${voteCount}`;
   }
 
   function handleOpenDrawer(): void {
@@ -400,6 +408,21 @@ export function Match() {
                         >
                           <option value="keep">Manter as cartas da mão</option>
                           <option value="random">Receber cartas novas</option>
+                        </Select>
+                      </FormControl>
+
+                      <FormControl>
+                        <FormLabel>Votos e placar</FormLabel>
+                        <Select
+                          value={match.hideVotes ? 'hidden' : 'visible'}
+                          onChange={(e) => {
+                            changeHideVotes(id!, e.target.value === 'hidden');
+                          }}
+                        >
+                          <option value="visible">
+                            Mostrar durante a partida
+                          </option>
+                          <option value="hidden">Revelar só no final</option>
                         </Select>
                       </FormControl>
                     </SimpleGrid>

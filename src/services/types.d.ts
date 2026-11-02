@@ -71,6 +71,7 @@ interface MatchType {
   pointsToWin: number;
   cardsPerPlayer: number;
   keepCards: boolean;
+  hideVotes?: boolean;
   shouldShowCardOwner?: boolean;
   createdAt?: Timestamp;
 }

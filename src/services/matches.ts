@@ -82,6 +82,7 @@ export async function newMatch(ownerId: string): Promise<string> {
       pointsToWin: 20,
       cardsPerPlayer: 4,
       keepCards: true,
+      hideVotes: false,
     })
   );
 }
@@ -115,6 +116,14 @@ export async function changeKeepCards(id: string, keepCards: boolean) {
 
   await updateDoc(matchDoc, {
     keepCards,
+  });
+}
+
+export async function changeHideVotes(id: string, hideVotes: boolean) {
+  const matchDoc = doc(matchesCollection, id);
+
+  await updateDoc(matchDoc, {
+    hideVotes,
   });
 }
 

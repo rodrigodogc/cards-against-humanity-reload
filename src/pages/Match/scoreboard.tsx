@@ -13,9 +13,14 @@ export function Scoreboard({ match }: ScoreboardProps): JSX.Element {
     return match.points?.find(({ userId }) => userId === uid)?.value || 0;
   }
 
-  const players = [...(match.users || [])].sort(
-    (a, b) => getPoints(b.uid) - getPoints(a.uid)
-  );
+  // Com o placar oculto, a própria ordem da lista entregaria quem está na frente.
+  const hideScores = Boolean(match.hideVotes && !match.winner);
+
+  const players = hideScores
+    ? match.users || []
+    : [...(match.users || [])].sort(
+        (a, b) => getPoints(b.uid) - getPoints(a.uid)
+      );
 
   return (
     <Flex as="ol" direction="column" gap="2" listStyleType="none" w="full">
@@ -35,9 +40,16 @@ export function Scoreboard({ match }: ScoreboardProps): JSX.Element {
             rounded="md"
             bg="app.surface"
           >
-            <Text w="6" textAlign="center" fontWeight="bold" color="app.muted">
-              {index + 1}
-            </Text>
+            {!hideScores && (
+              <Text
+                w="6"
+                textAlign="center"
+                fontWeight="bold"
+                color="app.muted"
+              >
+                {index + 1}
+              </Text>
+            )}
 
             <PlayerAvatar size="sm" user={player} />
 
@@ -63,9 +75,11 @@ export function Scoreboard({ match }: ScoreboardProps): JSX.Element {
               />
             )}
 
-            <Text fontWeight="bold" whiteSpace="nowrap">
-              {getPoints(player.uid)} pts
-            </Text>
+            {!hideScores && (
+              <Text fontWeight="bold" whiteSpace="nowrap">
+                {getPoints(player.uid)} pts
+              </Text>
+            )}
           </Flex>
         );
       })}

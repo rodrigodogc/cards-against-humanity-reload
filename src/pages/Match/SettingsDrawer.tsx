@@ -144,11 +144,12 @@ function SettingsDrawerBase(
 
             <Flex flexDir="column" gap="2">
               <Heading as="h3" fontSize="lg">
-                Placar
+                {match?.hideVotes ? 'Jogadores' : 'Placar'}
               </Heading>
 
               <Text fontSize="sm" color="app.muted">
                 Ganha quem fizer {match?.pointsToWin || 0} pontos.
+                {match?.hideVotes && ' O placar só aparece no final.'}
               </Text>
 
               {match && <Scoreboard match={match} />}

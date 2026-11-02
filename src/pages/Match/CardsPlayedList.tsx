@@ -87,10 +87,11 @@ export function CardsPlayedList({ match }: CardsPlayedListProps) {
   function renderAnswers(group: GroupedAnswersType): JSX.Element {
     const isMyGroup = group.user.uid === user?.uid;
     const showOwner = match.shouldShowCardOwner || isMyGroup;
-    const votes =
-      match.actualRound?.usersWhoVoted.filter(
-        ({ votedUser }) => group.user.uid === votedUser.uid
-      ) || [];
+    const votes = match.hideVotes
+      ? []
+      : match.actualRound?.usersWhoVoted.filter(
+          ({ votedUser }) => group.user.uid === votedUser.uid
+        ) || [];
 
     return (
       <div
@@ -111,7 +112,7 @@ export function CardsPlayedList({ match }: CardsPlayedListProps) {
               {showOwner ? getUserName(group.user) : 'Anônimo'}
             </Text>
 
-            {showOwner && (
+            {showOwner && !match.hideVotes && (
               <Text fontSize="xs" color="app.muted">
                 {match?.points.find((point) => point.userId === group.user.uid)
                   ?.value || 0}{' '}
