@@ -24,6 +24,8 @@ export function useSetupMatch(id = '') {
   const [isLoading, startLoading, stopLoading] = useBoolean(true);
   const [loadingNext, startLoadingNext, stopLoadingNext] = useBoolean(false);
   const [isFirstTime, setTrueFirstTime, setFalseFirstTime] = useBoolean(false);
+  const [roundFailed, setRoundFailed] = useState(false);
+  const roundAttemptedRef = useRef(false);
 
   const [match, setMatch] = useState<MatchConvertedType | null>(null);
   const [hasNewMessages, setHasNewMessases] = useState(false);
@@ -191,6 +193,8 @@ export function useSetupMatch(id = '') {
 
   const nextRound = useCallback(async () => {
     try {
+      roundAttemptedRef.current = true;
+      setRoundFailed(false);
       startLoadingNext();
 
       setMatch((match) => {
@@ -208,6 +212,8 @@ export function useSetupMatch(id = '') {
     } catch (error) {
       console.error('error', error);
 
+      setRoundFailed(true);
+
       const description = getErrorMessage(
         error,
         'Não foi possível carregar a rodada, recarregue a página.'
@@ -223,10 +229,20 @@ export function useSetupMatch(id = '') {
     }
   }, [id, startLoadingNext, stopLoadingNext, toast]);
 
+  // Uma tentativa interrompida deixa a partida em `LOADING` para todo mundo.
+  // Só o anfitrião retoma, e só se esta tela ainda não tentou criar a rodada.
+  const isStuck = match?.status === 'LOADING' && match.owner?.uid === user?.uid;
+
+  useEffect(() => {
+    if (isStuck && !roundAttemptedRef.current) {
+      nextRound();
+    }
+  }, [isStuck, nextRound]);
+
   return {
     isLoading,
     isFirstTime,
-    loadingNext: loadingNext || match?.status === 'LOADING',
+    loadingNext: loadingNext || (match?.status === 'LOADING' && !roundFailed),
     match,
     reload,
     nextRound,

@@ -90,6 +90,26 @@ export async function saveProfile({
 }
 
 /**
+ * Recria o documento de quem tem nick na sessão, mas não tem perfil no banco:
+ * acontece quando a gravação falha depois do login, e sem isso o jogador fica
+ * sem nome e sem controle da própria partida.
+ */
+export async function ensureProfile(user: UserType): Promise<void> {
+  if (CACHE[user.uid]) {
+    return;
+  }
+
+  const saved = await getAny<UserType>(usersCollection, user.uid);
+
+  if (saved.uid) {
+    putOnCache(user.uid, saved);
+    return;
+  }
+
+  await saveProfile(user);
+}
+
+/**
  * Leitura de perfil com cache. Use em qualquer lugar que só precise
  * exibir o usuário (nome, ícone).
  */
@@ -109,7 +129,9 @@ export async function getUser(id: string): Promise<UserType> {
   const promise = getAny<UserType>(usersCollection, id)
     .then((user) => {
       putOnCache(id, user);
-      return user;
+
+      // Sem documento, o jogador continua na partida: o uid vem da referência.
+      return user.uid ? user : { uid: id, displayName: null, photoURL: null };
     })
     .finally(() => {
       PENDING.delete(id);

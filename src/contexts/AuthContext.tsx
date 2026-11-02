@@ -16,7 +16,7 @@ import {
 } from 'react';
 
 import { auth } from '@/firebase/config';
-import { saveProfile } from '@/services/users';
+import { ensureProfile, saveProfile } from '@/services/users';
 
 export interface Profile {
   nick: string;
@@ -54,6 +54,12 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser ? toUser(firebaseUser) : ({} as UserType));
       setIsLoading(false);
+
+      if (firebaseUser?.displayName) {
+        ensureProfile(toUser(firebaseUser)).catch((error) => {
+          console.error('error', error);
+        });
+      }
     });
 
     return unsubscribe;
@@ -63,11 +69,17 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
     const firebaseUser =
       auth.currentUser || (await signInAnonymously(auth)).user;
 
-    await updateProfile(firebaseUser, { displayName: nick, photoURL: avatar });
+    const profile = {
+      uid: firebaseUser.uid,
+      displayName: nick,
+      photoURL: avatar,
+    };
 
-    const profile = toUser(firebaseUser);
-
+    // Primeiro o banco: com o nick na sessão, o formulário não aparece de novo,
+    // e uma falha aqui deixaria o jogador sem perfil.
     await saveProfile(profile);
+
+    await updateProfile(firebaseUser, { displayName: nick, photoURL: avatar });
 
     // `updateProfile` não dispara `onAuthStateChanged`.
     setUser(profile);

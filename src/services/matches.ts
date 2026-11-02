@@ -307,7 +307,12 @@ export async function sortPlayersDecks({
 const pickedQuestionsIds = new Set<string>();
 
 export async function createNewActiveRoundToMatch(id: string): Promise<void> {
-  await calculateMatchChanges(id);
+  const { status: previousStatus } = await getMatch(id);
+
+  // Em `LOADING`, os pontos já foram somados por uma tentativa que falhou.
+  if (previousStatus !== 'LOADING') {
+    await calculateMatchChanges(id);
+  }
 
   const matchDoc = doc(matchesCollection, id);
 
