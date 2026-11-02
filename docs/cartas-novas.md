@@ -2,7 +2,7 @@
 
 Cartas autorais, separadas do baralho original, em `src/data/cards-extra.json`. Para cortar uma carta, apague a entrada desse arquivo: nenhum outro lugar depende dela, e partidas em andamento mostram "Carta indisponível" no lugar.
 
-## Perguntas (60)
+## Perguntas (85)
 
 - `extra-b001` Meu terapeuta pediu demissão depois que contei sobre [?].
 - `extra-b002` O que a minha família chama de "fase", o juiz chama de [?].
@@ -64,8 +64,33 @@ Cartas autorais, separadas do baralho original, em `src/data/cards-extra.json`. 
 - `extra-b058` O último desejo do condenado foi [?].
 - `extra-b059` Minha carreira acabou no dia em que mandei para o grupo errado [?].
 - `extra-b060` O que eu faria com um milhão de reais e nenhuma consequência?
+- `extra-b061` O que o nazista descobriu no teste de DNA?
+- `extra-b062` Meu avô lutou na guerra e a única coisa que trouxe de lá foi [?].
+- `extra-b063` Segundo o tio do churrasco, na ditadura não tinha [?].
+- `extra-b064` O que sobrou da minha fé depois de [?]?
+- `extra-b065` O oncologista respirou fundo e disse: "Olha, pelo menos agora você tem [?]".
+- `extra-b066` Não sou racista, até tenho [?].
+- `extra-b067` Não sou machista, só acho que [?].
+- `extra-b068` A Santa Inquisição queimou minha tia por causa de [?].
+- `extra-b069` O que os conquistadores trouxeram junto com a varíola?
+- `extra-b070` Minha árvore genealógica virou um círculo por causa de [?].
+- `extra-b071` Hitler largou a pintura para se dedicar a [?].
+- `extra-b072` O que o carrasco pediu antes de puxar a alavanca?
+- `extra-b073` Depois de três dias morto, Jesus voltou só para reclamar de [?].
+- `extra-b074` Quando o homem-bomba apertou o botão, o que saiu foi [?].
+- `extra-b075` O legista anotou: "Nunca vi [?] enfiado em [?]".
+- `extra-b076` Deus criou o mundo em seis dias e, no sétimo, criou [?] de birra.
+- `extra-b077` O que o serial killer colocou na seção de hobbies do currículo?
+- `extra-b078` Meu psiquiatra pediu que eu parasse de rir de [?] em velórios.
+- `extra-b079` Bem-vindo ao Tribunal de Haia. O réu é acusado de crimes de guerra e [?].
+- `extra-b080` Minha mãe sempre disse que fui um acidente, igual a [?].
+- `extra-b081` Fiz as pazes com a morte depois de [?].
+- `extra-b082` Manchete de hoje: pastor é preso com R$ 2 milhões, três amantes e [?].
+- `extra-b083` O que tem dentro da mala que o general enterrou em 1971?
+- `extra-b084` A fila do transplante andou depois de [?].
+- `extra-b085` Como eu pretendo explicar [?] para a minha mãe?
 
-## Respostas (236)
+## Respostas (344)
 
 - `extra-w001` Chorar no banheiro da firma em horário comercial.
 - `extra-w002` Um boleto vencido com juros emocionais.
@@ -150,7 +175,6 @@ Cartas autorais, separadas do baralho original, em `src/data/cards-extra.json`. 
 - `extra-w081` Um cafezinho de R$ 38.
 - `extra-w082` O preço do ovo.
 - `extra-w083` Um político honesto, segundo ele mesmo.
-- `extra-w084` Dinheiro na cueca.
 - `extra-w085` Uma CPI que termina em pizza e com direito a borda recheada.
 - `extra-w086` Um santinho de candidato colado no para-brisa do carro funerário.
 - `extra-w087` A obra que está sendo inaugurada pela quarta vez.
@@ -303,3 +327,112 @@ Cartas autorais, separadas do baralho original, em `src/data/cards-extra.json`. 
 - `extra-w234` O vazio existencial que nem o Pix resolve.
 - `extra-w235` Rir para não chorar, e acabar fazendo os dois no ônibus.
 - `extra-w236` Ser picado por um mosquito da dengue que pediu desculpas depois.
+- `extra-w237` Um racista jurando que tem um amigo negro.
+- `extra-w238` O amigo negro do racista pedindo para sair dessa história.
+- `extra-w239` Um nazista descobrindo no teste de DNA que é 12% judeu.
+- `extra-w240` Um supremacista branco reprovado em interpretação de texto.
+- `extra-w241` Um neonazista que mora com a mãe e apanha dela.
+- `extra-w242` Uma suástica tatuada ao contrário por falta de atenção.
+- `extra-w243` Um skinhead com implante capilar.
+- `extra-w244` Um homofóbico com a aba anônima sempre aberta.
+- `extra-w245` Um pastor homofóbico com cinco estrelas no Grindr.
+- `extra-w246` O machão que desmaia na hora de tirar sangue.
+- `extra-w247` Um redpill virgem de 37 anos vendendo curso de sedução.
+- `extra-w248` Um machista sustentado pela mãe.
+- `extra-w249` O cara do "no meu tempo não tinha depressão" tomando Rivotril escondido.
+- `extra-w250` Um xenofóbico cuja bisavó chegou de navio sem documento.
+- `extra-w251` Um herdeiro de engenho explicando meritocracia.
+- `extra-w252` Um sinhozinho reclamando da CLT.
+- `extra-w253` Um bilionário pedindo sacrifício aos funcionários.
+- `extra-w254` Um fascista reclamando de censura.
+- `extra-w255` Um patriota pedindo intervenção na porta do quartel debaixo de chuva.
+- `extra-w256` Pedir intervenção militar aos extraterrestres com a lanterna do celular.
+- `extra-w257` "Sou cristão" na bio de quem odeia todo mundo.
+- `extra-w258` Um cidadão de bem com três medidas protetivas.
+- `extra-w259` Um eugenista feio pra caralho.
+- `extra-w260` Ter orgulho da raça e nenhum motivo pessoal.
+- `extra-w261` Hitler reprovado de novo na escola de artes.
+- `extra-w262` O bigode do Hitler voltando à moda.
+- `extra-w263` A lista de casamento do Goebbels.
+- `extra-w264` Um bunker com Wi-Fi ruim nos últimos dias da guerra.
+- `extra-w265` Stalin demitindo o RH inteiro.
+- `extra-w266` Um expurgo corporativo.
+- `extra-w267` Um gulag com café da manhã incluso.
+- `extra-w268` Terminar pendurado de cabeça para baixo num posto de gasolina.
+- `extra-w269` Um genocídio com quatro estrelas no Google.
+- `extra-w270` Um crime de guerra com nota fiscal.
+- `extra-w271` Cabral pedindo a senha do Wi-Fi da aldeia.
+- `extra-w272` Trocar um espelhinho por um continente.
+- `extra-w273` Catequizar à base de varíola.
+- `extra-w274` Um pau de arara com apoio lombar.
+- `extra-w275` O tio do churrasco com saudade de uma ditadura que ele nem viu.
+- `extra-w276` Um torturador aposentado dando aula de ética.
+- `extra-w277` A Inquisição com pesquisa de satisfação.
+- `extra-w278` Uma fogueira de bruxa com música ao vivo.
+- `extra-w279` A peste negra como oportunidade de networking.
+- `extra-w280` A guilhotina como solução para enxaqueca.
+- `extra-w281` Um homem-bomba com defeito de fabricação.
+- `extra-w282` Um homem-bomba que leu as letrinhas miúdas das 72 virgens.
+- `extra-w283` Um drone errando o endereço do casamento.
+- `extra-w284` Uma mina terrestre no quintal como alternativa ao cachorro.
+- `extra-w285` Um ditador com plano de previdência.
+- `extra-w286` Um câncer terminal com programa de pontos.
+- `extra-w287` Receber o diagnóstico e perguntar se dá para parcelar.
+- `extra-w288` A quimioterapia como método de emagrecimento.
+- `extra-w289` Perder o cabelo e o convênio na mesma semana.
+- `extra-w290` Uma metástase com espírito empreendedor.
+- `extra-w291` Um AVC bem no meio do "eu te".
+- `extra-w292` Um derrame em pleno pedido de desculpas.
+- `extra-w293` Desligar os aparelhos para carregar o celular.
+- `extra-w294` Disputar a herança com o corpo ainda quente.
+- `extra-w295` Cremar o vovô e usar as cinzas na horta.
+- `extra-w296` Um velório de caixão fechado por causa de um liquidificador industrial.
+- `extra-w297` Um rim vendido na OLX com avaliação positiva.
+- `extra-w298` Um fígado com cirrose ainda pedindo a saideira.
+- `extra-w299` Torcer por um feriadão de motos na fila do transplante.
+- `extra-w300` Uma perna amputada com síndrome de abandono.
+- `extra-w301` Um dedo decepado na salada.
+- `extra-w302` Um legista comendo durante a autópsia.
+- `extra-w303` Um coveiro com meta de vendas.
+- `extra-w304` Deixar a mãe no asilo e mudar de telefone.
+- `extra-w305` Esquecer a avó no shopping de propósito.
+- `extra-w306` Usar a morte do pai para faltar ao trabalho pela terceira vez.
+- `extra-w307` Rir no velório da própria mãe.
+- `extra-w308` Uma depressão tão grande que ganhou CEP.
+- `extra-w309` Um necrófilo reclamando da falta de iniciativa da parceira.
+- `extra-w310` Uma cabra com medida protetiva.
+- `extra-w311` Uma árvore genealógica em formato de círculo.
+- `extra-w312` Descobrir no chá de panela que a noiva é sua prima de primeiro grau.
+- `extra-w313` Trair com a sogra e ser elogiado pela técnica.
+- `extra-w314` Um dildo preso e um médico de plantão muito entediado.
+- `extra-w315` O raio X mostrando um controle remoto onde não devia.
+- `extra-w316` Pedir ao bombeiro para tirar a aliança do lugar errado.
+- `extra-w317` Uma orgia com lista de presença.
+- `extra-w318` Uma suruba de condomínio com rateio das despesas.
+- `extra-w319` Um swing que terminou em usucapião.
+- `extra-w320` Gonorreia com programa de indicação.
+- `extra-w321` Pegar sífilis no retiro espiritual.
+- `extra-w322` Levar uma surra de pica da vida.
+- `extra-w323` Um fetiche por declaração de imposto.
+- `extra-w324` Cagar durante o anal e culpar o cachorro.
+- `extra-w325` Mijar na cama do sogro e culpar a religião.
+- `extra-w326` Um cu com experiência internacional.
+- `extra-w327` Sexo de luto em cima do caixão.
+- `extra-w328` Jesus voltando e sendo barrado na igreja por causa da roupa.
+- `extra-w329` Um pastor curando câncer no Pix.
+- `extra-w330` Uma igreja com CNPJ em nome do cachorro.
+- `extra-w331` Deus deixando você no vácuo desde 1998.
+- `extra-w332` O Espírito Santo baixando na hora errada.
+- `extra-w333` Um dízimo descontado em folha.
+- `extra-w334` Um anjo da guarda afastado pelo INSS.
+- `extra-w335` A Virgem Maria pedindo teste de paternidade.
+- `extra-w336` Uma bala perdida com endereço certo.
+- `extra-w337` Um kit flagrante de bolso.
+- `extra-w338` O auto de resistência de quem estava dormindo.
+- `extra-w339` Uma milícia com plano família.
+- `extra-w340` Um político preso com dinheiro no último lugar que você imagina.
+- `extra-w341` A cracolândia como polo de startups.
+- `extra-w342` Uma rachadinha no dízimo.
+- `extra-w343` Um juiz vendendo sentença em parcelas sem juros.
+- `extra-w344` Um golpe de Estado remarcado por causa do churrasco.
+- `extra-w345` A desigualdade social vista da cobertura, com vinho.

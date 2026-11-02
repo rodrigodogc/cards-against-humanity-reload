@@ -415,11 +415,6 @@
     "message": "Um político honesto, segundo ele mesmo."
   },
   {
-    "id": "extra-w084",
-    "type": "WHITE",
-    "message": "Dinheiro na cueca."
-  },
-  {
     "id": "extra-w085",
     "type": "WHITE",
     "message": "Uma CPI que termina em pizza e com direito a borda recheada."
@@ -1180,6 +1175,551 @@
     "message": "Ser picado por um mosquito da dengue que pediu desculpas depois."
   },
   {
+    "id": "extra-w237",
+    "type": "WHITE",
+    "message": "Um racista jurando que tem um amigo negro."
+  },
+  {
+    "id": "extra-w238",
+    "type": "WHITE",
+    "message": "O amigo negro do racista pedindo para sair dessa história."
+  },
+  {
+    "id": "extra-w239",
+    "type": "WHITE",
+    "message": "Um nazista descobrindo no teste de DNA que é 12% judeu."
+  },
+  {
+    "id": "extra-w240",
+    "type": "WHITE",
+    "message": "Um supremacista branco reprovado em interpretação de texto."
+  },
+  {
+    "id": "extra-w241",
+    "type": "WHITE",
+    "message": "Um neonazista que mora com a mãe e apanha dela."
+  },
+  {
+    "id": "extra-w242",
+    "type": "WHITE",
+    "message": "Uma suástica tatuada ao contrário por falta de atenção."
+  },
+  {
+    "id": "extra-w243",
+    "type": "WHITE",
+    "message": "Um skinhead com implante capilar."
+  },
+  {
+    "id": "extra-w244",
+    "type": "WHITE",
+    "message": "Um homofóbico com a aba anônima sempre aberta."
+  },
+  {
+    "id": "extra-w245",
+    "type": "WHITE",
+    "message": "Um pastor homofóbico com cinco estrelas no Grindr."
+  },
+  {
+    "id": "extra-w246",
+    "type": "WHITE",
+    "message": "O machão que desmaia na hora de tirar sangue."
+  },
+  {
+    "id": "extra-w247",
+    "type": "WHITE",
+    "message": "Um redpill virgem de 37 anos vendendo curso de sedução."
+  },
+  {
+    "id": "extra-w248",
+    "type": "WHITE",
+    "message": "Um machista sustentado pela mãe."
+  },
+  {
+    "id": "extra-w249",
+    "type": "WHITE",
+    "message": "O cara do \"no meu tempo não tinha depressão\" tomando Rivotril escondido."
+  },
+  {
+    "id": "extra-w250",
+    "type": "WHITE",
+    "message": "Um xenofóbico cuja bisavó chegou de navio sem documento."
+  },
+  {
+    "id": "extra-w251",
+    "type": "WHITE",
+    "message": "Um herdeiro de engenho explicando meritocracia."
+  },
+  {
+    "id": "extra-w252",
+    "type": "WHITE",
+    "message": "Um sinhozinho reclamando da CLT."
+  },
+  {
+    "id": "extra-w253",
+    "type": "WHITE",
+    "message": "Um bilionário pedindo sacrifício aos funcionários."
+  },
+  {
+    "id": "extra-w254",
+    "type": "WHITE",
+    "message": "Um fascista reclamando de censura."
+  },
+  {
+    "id": "extra-w255",
+    "type": "WHITE",
+    "message": "Um patriota pedindo intervenção na porta do quartel debaixo de chuva."
+  },
+  {
+    "id": "extra-w256",
+    "type": "WHITE",
+    "message": "Pedir intervenção militar aos extraterrestres com a lanterna do celular."
+  },
+  {
+    "id": "extra-w257",
+    "type": "WHITE",
+    "message": "\"Sou cristão\" na bio de quem odeia todo mundo."
+  },
+  {
+    "id": "extra-w258",
+    "type": "WHITE",
+    "message": "Um cidadão de bem com três medidas protetivas."
+  },
+  {
+    "id": "extra-w259",
+    "type": "WHITE",
+    "message": "Um eugenista feio pra caralho."
+  },
+  {
+    "id": "extra-w260",
+    "type": "WHITE",
+    "message": "Ter orgulho da raça e nenhum motivo pessoal."
+  },
+  {
+    "id": "extra-w261",
+    "type": "WHITE",
+    "message": "Hitler reprovado de novo na escola de artes."
+  },
+  {
+    "id": "extra-w262",
+    "type": "WHITE",
+    "message": "O bigode do Hitler voltando à moda."
+  },
+  {
+    "id": "extra-w263",
+    "type": "WHITE",
+    "message": "A lista de casamento do Goebbels."
+  },
+  {
+    "id": "extra-w264",
+    "type": "WHITE",
+    "message": "Um bunker com Wi-Fi ruim nos últimos dias da guerra."
+  },
+  {
+    "id": "extra-w265",
+    "type": "WHITE",
+    "message": "Stalin demitindo o RH inteiro."
+  },
+  {
+    "id": "extra-w266",
+    "type": "WHITE",
+    "message": "Um expurgo corporativo."
+  },
+  {
+    "id": "extra-w267",
+    "type": "WHITE",
+    "message": "Um gulag com café da manhã incluso."
+  },
+  {
+    "id": "extra-w268",
+    "type": "WHITE",
+    "message": "Terminar pendurado de cabeça para baixo num posto de gasolina."
+  },
+  {
+    "id": "extra-w269",
+    "type": "WHITE",
+    "message": "Um genocídio com quatro estrelas no Google."
+  },
+  {
+    "id": "extra-w270",
+    "type": "WHITE",
+    "message": "Um crime de guerra com nota fiscal."
+  },
+  {
+    "id": "extra-w271",
+    "type": "WHITE",
+    "message": "Cabral pedindo a senha do Wi-Fi da aldeia."
+  },
+  {
+    "id": "extra-w272",
+    "type": "WHITE",
+    "message": "Trocar um espelhinho por um continente."
+  },
+  {
+    "id": "extra-w273",
+    "type": "WHITE",
+    "message": "Catequizar à base de varíola."
+  },
+  {
+    "id": "extra-w274",
+    "type": "WHITE",
+    "message": "Um pau de arara com apoio lombar."
+  },
+  {
+    "id": "extra-w275",
+    "type": "WHITE",
+    "message": "O tio do churrasco com saudade de uma ditadura que ele nem viu."
+  },
+  {
+    "id": "extra-w276",
+    "type": "WHITE",
+    "message": "Um torturador aposentado dando aula de ética."
+  },
+  {
+    "id": "extra-w277",
+    "type": "WHITE",
+    "message": "A Inquisição com pesquisa de satisfação."
+  },
+  {
+    "id": "extra-w278",
+    "type": "WHITE",
+    "message": "Uma fogueira de bruxa com música ao vivo."
+  },
+  {
+    "id": "extra-w279",
+    "type": "WHITE",
+    "message": "A peste negra como oportunidade de networking."
+  },
+  {
+    "id": "extra-w280",
+    "type": "WHITE",
+    "message": "A guilhotina como solução para enxaqueca."
+  },
+  {
+    "id": "extra-w281",
+    "type": "WHITE",
+    "message": "Um homem-bomba com defeito de fabricação."
+  },
+  {
+    "id": "extra-w282",
+    "type": "WHITE",
+    "message": "Um homem-bomba que leu as letrinhas miúdas das 72 virgens."
+  },
+  {
+    "id": "extra-w283",
+    "type": "WHITE",
+    "message": "Um drone errando o endereço do casamento."
+  },
+  {
+    "id": "extra-w284",
+    "type": "WHITE",
+    "message": "Uma mina terrestre no quintal como alternativa ao cachorro."
+  },
+  {
+    "id": "extra-w285",
+    "type": "WHITE",
+    "message": "Um ditador com plano de previdência."
+  },
+  {
+    "id": "extra-w286",
+    "type": "WHITE",
+    "message": "Um câncer terminal com programa de pontos."
+  },
+  {
+    "id": "extra-w287",
+    "type": "WHITE",
+    "message": "Receber o diagnóstico e perguntar se dá para parcelar."
+  },
+  {
+    "id": "extra-w288",
+    "type": "WHITE",
+    "message": "A quimioterapia como método de emagrecimento."
+  },
+  {
+    "id": "extra-w289",
+    "type": "WHITE",
+    "message": "Perder o cabelo e o convênio na mesma semana."
+  },
+  {
+    "id": "extra-w290",
+    "type": "WHITE",
+    "message": "Uma metástase com espírito empreendedor."
+  },
+  {
+    "id": "extra-w291",
+    "type": "WHITE",
+    "message": "Um AVC bem no meio do \"eu te\"."
+  },
+  {
+    "id": "extra-w292",
+    "type": "WHITE",
+    "message": "Um derrame em pleno pedido de desculpas."
+  },
+  {
+    "id": "extra-w293",
+    "type": "WHITE",
+    "message": "Desligar os aparelhos para carregar o celular."
+  },
+  {
+    "id": "extra-w294",
+    "type": "WHITE",
+    "message": "Disputar a herança com o corpo ainda quente."
+  },
+  {
+    "id": "extra-w295",
+    "type": "WHITE",
+    "message": "Cremar o vovô e usar as cinzas na horta."
+  },
+  {
+    "id": "extra-w296",
+    "type": "WHITE",
+    "message": "Um velório de caixão fechado por causa de um liquidificador industrial."
+  },
+  {
+    "id": "extra-w297",
+    "type": "WHITE",
+    "message": "Um rim vendido na OLX com avaliação positiva."
+  },
+  {
+    "id": "extra-w298",
+    "type": "WHITE",
+    "message": "Um fígado com cirrose ainda pedindo a saideira."
+  },
+  {
+    "id": "extra-w299",
+    "type": "WHITE",
+    "message": "Torcer por um feriadão de motos na fila do transplante."
+  },
+  {
+    "id": "extra-w300",
+    "type": "WHITE",
+    "message": "Uma perna amputada com síndrome de abandono."
+  },
+  {
+    "id": "extra-w301",
+    "type": "WHITE",
+    "message": "Um dedo decepado na salada."
+  },
+  {
+    "id": "extra-w302",
+    "type": "WHITE",
+    "message": "Um legista comendo durante a autópsia."
+  },
+  {
+    "id": "extra-w303",
+    "type": "WHITE",
+    "message": "Um coveiro com meta de vendas."
+  },
+  {
+    "id": "extra-w304",
+    "type": "WHITE",
+    "message": "Deixar a mãe no asilo e mudar de telefone."
+  },
+  {
+    "id": "extra-w305",
+    "type": "WHITE",
+    "message": "Esquecer a avó no shopping de propósito."
+  },
+  {
+    "id": "extra-w306",
+    "type": "WHITE",
+    "message": "Usar a morte do pai para faltar ao trabalho pela terceira vez."
+  },
+  {
+    "id": "extra-w307",
+    "type": "WHITE",
+    "message": "Rir no velório da própria mãe."
+  },
+  {
+    "id": "extra-w308",
+    "type": "WHITE",
+    "message": "Uma depressão tão grande que ganhou CEP."
+  },
+  {
+    "id": "extra-w309",
+    "type": "WHITE",
+    "message": "Um necrófilo reclamando da falta de iniciativa da parceira."
+  },
+  {
+    "id": "extra-w310",
+    "type": "WHITE",
+    "message": "Uma cabra com medida protetiva."
+  },
+  {
+    "id": "extra-w311",
+    "type": "WHITE",
+    "message": "Uma árvore genealógica em formato de círculo."
+  },
+  {
+    "id": "extra-w312",
+    "type": "WHITE",
+    "message": "Descobrir no chá de panela que a noiva é sua prima de primeiro grau."
+  },
+  {
+    "id": "extra-w313",
+    "type": "WHITE",
+    "message": "Trair com a sogra e ser elogiado pela técnica."
+  },
+  {
+    "id": "extra-w314",
+    "type": "WHITE",
+    "message": "Um dildo preso e um médico de plantão muito entediado."
+  },
+  {
+    "id": "extra-w315",
+    "type": "WHITE",
+    "message": "O raio X mostrando um controle remoto onde não devia."
+  },
+  {
+    "id": "extra-w316",
+    "type": "WHITE",
+    "message": "Pedir ao bombeiro para tirar a aliança do lugar errado."
+  },
+  {
+    "id": "extra-w317",
+    "type": "WHITE",
+    "message": "Uma orgia com lista de presença."
+  },
+  {
+    "id": "extra-w318",
+    "type": "WHITE",
+    "message": "Uma suruba de condomínio com rateio das despesas."
+  },
+  {
+    "id": "extra-w319",
+    "type": "WHITE",
+    "message": "Um swing que terminou em usucapião."
+  },
+  {
+    "id": "extra-w320",
+    "type": "WHITE",
+    "message": "Gonorreia com programa de indicação."
+  },
+  {
+    "id": "extra-w321",
+    "type": "WHITE",
+    "message": "Pegar sífilis no retiro espiritual."
+  },
+  {
+    "id": "extra-w322",
+    "type": "WHITE",
+    "message": "Levar uma surra de pica da vida."
+  },
+  {
+    "id": "extra-w323",
+    "type": "WHITE",
+    "message": "Um fetiche por declaração de imposto."
+  },
+  {
+    "id": "extra-w324",
+    "type": "WHITE",
+    "message": "Cagar durante o anal e culpar o cachorro."
+  },
+  {
+    "id": "extra-w325",
+    "type": "WHITE",
+    "message": "Mijar na cama do sogro e culpar a religião."
+  },
+  {
+    "id": "extra-w326",
+    "type": "WHITE",
+    "message": "Um cu com experiência internacional."
+  },
+  {
+    "id": "extra-w327",
+    "type": "WHITE",
+    "message": "Sexo de luto em cima do caixão."
+  },
+  {
+    "id": "extra-w328",
+    "type": "WHITE",
+    "message": "Jesus voltando e sendo barrado na igreja por causa da roupa."
+  },
+  {
+    "id": "extra-w329",
+    "type": "WHITE",
+    "message": "Um pastor curando câncer no Pix."
+  },
+  {
+    "id": "extra-w330",
+    "type": "WHITE",
+    "message": "Uma igreja com CNPJ em nome do cachorro."
+  },
+  {
+    "id": "extra-w331",
+    "type": "WHITE",
+    "message": "Deus deixando você no vácuo desde 1998."
+  },
+  {
+    "id": "extra-w332",
+    "type": "WHITE",
+    "message": "O Espírito Santo baixando na hora errada."
+  },
+  {
+    "id": "extra-w333",
+    "type": "WHITE",
+    "message": "Um dízimo descontado em folha."
+  },
+  {
+    "id": "extra-w334",
+    "type": "WHITE",
+    "message": "Um anjo da guarda afastado pelo INSS."
+  },
+  {
+    "id": "extra-w335",
+    "type": "WHITE",
+    "message": "A Virgem Maria pedindo teste de paternidade."
+  },
+  {
+    "id": "extra-w336",
+    "type": "WHITE",
+    "message": "Uma bala perdida com endereço certo."
+  },
+  {
+    "id": "extra-w337",
+    "type": "WHITE",
+    "message": "Um kit flagrante de bolso."
+  },
+  {
+    "id": "extra-w338",
+    "type": "WHITE",
+    "message": "O auto de resistência de quem estava dormindo."
+  },
+  {
+    "id": "extra-w339",
+    "type": "WHITE",
+    "message": "Uma milícia com plano família."
+  },
+  {
+    "id": "extra-w340",
+    "type": "WHITE",
+    "message": "Um político preso com dinheiro no último lugar que você imagina."
+  },
+  {
+    "id": "extra-w341",
+    "type": "WHITE",
+    "message": "A cracolândia como polo de startups."
+  },
+  {
+    "id": "extra-w342",
+    "type": "WHITE",
+    "message": "Uma rachadinha no dízimo."
+  },
+  {
+    "id": "extra-w343",
+    "type": "WHITE",
+    "message": "Um juiz vendendo sentença em parcelas sem juros."
+  },
+  {
+    "id": "extra-w344",
+    "type": "WHITE",
+    "message": "Um golpe de Estado remarcado por causa do churrasco."
+  },
+  {
+    "id": "extra-w345",
+    "type": "WHITE",
+    "message": "A desigualdade social vista da cobertura, com vinho."
+  },
+  {
     "id": "extra-b001",
     "type": "BLACK",
     "message": "Meu terapeuta pediu demissão depois que contei sobre [?]."
@@ -1478,5 +2018,130 @@
     "id": "extra-b060",
     "type": "BLACK",
     "message": "O que eu faria com um milhão de reais e nenhuma consequência?"
+  },
+  {
+    "id": "extra-b061",
+    "type": "BLACK",
+    "message": "O que o nazista descobriu no teste de DNA?"
+  },
+  {
+    "id": "extra-b062",
+    "type": "BLACK",
+    "message": "Meu avô lutou na guerra e a única coisa que trouxe de lá foi [?]."
+  },
+  {
+    "id": "extra-b063",
+    "type": "BLACK",
+    "message": "Segundo o tio do churrasco, na ditadura não tinha [?]."
+  },
+  {
+    "id": "extra-b064",
+    "type": "BLACK",
+    "message": "O que sobrou da minha fé depois de [?]?"
+  },
+  {
+    "id": "extra-b065",
+    "type": "BLACK",
+    "message": "O oncologista respirou fundo e disse: \"Olha, pelo menos agora você tem [?]\"."
+  },
+  {
+    "id": "extra-b066",
+    "type": "BLACK",
+    "message": "Não sou racista, até tenho [?]."
+  },
+  {
+    "id": "extra-b067",
+    "type": "BLACK",
+    "message": "Não sou machista, só acho que [?]."
+  },
+  {
+    "id": "extra-b068",
+    "type": "BLACK",
+    "message": "A Santa Inquisição queimou minha tia por causa de [?]."
+  },
+  {
+    "id": "extra-b069",
+    "type": "BLACK",
+    "message": "O que os conquistadores trouxeram junto com a varíola?"
+  },
+  {
+    "id": "extra-b070",
+    "type": "BLACK",
+    "message": "Minha árvore genealógica virou um círculo por causa de [?]."
+  },
+  {
+    "id": "extra-b071",
+    "type": "BLACK",
+    "message": "Hitler largou a pintura para se dedicar a [?]."
+  },
+  {
+    "id": "extra-b072",
+    "type": "BLACK",
+    "message": "O que o carrasco pediu antes de puxar a alavanca?"
+  },
+  {
+    "id": "extra-b073",
+    "type": "BLACK",
+    "message": "Depois de três dias morto, Jesus voltou só para reclamar de [?]."
+  },
+  {
+    "id": "extra-b074",
+    "type": "BLACK",
+    "message": "Quando o homem-bomba apertou o botão, o que saiu foi [?]."
+  },
+  {
+    "id": "extra-b075",
+    "type": "BLACK",
+    "message": "O legista anotou: \"Nunca vi [?] enfiado em [?]\"."
+  },
+  {
+    "id": "extra-b076",
+    "type": "BLACK",
+    "message": "Deus criou o mundo em seis dias e, no sétimo, criou [?] de birra."
+  },
+  {
+    "id": "extra-b077",
+    "type": "BLACK",
+    "message": "O que o serial killer colocou na seção de hobbies do currículo?"
+  },
+  {
+    "id": "extra-b078",
+    "type": "BLACK",
+    "message": "Meu psiquiatra pediu que eu parasse de rir de [?] em velórios."
+  },
+  {
+    "id": "extra-b079",
+    "type": "BLACK",
+    "message": "Bem-vindo ao Tribunal de Haia. O réu é acusado de crimes de guerra e [?]."
+  },
+  {
+    "id": "extra-b080",
+    "type": "BLACK",
+    "message": "Minha mãe sempre disse que fui um acidente, igual a [?]."
+  },
+  {
+    "id": "extra-b081",
+    "type": "BLACK",
+    "message": "Fiz as pazes com a morte depois de [?]."
+  },
+  {
+    "id": "extra-b082",
+    "type": "BLACK",
+    "message": "Manchete de hoje: pastor é preso com R$ 2 milhões, três amantes e [?]."
+  },
+  {
+    "id": "extra-b083",
+    "type": "BLACK",
+    "message": "O que tem dentro da mala que o general enterrou em 1971?"
+  },
+  {
+    "id": "extra-b084",
+    "type": "BLACK",
+    "message": "A fila do transplante andou depois de [?]."
+  },
+  {
+    "id": "extra-b085",
+    "type": "BLACK",
+    "message": "Como eu pretendo explicar [?] para a minha mãe?"
   }
 ]
