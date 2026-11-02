@@ -58,7 +58,7 @@ npm run deploy:rules
 ### 2. Vercel
 
 1. Importe o seu repositório. O preset Vite é detectado sozinho.
-2. Em **Environment Variables**, cadastre as variáveis de `.env.example` com os valores do passo anterior. Deixe `VITE_USE_EMULATORS` de fora.
+2. Em **Environment Variables**, cadastre as variáveis de `.env.example` com os valores do passo anterior. Deixe `VITE_USE_EMULATORS` de fora. Sem as variáveis, a build falha de propósito.
 3. Faça o deploy.
 4. No Firebase, em **Authentication > Settings > Authorized domains**, adicione o domínio da Vercel.
 

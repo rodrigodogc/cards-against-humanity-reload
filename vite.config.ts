@@ -1,8 +1,31 @@
 import path from 'node:path';
 
 import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
+import { defineConfig, Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+
+// Sem isso, um deploy mal configurado passa na build e publica uma tela branca.
+function checkFirebaseEnv(): Plugin {
+  return {
+    name: 'check-firebase-env',
+    apply: 'build',
+    configResolved({ env }) {
+      const missing = [
+        'VITE_FIREBASE_API_KEY',
+        'VITE_FIREBASE_PROJECT_ID',
+        'VITE_FIREBASE_APP_ID',
+      ].filter((name) => !env[name]);
+
+      if (missing.length > 0) {
+        throw new Error(`Variáveis ausentes: ${missing.join(', ')}.`);
+      }
+
+      if (process.env.VERCEL && env.VITE_USE_EMULATORS === 'true') {
+        throw new Error('VITE_USE_EMULATORS não pode ser true na Vercel.');
+      }
+    },
+  };
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,6 +40,7 @@ export default defineConfig({
     ],
   },
   plugins: [
+    checkFirebaseEnv(),
     react(),
     VitePWA({
       // A atualização é oferecida em `components/app-status`, nunca forçada:
