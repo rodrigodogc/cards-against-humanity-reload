@@ -1,1 +1,3037 @@
-[]
+[
+  {
+    "id": "0SCDa7ZqMB1qyJIOsZko",
+    "type": "BLACK",
+    "message": "Dizem que em Bangu 3 se troca dez maços de cigarro por [?]."
+  },
+  {
+    "id": "16LuiIrkAVVb82E7nbTg",
+    "type": "WHITE",
+    "message": "Escalpelamento."
+  },
+  {
+    "id": "1ASArCiT4PcM75tQ4Rsp",
+    "type": "WHITE",
+    "message": "Sarah Palin."
+  },
+  {
+    "id": "1dMISNgn36KSk3geJHlT",
+    "type": "WHITE",
+    "message": "Sopa muito quente."
+  },
+  {
+    "id": "1EpuNnunTkHzlnJU5yBv",
+    "type": "WHITE",
+    "message": "Cotas raciais."
+  },
+  {
+    "id": "1fURRkmWSSEzg3SkqUYe",
+    "type": "WHITE",
+    "message": "Pré-adolescentes."
+  },
+  {
+    "id": "1lYfF7b1DBCqIIyu6jLf",
+    "type": "WHITE",
+    "message": "Fungos."
+  },
+  {
+    "id": "1VmTbGbFP6baRhbLWCi4",
+    "type": "WHITE",
+    "message": "Design Inteligente."
+  },
+  {
+    "id": "1Vo5RzjGZXw1xFD0kAav",
+    "type": "WHITE",
+    "message": "Filhotes de cachorro."
+  },
+  {
+    "id": "1Xdu6st81XW2lodLLrqQ",
+    "type": "BLACK",
+    "message": "Por que não consigo dormir à noite?"
+  },
+  {
+    "id": "2APffEDzSZXOdeWz7A0n",
+    "type": "BLACK",
+    "message": "O que o Vin Diesel teve no jantar?"
+  },
+  {
+    "id": "2GxssHvsYhRH6TU56QBG",
+    "type": "WHITE",
+    "message": "O massacre de Virginia Tech."
+  },
+  {
+    "id": "2itRMxLwAewWXz8oVMyU",
+    "type": "WHITE",
+    "message": "Ser foda."
+  },
+  {
+    "id": "2Mjhj14IYoKkbA1yArBn",
+    "type": "WHITE",
+    "message": "O jogo World of Warcraft."
+  },
+  {
+    "id": "2oKiHBidJbNQWI3H1cKF",
+    "type": "WHITE",
+    "message": "Pôr um ovo."
+  },
+  {
+    "id": "2Qlvm4tfGDUmBGm3ZKD0",
+    "type": "BLACK",
+    "message": "O que me causa gases incontroláveis?"
+  },
+  {
+    "id": "2sbhu2tuAen2fYMAk95Z",
+    "type": "WHITE",
+    "message": "A cabeça de Arthur."
+  },
+  {
+    "id": "2uPfrAQKekvkd1OiN97o",
+    "type": "WHITE",
+    "message": "Keanu Reeves."
+  },
+  {
+    "id": "2yGHg5qhdDITFpFqyv4E",
+    "type": "WHITE",
+    "message": "Os pobres."
+  },
+  {
+    "id": "2Zlvqxw0YXOwPMP7QLjQ",
+    "type": "BLACK",
+    "message": "[?]. Véi, na boa..."
+  },
+  {
+    "id": "30FbnnOfaGk2pFMYO2OM",
+    "type": "WHITE",
+    "message": "Um raio de morte."
+  },
+  {
+    "id": "384PdyhfXwbkoAqHvw6z",
+    "type": "WHITE",
+    "message": "Outro maldito filme sobre vampiros."
+  },
+  {
+    "id": "3CmXDhsnRGpLgJACBk0I",
+    "type": "WHITE",
+    "message": "O entregador de leite."
+  },
+  {
+    "id": "3FbWlyDexbkPJRLGnuTn",
+    "type": "BLACK",
+    "message": "Qual é a próxima dupla de super-herói e ajudante?"
+  },
+  {
+    "id": "3KGc1tAkfRkGe8JiN2G9",
+    "type": "WHITE",
+    "message": "Pais mortos."
+  },
+  {
+    "id": "3kjm6sEsw3Y1dQErhRh7",
+    "type": "WHITE",
+    "message": "Ciência."
+  },
+  {
+    "id": "3NFVmDRUP14tubC0T3ab",
+    "type": "BLACK",
+    "message": "A solidez do meu relacionamento se baseia bastante em [?]."
+  },
+  {
+    "id": "3tpqAClFlciqh9sETKkq",
+    "type": "WHITE",
+    "message": "Uma negra atrevida."
+  },
+  {
+    "id": "4AQxtoVbDkv1nV9xZM4a",
+    "type": "WHITE",
+    "message": "Dois anões cagando num balde."
+  },
+  {
+    "id": "4ECi8mXyQgR46dsaTrK4",
+    "type": "WHITE",
+    "message": "Os braços da Michelle Obama."
+  },
+  {
+    "id": "4eZorsmu33qnEJmr0T2x",
+    "type": "WHITE",
+    "message": "BATMAN!!!"
+  },
+  {
+    "id": "4R5ihedPlU1YFTfmnc3y",
+    "type": "WHITE",
+    "message": "Vadias."
+  },
+  {
+    "id": "4v0HconHLMozdrwk8pRy",
+    "type": "WHITE",
+    "message": "Atleta de olimpíada de matemática."
+  },
+  {
+    "id": "4zcv1N2zpHUYi9rMsKIL",
+    "type": "WHITE",
+    "message": "Um mongoloide vigoroso."
+  },
+  {
+    "id": "537Uaq76H9AnyzA98RMW",
+    "type": "WHITE",
+    "message": "Estupidez incomensurável."
+  },
+  {
+    "id": "53DJj07dK6edyw5THiCO",
+    "type": "WHITE",
+    "message": "Biquíni fio-dental."
+  },
+  {
+    "id": "53P9EtBnYfMygptNSdDc",
+    "type": "WHITE",
+    "message": "Gel de cabelo em excesso."
+  },
+  {
+    "id": "57KXBD6zJglwahZZ8MKg",
+    "type": "WHITE",
+    "message": "Um preservativo defeituoso."
+  },
+  {
+    "id": "5A7fXUi4CThRHWFQ8B5d",
+    "type": "WHITE",
+    "message": "Mamilos protuberantes."
+  },
+  {
+    "id": "5HmwtQRK1mHHooSLhLWi",
+    "type": "WHITE",
+    "message": "Retardados."
+  },
+  {
+    "id": "5nBLQHDoqtr3rPR17SQS",
+    "type": "WHITE",
+    "message": "A loucura do homem."
+  },
+  {
+    "id": "5nQMQJGOKCmZF0SdoGUf",
+    "type": "WHITE",
+    "message": "Ser marginalizado."
+  },
+  {
+    "id": "5nqVtmP92lJ0XpOpLd2y",
+    "type": "WHITE",
+    "message": "Sean Connery."
+  },
+  {
+    "id": "5roUkl5sf6gYpoWVEQmU",
+    "type": "WHITE",
+    "message": "Ataques de velociraptor."
+  },
+  {
+    "id": "5VEs03E7efJhH3cRr2nq",
+    "type": "WHITE",
+    "message": "Cachalotes."
+  },
+  {
+    "id": "5WqW3QVBSUaZVsP8e6HH",
+    "type": "WHITE",
+    "message": "Natalie Portman."
+  },
+  {
+    "id": "5xGgxDWj5pAk9xa0GA3k",
+    "type": "WHITE",
+    "message": "Túneis clandestinos."
+  },
+  {
+    "id": "62O4XcxHSHn4b2HzRJbf",
+    "type": "WHITE",
+    "message": "O Big Bang."
+  },
+  {
+    "id": "62XnN0h1opNdyGMksxpR",
+    "type": "BLACK",
+    "message": "[?]. Tô dentro!"
+  },
+  {
+    "id": "6b2S38VbolCWy34Bkhxv",
+    "type": "WHITE",
+    "message": "Um falcão encapuzado."
+  },
+  {
+    "id": "6bfVjCQR9i3fzD5KIgdy",
+    "type": "WHITE",
+    "message": "Enfiar os polegares nos bolsos feito caipira."
+  },
+  {
+    "id": "6eI8n6ce0vrsZ6gB1MvO",
+    "type": "WHITE",
+    "message": "Um cara de meia-idade andando de patins."
+  },
+  {
+    "id": "6fsFLwmC4HJNpqM5Vv2M",
+    "type": "WHITE",
+    "message": "Gays."
+  },
+  {
+    "id": "6gR8A7taBn4Emh50kel1",
+    "type": "BLACK",
+    "message": "Talvez ela tenha nascido assim. Talvez seja [?]."
+  },
+  {
+    "id": "6H7tf5L0yUM1whqZVR3J",
+    "type": "WHITE",
+    "message": "Felicidade ingênua."
+  },
+  {
+    "id": "6rmSHBjJ98dc04z2lS8E",
+    "type": "WHITE",
+    "message": "Um paradoxo de viagem no tempo."
+  },
+  {
+    "id": "6tXTNyU6CfwQHkhLxXUl",
+    "type": "WHITE",
+    "message": "Um festival da linguiça."
+  },
+  {
+    "id": "6uwjm2JMGDR2AQ9jaHJl",
+    "type": "BLACK",
+    "message": "O que Dwayne \"The Rock\" Johnson come no jantar?"
+  },
+  {
+    "id": "757OzxRF7r4WK6PAJDxo",
+    "type": "WHITE",
+    "message": "Um mímico tendo um AVC."
+  },
+  {
+    "id": "7DNeXi8kC68o9FaYUnMd",
+    "type": "WHITE",
+    "message": "Ser um feiticeiro filho da puta."
+  },
+  {
+    "id": "7EspusuabCxmP65ddTOQ",
+    "type": "BLACK",
+    "message": "Depois do terremoto, o Sean Penn levou [?] ao Haiti."
+  },
+  {
+    "id": "7F25nCM1GiSlSffE8WYm",
+    "type": "WHITE",
+    "message": "Cantar à tirolesa na hora errada."
+  },
+  {
+    "id": "7fPHt697nj0R1mkLSSGQ",
+    "type": "WHITE",
+    "message": "O ex-presidente George W. Bush."
+  },
+  {
+    "id": "7fPLveOBZKp6zE3SZ3XM",
+    "type": "BLACK",
+    "message": "O que você espera não achar em seu prato de comida chinesa?"
+  },
+  {
+    "id": "7fyD2NN4mmFK15IantMC",
+    "type": "BLACK",
+    "message": "Quando anunciaram o Habemus Papam, o escolhido foi [?]."
+  },
+  {
+    "id": "7jGM72D5tKOhf0zxj5wg",
+    "type": "WHITE",
+    "message": "Genghis Khan."
+  },
+  {
+    "id": "7mhhFwSktyMTbqc08tHc",
+    "type": "WHITE",
+    "message": "Flertar."
+  },
+  {
+    "id": "7ND7gW5Az9T4B85V5wD1",
+    "type": "WHITE",
+    "message": "O jeitinho brasileiro."
+  },
+  {
+    "id": "7nSsPWcRLQOcC8EjfQQT",
+    "type": "WHITE",
+    "message": "Aborto clandestino."
+  },
+  {
+    "id": "7oXejhNWOKPl1VnlaCx4",
+    "type": "BLACK",
+    "message": "[?]: quanto mais velho, melhor."
+  },
+  {
+    "id": "7RNEjYclIyf6jf6nbgYE",
+    "type": "BLACK",
+    "message": "Daqui a 1000 anos, quando o dinheiro em papel for uma lembrança distante, [?] será a nossa moeda."
+  },
+  {
+    "id": "7V1KttM5Asy79U0pdCvH",
+    "type": "WHITE",
+    "message": "Maomé (Louvado Seja Seu Nome)."
+  },
+  {
+    "id": "8NHKoHHwMG0Nbe6Gaf0i",
+    "type": "WHITE",
+    "message": "O coração de uma criança."
+  },
+  {
+    "id": "8NLUk6ELdi5E0MvDwUVd",
+    "type": "WHITE",
+    "message": "Minha vagina."
+  },
+  {
+    "id": "8PhUQAAJjsdVSlk7btGf",
+    "type": "WHITE",
+    "message": "Oompa-Loompas."
+  },
+  {
+    "id": "8yoKFEXVqYDVPpPNSQBC",
+    "type": "BLACK",
+    "message": "[?]. É uma armadilha!"
+  },
+  {
+    "id": "8zEoNEIt87KXL93ME8KS",
+    "type": "BLACK",
+    "message": "Em seu último discurso, o que a Dilma disse?"
+  },
+  {
+    "id": "8ZlSpDRUXWy2ICGFGkUS",
+    "type": "WHITE",
+    "message": "Um mar de problemas."
+  },
+  {
+    "id": "95fczzNFqfko788GJxTi",
+    "type": "WHITE",
+    "message": "X-Tudão."
+  },
+  {
+    "id": "98yE9MYlwX1KvFDOjgfi",
+    "type": "WHITE",
+    "message": "Queijo quente."
+  },
+  {
+    "id": "9CqwTTcmxLnaevD2QuP0",
+    "type": "BLACK",
+    "message": "No novo filme da Disney, Hannah Montana enfrenta [?] pela primeira vez."
+  },
+  {
+    "id": "9j5uuGewyXvgt4Gwq6wu",
+    "type": "WHITE",
+    "message": "Ejaculação precoce."
+  },
+  {
+    "id": "9kcNikYQWKjNCaxK9w1D",
+    "type": "WHITE",
+    "message": "Pegar mulher na clínica de aborto."
+  },
+  {
+    "id": "9T2eMXJgkFoU9BJDWGVp",
+    "type": "BLACK",
+    "message": "Desculpe, professora, é que eu não terminei o dever de casa por causa de [?]."
+  },
+  {
+    "id": "9WwV9yrnY3heQJ4srEqU",
+    "type": "WHITE",
+    "message": "Minha coleção de brinquedos sexuais eletrônicos."
+  },
+  {
+    "id": "A0iyHWAsbPoTGFd8bpdE",
+    "type": "BLACK",
+    "message": "O que tira meu sono?"
+  },
+  {
+    "id": "aaWrmRyIvshWOah0ZAQ9",
+    "type": "WHITE",
+    "message": "Faculdade."
+  },
+  {
+    "id": "AbUTqVZCfHwUNJLAPSqT",
+    "type": "WHITE",
+    "message": "Puberdade."
+  },
+  {
+    "id": "ahgQsp6IORjcQZWEYvKl",
+    "type": "WHITE",
+    "message": "Limpeza étnica."
+  },
+  {
+    "id": "AiYN6fg7UOGUgF5Yab1H",
+    "type": "WHITE",
+    "message": "Tétano."
+  },
+  {
+    "id": "ak9TxHXrJ4Jp9mfwXRFQ",
+    "type": "WHITE",
+    "message": "Sexting."
+  },
+  {
+    "id": "akvi6d6nS5EQ7AF0Pq2e",
+    "type": "BLACK",
+    "message": "Por que minha pele está pegajosa?"
+  },
+  {
+    "id": "AO51pnhgbJAqtQbU6e2k",
+    "type": "WHITE",
+    "message": "Dick Cheney."
+  },
+  {
+    "id": "apf8wR5Snp2wpOuXTNAY",
+    "type": "WHITE",
+    "message": "Um pelo pubiano."
+  },
+  {
+    "id": "APJw9PywOI0LZ7TAQtsI",
+    "type": "WHITE",
+    "message": "Uma detonação termonuclear."
+  },
+  {
+    "id": "ARqH4P5gK3muYfTZle4D",
+    "type": "WHITE",
+    "message": "A Força."
+  },
+  {
+    "id": "ASElGlpQIL2qyFkgMQif",
+    "type": "BLACK",
+    "message": "[?]: bom até a última gota."
+  },
+  {
+    "id": "aspR3tgCkpZ1b9wbwAGa",
+    "type": "WHITE",
+    "message": "Hulk Hogan."
+  },
+  {
+    "id": "AT71zfybCCRYluaCjmkZ",
+    "type": "WHITE",
+    "message": "Piscar para idosos."
+  },
+  {
+    "id": "atIsqfZZmltnog05MnXJ",
+    "type": "WHITE",
+    "message": "Ensinar um robô a amar."
+  },
+  {
+    "id": "auX3gapUVMp4xNDlw6Zc",
+    "type": "WHITE",
+    "message": "Esqueleto."
+  },
+  {
+    "id": "axNFm9OHTPw4WdX2aL65",
+    "type": "BLACK",
+    "message": "A seguir, na ESPN2: Campeonato mundial de [?]."
+  },
+  {
+    "id": "aynblv63zHF5QO7e1VpP",
+    "type": "WHITE",
+    "message": "Bufê livre de camarão por R$ 4,99."
+  },
+  {
+    "id": "AzhREfwk17DVqQElKtxF",
+    "type": "BLACK",
+    "message": "[?]. RÁ! Pegadinha do Malandro!"
+  },
+  {
+    "id": "B1UMMBQF7uba0V0I2VIE",
+    "type": "WHITE",
+    "message": "Gansos."
+  },
+  {
+    "id": "b2plc83tg8QJBg6WAYXS",
+    "type": "WHITE",
+    "message": "Coisas poderosas."
+  },
+  {
+    "id": "b7V5ExuC2Gx88TISD9Xr",
+    "type": "WHITE",
+    "message": "Emitir flatos vaginais."
+  },
+  {
+    "id": "BboohwU5tmoiTK9g4Uoh",
+    "type": "BLACK",
+    "message": "Faça um poema de três versos. [?][?][?]."
+  },
+  {
+    "id": "bf3xonBch8boxdJ0pKzZ",
+    "type": "BLACK",
+    "message": "Doutor Drauzio, estou tendo problemas com [?] e gostaria de ouvir seus conselhos."
+  },
+  {
+    "id": "bFgDvI3LP7FT4mBXAEST",
+    "type": "WHITE",
+    "message": "Feijoada."
+  },
+  {
+    "id": "bGRrEvPGne9Oc3P4ju9w",
+    "type": "WHITE",
+    "message": "Vikings."
+  },
+  {
+    "id": "Bijn7q1lAPbUfTkR461F",
+    "type": "WHITE",
+    "message": "Coroinhas."
+  },
+  {
+    "id": "bnf5dI978GjdCukuuUXO",
+    "type": "WHITE",
+    "message": "Inveja do pênis."
+  },
+  {
+    "id": "bOlt41xdPiJk4Fw0oWks",
+    "type": "WHITE",
+    "message": "Masturbação feminina."
+  },
+  {
+    "id": "BpjbWXlcxtkJR6FMN9SR",
+    "type": "WHITE",
+    "message": "Hot Pockets."
+  },
+  {
+    "id": "BRTFf88oDA7bL3BFdPlg",
+    "type": "WHITE",
+    "message": "Legião dos Super-Heróis Brasileiros."
+  },
+  {
+    "id": "buJGspuDf7aWmhJlfKwj",
+    "type": "BLACK",
+    "message": "[?] é uma ladeira escorregadia que leva direto para [?]."
+  },
+  {
+    "id": "buMJQztJo4O4xj5AOLWk",
+    "type": "WHITE",
+    "message": "Um macaco fumando cigarro."
+  },
+  {
+    "id": "bUoetFLgsBFvwrR5fnmF",
+    "type": "BLACK",
+    "message": "Qual é o cúmulo da porquice?"
+  },
+  {
+    "id": "bvIJYMNFYEHekygvcvCd",
+    "type": "WHITE",
+    "message": "Dar uns amassos."
+  },
+  {
+    "id": "bVKK7R1zikYutBArnmj8",
+    "type": "BLACK",
+    "message": "[?]. Aposto que um só não te satisfaz!"
+  },
+  {
+    "id": "c9eas4HyvbbrGIbAu78W",
+    "type": "WHITE",
+    "message": "Menstruação."
+  },
+  {
+    "id": "cB13G9SvKgdrjaAKZ5pq",
+    "type": "WHITE",
+    "message": "A fundação Make-A-Wish."
+  },
+  {
+    "id": "cb8JXW4OPidfP9a5WDHm",
+    "type": "WHITE",
+    "message": "Más decisões ao longo da vida."
+  },
+  {
+    "id": "cC3kazWOorghZKBqRkj1",
+    "type": "WHITE",
+    "message": "Ficar tão nervoso a ponto de ter uma ereção."
+  },
+  {
+    "id": "cFidAaqZQYIrDPEDZZLq",
+    "type": "WHITE",
+    "message": "O moço da foto."
+  },
+  {
+    "id": "CHLeOm15qiMKZqmaUvUg",
+    "type": "BLACK",
+    "message": "O que tem de sobra no Paraíso?"
+  },
+  {
+    "id": "cHPDPmYmo9vS9PyfcF9E",
+    "type": "WHITE",
+    "message": "Lepra."
+  },
+  {
+    "id": "Ck2FTjNHKtGlfywOgcHN",
+    "type": "BLACK",
+    "message": "O que causou o fim da minha última relação?"
+  },
+  {
+    "id": "clLkqlHA8qbt3Aeni8ZB",
+    "type": "WHITE",
+    "message": "Começar a cantar e dançar de repente em público."
+  },
+  {
+    "id": "cOoooeOzfRBmlC4JSZlH",
+    "type": "BLACK",
+    "message": "Qual é o prazer proibido do Batman?"
+  },
+  {
+    "id": "Cq3ha3rBez0TV97sfePU",
+    "type": "WHITE",
+    "message": "Cintilante."
+  },
+  {
+    "id": "Cx9CjogNC1AMwvKEbirZ",
+    "type": "BLACK",
+    "message": "[?] de cu é rola!"
+  },
+  {
+    "id": "d8bTEcYmzYEK8AswNq6a",
+    "type": "WHITE",
+    "message": "Comer, rezar, amar."
+  },
+  {
+    "id": "dbh7dJWPGgLg2YVkd536",
+    "type": "BLACK",
+    "message": "Qual frase eu gostaria de ler no biscoito da sorte?"
+  },
+  {
+    "id": "DbixwMoIHBCzywEX9JSp",
+    "type": "WHITE",
+    "message": "Funcionários do serviço de atendimento ao cliente."
+  },
+  {
+    "id": "DDQlA4Z3qAbuJuI8WKZM",
+    "type": "WHITE",
+    "message": "Disfunção erétil."
+  },
+  {
+    "id": "dfV0fC86Tm9WOJxojJal",
+    "type": "WHITE",
+    "message": "Separar o Mar Vermelho."
+  },
+  {
+    "id": "dg08tIPJ0L8CyjglorPX",
+    "type": "WHITE",
+    "message": "Depender do SUS."
+  },
+  {
+    "id": "Dg8bkW5rJjSUXTIJQGoL",
+    "type": "WHITE",
+    "message": "Injeções hormonais."
+  },
+  {
+    "id": "DICHP8rSPNnjhYiYOL2b",
+    "type": "WHITE",
+    "message": "Catapultas."
+  },
+  {
+    "id": "djjtcNkbiIT29UVMHcft",
+    "type": "BLACK",
+    "message": "O que nunca falha em deixar uma festa mais animada?"
+  },
+  {
+    "id": "DL2AP27TQKhGMLB8ffmG",
+    "type": "BLACK",
+    "message": "O que é que tem à vontade no Céu?"
+  },
+  {
+    "id": "DniUT3vLlqB3iEaCkGsQ",
+    "type": "WHITE",
+    "message": "Se dedar incontrolavelmente."
+  },
+  {
+    "id": "DPCiJXqZg5HAE7IqODo5",
+    "type": "WHITE",
+    "message": "Agricultura."
+  },
+  {
+    "id": "DPXuAuFxogAYYidB6HUd",
+    "type": "WHITE",
+    "message": "Kanye West."
+  },
+  {
+    "id": "dq81tkddqtybIqvawk2G",
+    "type": "WHITE",
+    "message": "Bactéria carnívora."
+  },
+  {
+    "id": "Ds5ekV8Vu2vOjJ4imOSx",
+    "type": "WHITE",
+    "message": "Pagar mico em público."
+  },
+  {
+    "id": "dw7YoDm0np9xmLkHxXbd",
+    "type": "WHITE",
+    "message": "Britney Spears aos 55."
+  },
+  {
+    "id": "DXBxCeio66hVUilanIkN",
+    "type": "WHITE",
+    "message": "Goblins."
+  },
+  {
+    "id": "DXtBewlSgYIrxc8G5nlX",
+    "type": "WHITE",
+    "message": "Chamengo."
+  },
+  {
+    "id": "dYDSZKqUuvpKMGXOlXUm",
+    "type": "WHITE",
+    "message": "Sessão da Tarde."
+  },
+  {
+    "id": "dzYhH1CHWEnVrlGPEF7l",
+    "type": "WHITE",
+    "message": "O clitóris."
+  },
+  {
+    "id": "E0tP3y3wdsRkzlHISBPo",
+    "type": "WHITE",
+    "message": "Brancos."
+  },
+  {
+    "id": "e0vLP1vB71G05vBJY9zQ",
+    "type": "BLACK",
+    "message": "Esta é a mais nova dupla de heróis de sucesso: [?] & [?]!"
+  },
+  {
+    "id": "E1OuQXtdX6SvyE6niByv",
+    "type": "WHITE",
+    "message": "Música New Age."
+  },
+  {
+    "id": "e4uzxmZ2GR33axLstqZN",
+    "type": "WHITE",
+    "message": "Histórias de lenhador."
+  },
+  {
+    "id": "e4yh29QD9UI9JpodVEt4",
+    "type": "BLACK",
+    "message": "Em breve, numa livraria perto de você, [?]."
+  },
+  {
+    "id": "e9k6NDZ0oCYeXqEKvGYq",
+    "type": "WHITE",
+    "message": "Língua solta."
+  },
+  {
+    "id": "eA3zLGyXXVz93n6KbysF",
+    "type": "WHITE",
+    "message": "Brincadeiras gostosas."
+  },
+  {
+    "id": "EDRgoXqJp9uxXMnFiMw7",
+    "type": "WHITE",
+    "message": "Minha genitália."
+  },
+  {
+    "id": "eF7VEutQQ7h2wQiCGfJG",
+    "type": "WHITE",
+    "message": "Uma vida de tristeza."
+  },
+  {
+    "id": "EFpg9ALr9bd8GhINeRVj",
+    "type": "BLACK",
+    "message": "Quando eu for Presidente do Brasil, vou criar o Ministério de [?]."
+  },
+  {
+    "id": "eGHpyR1pG3zC2igprfel",
+    "type": "WHITE",
+    "message": "Crianças africanas."
+  },
+  {
+    "id": "egN0ghjJ37MSVmGGHLuR",
+    "type": "WHITE",
+    "message": "Teto de vidro."
+  },
+  {
+    "id": "EigGghZMyU1djsrklkuf",
+    "type": "WHITE",
+    "message": "Os judeus."
+  },
+  {
+    "id": "ej0mrehOnAJnGmXjGZXL",
+    "type": "BLACK",
+    "message": "Chega à Broadway nesta temporada o musical [?]."
+  },
+  {
+    "id": "EJCMEdfcC7WQXkHVwEJY",
+    "type": "WHITE",
+    "message": "Boa Noite, Cinderela."
+  },
+  {
+    "id": "eKLiTxhQiNES0fIBJXFs",
+    "type": "WHITE",
+    "message": "Escassez de comida."
+  },
+  {
+    "id": "Eo8zFEtGxOoQ2f3Ijs9n",
+    "type": "WHITE",
+    "message": "Meleca de nariz."
+  },
+  {
+    "id": "eqqbIcdlvPYTJjfUTsne",
+    "type": "WHITE",
+    "message": "Chacina."
+  },
+  {
+    "id": "eRH9lL0NdVIAoBmJR6Gz",
+    "type": "WHITE",
+    "message": "Metanfetamina."
+  },
+  {
+    "id": "ERViLnMtREjNqeLBxVGY",
+    "type": "WHITE",
+    "message": "Mola maluca."
+  },
+  {
+    "id": "ESPVOm9s7jDDRXrZrHQe",
+    "type": "WHITE",
+    "message": "Glory holes."
+  },
+  {
+    "id": "ETsbHjFeCfGGeIwLaUAX",
+    "type": "WHITE",
+    "message": "Quentinha."
+  },
+  {
+    "id": "EUdExLSQ93IEg87dELy2",
+    "type": "WHITE",
+    "message": "Imagens de seios."
+  },
+  {
+    "id": "eXuZ9NPSfG9v1qV8CY1I",
+    "type": "WHITE",
+    "message": "Compartilhar agulhas."
+  },
+  {
+    "id": "EY4Hf2I8DZpuoerzguwj",
+    "type": "WHITE",
+    "message": "Morrer."
+  },
+  {
+    "id": "f27a9KeE862ODpTf49fE",
+    "type": "WHITE",
+    "message": "Lençóis infectados com varíola."
+  },
+  {
+    "id": "F2d06PRPAZhVl2HgTjiy",
+    "type": "WHITE",
+    "message": "Stephen Hawking dizendo coisas obscenas."
+  },
+  {
+    "id": "F2hA86rO6fWV4ij3P14H",
+    "type": "WHITE",
+    "message": "MechaHitler."
+  },
+  {
+    "id": "F3Hsl51wSLFT92ksAVwj",
+    "type": "WHITE",
+    "message": "Trepar."
+  },
+  {
+    "id": "f5DqFMy2D0zwfAsnbwgB",
+    "type": "BLACK",
+    "message": "Laura Muller, meu \"amigo\" queria saber se tem problema usar [?] na hora H."
+  },
+  {
+    "id": "F8gipQBLSBzBgqRSFY9t",
+    "type": "WHITE",
+    "message": "Um cavalo minúsculo."
+  },
+  {
+    "id": "f8rq8Nnh65Bfqcj92U0l",
+    "type": "WHITE",
+    "message": "Beber sozinho."
+  },
+  {
+    "id": "FC8BrvUY3Yv4QHNqwTNu",
+    "type": "WHITE",
+    "message": "Sexo oral não recíproco."
+  },
+  {
+    "id": "fCRXHuRcUiQ3gOFCqtT2",
+    "type": "BLACK",
+    "message": "Acham que o Marcos é gay depois que o viram [?]."
+  },
+  {
+    "id": "fdom0nIuQoQoriKbQISA",
+    "type": "WHITE",
+    "message": "Prepúcio."
+  },
+  {
+    "id": "fEIYq5CdIbfGj3uDp0US",
+    "type": "WHITE",
+    "message": "Solos de saxofone."
+  },
+  {
+    "id": "fGJAd82XnfH7tUQklrxt",
+    "type": "WHITE",
+    "message": "A inevitável morte térmica do universo."
+  },
+  {
+    "id": "fivEmtZXQSzGoVf3pccU",
+    "type": "WHITE",
+    "message": "Cobiçar a mulher do próximo."
+  },
+  {
+    "id": "FlEXdUDOExDJW8K3823k",
+    "type": "WHITE",
+    "message": "Combustão humana espontânea."
+  },
+  {
+    "id": "FN14miJtV0RMd29YmhcU",
+    "type": "WHITE",
+    "message": "Twittar."
+  },
+  {
+    "id": "foXeQupK1CUSiEkGgYM2",
+    "type": "WHITE",
+    "message": "A mão invisível."
+  },
+  {
+    "id": "fp762IjHGVTL0wXe7l9q",
+    "type": "WHITE",
+    "message": "Crianças com câncer anal."
+  },
+  {
+    "id": "Fqam4W3MjbBCsFpjS9Q3",
+    "type": "WHITE",
+    "message": "Sexo surpresa!"
+  },
+  {
+    "id": "FQq2cyOezAEK9D0b2JBh",
+    "type": "BLACK",
+    "message": "Dica: quando seu(ua) parceiro(a) pedir sexo oral, em vez disso, surpreenda-o(a) com [?]."
+  },
+  {
+    "id": "FVNFiQ5MHw4xKqS349yc",
+    "type": "WHITE",
+    "message": "O cara da previsão do tempo."
+  },
+  {
+    "id": "FvSWTy74YgmRSrj9uu5F",
+    "type": "WHITE",
+    "message": "Motosserras."
+  },
+  {
+    "id": "FWIJ4G2JcjuiBYfJfvBA",
+    "type": "WHITE",
+    "message": "Uma ereção que dura mais que quatro horas."
+  },
+  {
+    "id": "FYpBHoBHIsXrvNXMYuIu",
+    "type": "WHITE",
+    "message": "Tirar a camisa."
+  },
+  {
+    "id": "G0yGOpNGT8wfsTooK4OH",
+    "type": "BLACK",
+    "message": "Estou com 99 problemas, mas [?] não é um deles."
+  },
+  {
+    "id": "G4Am4uwRoDT4CfTMoXPk",
+    "type": "WHITE",
+    "message": "Permanência de objeto."
+  },
+  {
+    "id": "g8YiLVawMSGeoFyjNpxY",
+    "type": "BLACK",
+    "message": "O que é tiro e queda para se conseguir sexo?"
+  },
+  {
+    "id": "gb1XxRHqZrE0nSkBnRyB",
+    "type": "WHITE",
+    "message": "Vestir-se de modo a exibir a lateral dos seios com elegância."
+  },
+  {
+    "id": "GblFLlBBJWZe5IPurvVP",
+    "type": "WHITE",
+    "message": "A Ku Klux Klan."
+  },
+  {
+    "id": "Ge3ZWpG6ebrNflv4TZTe",
+    "type": "BLACK",
+    "message": "[?] merece um high five. Toca aqui!"
+  },
+  {
+    "id": "GEmMFtTGW4eGESxx7mc9",
+    "type": "WHITE",
+    "message": "Ovos de pterodáctilo."
+  },
+  {
+    "id": "GFMRha1sT83udD1WCnBI",
+    "type": "WHITE",
+    "message": "Fricção."
+  },
+  {
+    "id": "GG40pR4MlvXfg8pg9xOh",
+    "type": "BLACK",
+    "message": "Qual é o melhor amigo de uma garota?"
+  },
+  {
+    "id": "gHuPHB30bK9nUy6xxPoF",
+    "type": "WHITE",
+    "message": "Colocar armadilhas em casa pra pegar assaltantes."
+  },
+  {
+    "id": "GM3OYoYcq6kFh6J8nAo5",
+    "type": "WHITE",
+    "message": "Autêntica cozinha mexicana."
+  },
+  {
+    "id": "GMp9Vmn62ehAQFP9BBbc",
+    "type": "WHITE",
+    "message": "Aumento peniano natural."
+  },
+  {
+    "id": "Goj9WggnwEosyRTxgld3",
+    "type": "BLACK",
+    "message": "Qual brinquedo me faria voltar a comprar Kinder Ovo?"
+  },
+  {
+    "id": "gPy6KrR6SXOmaMoOY7qY",
+    "type": "WHITE",
+    "message": "Estar em chamas."
+  },
+  {
+    "id": "Gr7PAOeR1tZWZDMoobV7",
+    "type": "WHITE",
+    "message": "Órfãos."
+  },
+  {
+    "id": "GrpOOmx4quEdOPja80nW",
+    "type": "WHITE",
+    "message": "Cheiro de pessoa velha."
+  },
+  {
+    "id": "GSH6cRlZSrjpEXuqbfiR",
+    "type": "WHITE",
+    "message": "Sexo entre pandas."
+  },
+  {
+    "id": "GUkcqczP5bolCIxeVw7g",
+    "type": "WHITE",
+    "message": "Arnold Schwarzenegger."
+  },
+  {
+    "id": "gZmE62S6nuHXhYjKOtnV",
+    "type": "BLACK",
+    "message": "O que eu levaria ao passado pra convencer as pessoas de que sou um mágico poderoso?"
+  },
+  {
+    "id": "H2ySoTuoYA0gziZ3Tyms",
+    "type": "WHITE",
+    "message": "Melhoramentos cibernéticos."
+  },
+  {
+    "id": "H3J37Qaqdtzfh3OtsGxM",
+    "type": "WHITE",
+    "message": "Abuso infantil."
+  },
+  {
+    "id": "H3TigjDGDGYE1iY0cG8V",
+    "type": "WHITE",
+    "message": "Meus demônios interiores."
+  },
+  {
+    "id": "H5s2fW9PF0a1v1DoUHLc",
+    "type": "BLACK",
+    "message": "Estudos mostram que ratos de laboratório atravessam labirintos 50% mais rápido depois de serem expostos a [?]."
+  },
+  {
+    "id": "H6X4ddeOdgsQVz0ZaRgP",
+    "type": "WHITE",
+    "message": "Complexo de Édipo."
+  },
+  {
+    "id": "hBarxWM4VGaHVQbVtsrd",
+    "type": "WHITE",
+    "message": "Porque preto não é flor que se cheire."
+  },
+  {
+    "id": "Hc7CTsJS30d5OnkgxoD9",
+    "type": "WHITE",
+    "message": "Lingerie comestível."
+  },
+  {
+    "id": "hClD77LHYSmHFEJtu9lx",
+    "type": "WHITE",
+    "message": "Uma reviravolta num roteiro de M. Night Shyamalan."
+  },
+  {
+    "id": "hD0ppRKmIgzaWFhT0DXr",
+    "type": "WHITE",
+    "message": "Sedução."
+  },
+  {
+    "id": "HFFrjRVagQMC9DjTIu67",
+    "type": "WHITE",
+    "message": "Um micro-pênis."
+  },
+  {
+    "id": "hhxi1KgsDCUEqNxSikjV",
+    "type": "WHITE",
+    "message": "Lactação."
+  },
+  {
+    "id": "hiUVKUU8tcjXu4gwe5uC",
+    "type": "WHITE",
+    "message": "Literalmente roubar doce de criança."
+  },
+  {
+    "id": "HjBiNYPqxTXpN974scSj",
+    "type": "WHITE",
+    "message": "Sufrágio feminino."
+  },
+  {
+    "id": "HjvjKvm9d6kIjPCMJCRV",
+    "type": "BLACK",
+    "message": "Qual é meu poder secreto?"
+  },
+  {
+    "id": "hNeFioPVjLnLa8otF9Fq",
+    "type": "WHITE",
+    "message": "Faculdades historicamente mais frequentadas por negros."
+  },
+  {
+    "id": "HnQIgD4kzaXzP1BcqTk6",
+    "type": "WHITE",
+    "message": "Repressão."
+  },
+  {
+    "id": "HnzCRiyEWEWdfQvJlL9H",
+    "type": "WHITE",
+    "message": "Morrer de disenteria."
+  },
+  {
+    "id": "Ho25kH9ppMtgIMdPwKCn",
+    "type": "WHITE",
+    "message": "Sua Alteza Real, Rainha Elizabeth II."
+  },
+  {
+    "id": "hoHg1Ph1DIot3Pqu0dJU",
+    "type": "WHITE",
+    "message": "Uma boa cheirada."
+  },
+  {
+    "id": "HoPHAdfVSM8pxdDDqkKW",
+    "type": "WHITE",
+    "message": "Um tumor cerebral."
+  },
+  {
+    "id": "hpczcXugrny8zwx1LQ6O",
+    "type": "WHITE",
+    "message": "Pornô alemão de calabouço."
+  },
+  {
+    "id": "hrJL7ri9mRXFt81J1ID1",
+    "type": "WHITE",
+    "message": "Ânsia de vômito."
+  },
+  {
+    "id": "hUJBGVD4vOqyUzx9VILi",
+    "type": "WHITE",
+    "message": "Café da manhã balanceado."
+  },
+  {
+    "id": "HV3FQLDnEvTDMb8t2JFu",
+    "type": "WHITE",
+    "message": "Pão na chapa."
+  },
+  {
+    "id": "hyRfPM6n4NqxBIFROhtm",
+    "type": "WHITE",
+    "message": "Tempo pra mim."
+  },
+  {
+    "id": "i58Sh3msWm8XH3E4PYME",
+    "type": "WHITE",
+    "message": "Gravidez na adolescência."
+  },
+  {
+    "id": "i9JJ7cIeYeNk5nqwSOg6",
+    "type": "BLACK",
+    "message": "A excursão escolar foi um fiasco devido a [?]."
+  },
+  {
+    "id": "IaHEUYrFj0abUg1cvPqK",
+    "type": "WHITE",
+    "message": "Um brinquedo Bop It."
+  },
+  {
+    "id": "IAOmYdzXGnltv8o8D9Tc",
+    "type": "WHITE",
+    "message": "Um moinho de vento cheio de cadáveres."
+  },
+  {
+    "id": "iddup4Rkx1q1TbzFC42A",
+    "type": "WHITE",
+    "message": "Churrasco na laje."
+  },
+  {
+    "id": "IirYT0n6IExmhfhm4UtZ",
+    "type": "WHITE",
+    "message": "Seleção natural."
+  },
+  {
+    "id": "ijgTbECWRRz5ZnY5TuUr",
+    "type": "WHITE",
+    "message": "Um policial honesto sem nada a perder."
+  },
+  {
+    "id": "ikwUcrM73q36be14s64d",
+    "type": "BLACK",
+    "message": "Idosos têm cheiro de quê?"
+  },
+  {
+    "id": "iPgHV3sqJEFED6L5k6t0",
+    "type": "WHITE",
+    "message": "O privilégio de ser branco."
+  },
+  {
+    "id": "iRSAE3vdfJhuvhiBPQRM",
+    "type": "WHITE",
+    "message": "Robert Downey, Jr."
+  },
+  {
+    "id": "ItJpLkV5AhI1slqwyD80",
+    "type": "WHITE",
+    "message": "Flanelinhas."
+  },
+  {
+    "id": "itOZixz2wnpEKcUoVaaA",
+    "type": "WHITE",
+    "message": "Fingir que se importa."
+  },
+  {
+    "id": "IttVQhB3Jdgk2vwiikAB",
+    "type": "WHITE",
+    "message": "Cheirar cola."
+  },
+  {
+    "id": "IVFwmVW1RiDyf50Ds5GG",
+    "type": "WHITE",
+    "message": "Capitão Nascimento levando bronca da sogra."
+  },
+  {
+    "id": "ixAGA9HRV806VkYCKyzD",
+    "type": "WHITE",
+    "message": "Uma tartaruga mordedora mordiscando a ponta do seu pênis."
+  },
+  {
+    "id": "Ixfb7YGl0H2yGJOcifJ0",
+    "type": "WHITE",
+    "message": "Fraternidades judias."
+  },
+  {
+    "id": "IZLFW6Ib0lqpWsCKuVYv",
+    "type": "BLACK",
+    "message": "Em seus momentos finais, Michael Jackson pensou em [?]."
+  },
+  {
+    "id": "j4q7C75NyjsBJirNWz1Y",
+    "type": "WHITE",
+    "message": "Uppercuts."
+  },
+  {
+    "id": "J8xldFDtQkLJkEJqiQmo",
+    "type": "BLACK",
+    "message": "Bebo pra esquecer [?]."
+  },
+  {
+    "id": "JAyp58y7EGAXnBTGBZwd",
+    "type": "WHITE",
+    "message": "Emoções."
+  },
+  {
+    "id": "JBdpXfTRvTs1eoUzKW5I",
+    "type": "WHITE",
+    "message": "Uma inspeção."
+  },
+  {
+    "id": "Jclj0eXrCux07fdstCDh",
+    "type": "WHITE",
+    "message": "Indigestão de torresmo."
+  },
+  {
+    "id": "JcNwOCniNQqRnUEBSmcW",
+    "type": "BLACK",
+    "message": "Qual é a dieta do momento?"
+  },
+  {
+    "id": "jECyYY4bVdIQs6orl7zN",
+    "type": "WHITE",
+    "message": "Amputados."
+  },
+  {
+    "id": "jEeBXnC4LowX4jShybNJ",
+    "type": "BLACK",
+    "message": "Eu estava com medo, mas ouvi que [?] aumentou e me senti aliviado."
+  },
+  {
+    "id": "JEvhfxr8ACHtU0im2P2Q",
+    "type": "BLACK",
+    "message": "Enquanto os EUA e a URRS competiam na corrida espacial, o Brasil investia pesado em [?]."
+  },
+  {
+    "id": "JfbXySmpHPwMgFOssQ9R",
+    "type": "BLACK",
+    "message": "[?]. As mina pira, véi."
+  },
+  {
+    "id": "jfxmYNP4EHnttKcgiDMf",
+    "type": "BLACK",
+    "message": "E para meu próximo número, tirarei [?] de [?]."
+  },
+  {
+    "id": "JhUlQsH5Pn7EOJK5uCM3",
+    "type": "WHITE",
+    "message": "Deixar o lustre cair sobre seus inimigos enquanto a outra ponta da corda te lança pra cima."
+  },
+  {
+    "id": "jHWVu4Hlgy6efGHE3pN8",
+    "type": "WHITE",
+    "message": "Cabras comendo latas."
+  },
+  {
+    "id": "JiDVsPzycUuxvgsgfPWS",
+    "type": "WHITE",
+    "message": "Picolé de sêmen."
+  },
+  {
+    "id": "JikVGoeZSNa1JlHNJJgq",
+    "type": "WHITE",
+    "message": "Uma desolação."
+  },
+  {
+    "id": "JkIiUeyia5cbiII9iEG6",
+    "type": "WHITE",
+    "message": "Horríveis acidentes causados por depilação a laser."
+  },
+  {
+    "id": "Jl7YNMQAgu8HxgA8t1KF",
+    "type": "BLACK",
+    "message": "Qual é a coisa mais gay do mundo?"
+  },
+  {
+    "id": "jm4p3Zaeq01F6cUSb5Bv",
+    "type": "BLACK",
+    "message": "Não sei com que armas se lutará a Terceira Guerra Mundial, mas a Quarta será com [?]."
+  },
+  {
+    "id": "jmqlJLha57t8V6UBnxtJ",
+    "type": "WHITE",
+    "message": "Deveres da esposa."
+  },
+  {
+    "id": "jOSVG5ZsQF4F5bWp0SBH",
+    "type": "WHITE",
+    "message": "Cientologia."
+  },
+  {
+    "id": "jqo6DWwFSvUNDNBfY84J",
+    "type": "WHITE",
+    "message": "Alcoolismo."
+  },
+  {
+    "id": "jsmcPgBoqOshAeb9KtaQ",
+    "type": "WHITE",
+    "message": "Cards Against Humanity."
+  },
+  {
+    "id": "jSRFevuR6LUTKCHDEsHC",
+    "type": "WHITE",
+    "message": "Terroristas."
+  },
+  {
+    "id": "jU0KSK7pyj0QiOTPEBwe",
+    "type": "WHITE",
+    "message": "Roubar sepultura."
+  },
+  {
+    "id": "JwRyxkpQU92o0bYptTUf",
+    "type": "WHITE",
+    "message": "Sacolé."
+  },
+  {
+    "id": "jXpy2kiHAH3JPJGASSEb",
+    "type": "WHITE",
+    "message": "Cavalgando ao pôr do sol."
+  },
+  {
+    "id": "k9nbpeAA9w6VrhFuEiYq",
+    "type": "WHITE",
+    "message": "Barreira de látex para sexo oral."
+  },
+  {
+    "id": "KCL8dyz1WvPjkUo9pkkx",
+    "type": "WHITE",
+    "message": "O Anticristo."
+  },
+  {
+    "id": "Kf35px2gr11PibkqQqir",
+    "type": "WHITE",
+    "message": "Coito interrompido."
+  },
+  {
+    "id": "KfzFuhv72q2QdmX3E6ro",
+    "type": "WHITE",
+    "message": "Lady Gaga."
+  },
+  {
+    "id": "kHhCAJitjFVcZL6KyQRN",
+    "type": "WHITE",
+    "message": "Dinâmica de grupo."
+  },
+  {
+    "id": "KkeBsaS88A4bHnKlx8Fa",
+    "type": "BLACK",
+    "message": "Nunca de fato entendi [?], até encontrar [?]."
+  },
+  {
+    "id": "kPwTDUqYslpFGP9ONO6c",
+    "type": "BLACK",
+    "message": "E o prêmio [?] vai para [?]."
+  },
+  {
+    "id": "Krnuti73gU4yyYSpFm5G",
+    "type": "WHITE",
+    "message": "Pilotos Kamikaze."
+  },
+  {
+    "id": "KRZJfd80lYu8ysqcUiQC",
+    "type": "WHITE",
+    "message": "Pintar com os dedos."
+  },
+  {
+    "id": "kssyZ0PbqYQQlWWNbY3n",
+    "type": "WHITE",
+    "message": "Transmutação corpórea."
+  },
+  {
+    "id": "KUUnTtjLZzdOA0J2YWuq",
+    "type": "WHITE",
+    "message": "Estuprar e saquear."
+  },
+  {
+    "id": "KvM3g7anY0LF2CrXEglR",
+    "type": "WHITE",
+    "message": "Trapacear nas Paralimpíadas."
+  },
+  {
+    "id": "L2tKFV7iSIpNfEBwCYTG",
+    "type": "WHITE",
+    "message": "Minas terrestres."
+  },
+  {
+    "id": "l6mi59bCGSnI5szdLJ0p",
+    "type": "WHITE",
+    "message": "Guerra de travesseiros sensual."
+  },
+  {
+    "id": "Lb1fbOeRiji2HtqGVg83",
+    "type": "BLACK",
+    "message": "A medicina alternativa agora está explorando os poderes curativos de [?]."
+  },
+  {
+    "id": "Lcd2GY10cSniALi2LMCN",
+    "type": "WHITE",
+    "message": "Exibição para fins de acasalamento."
+  },
+  {
+    "id": "LFupzv2F9FP6ZlpY6nfH",
+    "type": "BLACK",
+    "message": "O que não pode faltar em um rolê com os amigos?"
+  },
+  {
+    "id": "LK9OfPokh6mlFOZdZkJA",
+    "type": "WHITE",
+    "message": "Exibir-se."
+  },
+  {
+    "id": "LkcK0kpPGPJ0ilUM1R2e",
+    "type": "WHITE",
+    "message": "O reverendo Dr. Martin Luther King, Jr."
+  },
+  {
+    "id": "LKjCWHEk83VXbEbm0RoW",
+    "type": "WHITE",
+    "message": "Bolas."
+  },
+  {
+    "id": "LOB3wsePIdZVsgnrFmrG",
+    "type": "WHITE",
+    "message": "Preliminares meia-boca."
+  },
+  {
+    "id": "loNvgPQ7lw23fggIP1K0",
+    "type": "BLACK",
+    "message": "Quando o faraó se manteve irredutível, Moisés invocou dos céus a praga de [?]."
+  },
+  {
+    "id": "lpQMDYPPtnyLHI4bTpbk",
+    "type": "WHITE",
+    "message": "O status da minha relação."
+  },
+  {
+    "id": "lQeNQKTIMvSdTjKvWquC",
+    "type": "WHITE",
+    "message": "O milagre do parto."
+  },
+  {
+    "id": "LqS5vbUG1zF77DaZa5Nf",
+    "type": "WHITE",
+    "message": "Erotismo baseado em Harry Potter."
+  },
+  {
+    "id": "LTKmr4IsJK8YoSbRZSUP",
+    "type": "WHITE",
+    "message": "O papa."
+  },
+  {
+    "id": "lTYLEOkLTve95GntCQNp",
+    "type": "WHITE",
+    "message": "O fruto proibido."
+  },
+  {
+    "id": "lUgkNuJWp5EXaNPyRRlQ",
+    "type": "WHITE",
+    "message": "Estrogênio."
+  },
+  {
+    "id": "lUResFBUWDjZmZhJa6o5",
+    "type": "WHITE",
+    "message": "Acariciar alguém sem permissão."
+  },
+  {
+    "id": "LvhISlFvgSMPCzNRYyqi",
+    "type": "WHITE",
+    "message": "Autorrepugnância."
+  },
+  {
+    "id": "lxXQOSwmOK79Jbvgljtg",
+    "type": "WHITE",
+    "message": "Mão furada."
+  },
+  {
+    "id": "lyoDHv4a70W74h5oY7OM",
+    "type": "WHITE",
+    "message": "Homens japoneses idosos."
+  },
+  {
+    "id": "lyZkObrMDDHGhSWih7wQ",
+    "type": "WHITE",
+    "message": "Os amish."
+  },
+  {
+    "id": "LzD057JYCOTe91B8jClR",
+    "type": "BLACK",
+    "message": "Passo 1: [?]. Passo 2: [?]. Passo 3: lucrar."
+  },
+  {
+    "id": "m3xT8PMPEwuWAqxRVos6",
+    "type": "WHITE",
+    "message": "Cordão anal com nódulos e alça de segurança."
+  },
+  {
+    "id": "M4s3SD110SQn24Vh586v",
+    "type": "WHITE",
+    "message": "Conotações classistas."
+  },
+  {
+    "id": "maKEySelABjxez9lOzeM",
+    "type": "WHITE",
+    "message": "Minha alma."
+  },
+  {
+    "id": "maQMvtAGy3D0UmTrHo3u",
+    "type": "BLACK",
+    "message": "O que o Ministério da Educação está usando para inspirar os estudantes do interior a serem bem-sucedidos?"
+  },
+  {
+    "id": "mC7gSceI4SU53ffL173v",
+    "type": "WHITE",
+    "message": "Comer o último bisão conhecido."
+  },
+  {
+    "id": "MEDXj6MdqWvfkaaqtBpZ",
+    "type": "WHITE",
+    "message": "Jeffrey Epstein."
+  },
+  {
+    "id": "MHGrtytvtgRlcMSeACWq",
+    "type": "WHITE",
+    "message": "Um chapéu supertransado."
+  },
+  {
+    "id": "mHJQU2cIqgfsnbUumwWb",
+    "type": "WHITE",
+    "message": "Nicolas Cage."
+  },
+  {
+    "id": "MNfUUv87x0MSkSp0mWSK",
+    "type": "WHITE",
+    "message": "Justin Bieber."
+  },
+  {
+    "id": "MORpACB3CZz9WusEDf31",
+    "type": "WHITE",
+    "message": "Um congelador cheio de órgãos."
+  },
+  {
+    "id": "mPo0Ue8gdTYHsalGhA5p",
+    "type": "WHITE",
+    "message": "Carne humana."
+  },
+  {
+    "id": "MQf7U4QvW1JhCoqUP2MR",
+    "type": "WHITE",
+    "message": "Implantes de silicone assimétricos."
+  },
+  {
+    "id": "mQnesnyOcLsQVm1sMt3W",
+    "type": "WHITE",
+    "message": "Ser chato com crianças."
+  },
+  {
+    "id": "mr3tktO6rSwQNm0ZowEu",
+    "type": "WHITE",
+    "message": "O time de ginástica chinês."
+  },
+  {
+    "id": "mS2yTDVqh0KsceoX5Nd9",
+    "type": "WHITE",
+    "message": "Ser rico."
+  },
+  {
+    "id": "Ms6bTMlA5oe1hictXSKj",
+    "type": "WHITE",
+    "message": "Atitude."
+  },
+  {
+    "id": "mUJfCnd9Fi3qXYLsI2sM",
+    "type": "WHITE",
+    "message": "Minhas curvas."
+  },
+  {
+    "id": "mUMfl86wrcS7Gp8TKY3S",
+    "type": "BLACK",
+    "message": "Assim expira o mundo, não com uma explosão, mas com [?]."
+  },
+  {
+    "id": "mxL1Xww5rBt7dL5hRqEx",
+    "type": "WHITE",
+    "message": "Servidão."
+  },
+  {
+    "id": "mxouqv5wSRYHDt2R9Rjb",
+    "type": "WHITE",
+    "message": "Os cientistas desocupados da Austrália."
+  },
+  {
+    "id": "mxrdk08XAqXF4bZtc80Y",
+    "type": "BLACK",
+    "message": "Gente branca odeia [?]."
+  },
+  {
+    "id": "n2G0eACPTgn50hYicvTk",
+    "type": "WHITE",
+    "message": "Um saco de feijões mágicos."
+  },
+  {
+    "id": "n4Az0ngniDCOZ942EMSH",
+    "type": "WHITE",
+    "message": "Milícias."
+  },
+  {
+    "id": "nD6hyTz9nFW38uoL1CCO",
+    "type": "WHITE",
+    "message": "Limpar a bunda dela."
+  },
+  {
+    "id": "nFb8Nlx6V3VAmhmnm20v",
+    "type": "BLACK",
+    "message": "No próximo Natal, o Papai Noel vai dar [?] pra criança que não se comportar."
+  },
+  {
+    "id": "nfgrmVfDWS00hnwBQZdU",
+    "type": "WHITE",
+    "message": "72 virgens."
+  },
+  {
+    "id": "nFxHCWBfcXnVhQOWw9Ny",
+    "type": "WHITE",
+    "message": "Esperar um arroto e acabar vomitando no chão."
+  },
+  {
+    "id": "NgviXaPtxojDTQ6yT3zF",
+    "type": "WHITE",
+    "message": "Múltiplas facadas."
+  },
+  {
+    "id": "ngyNadZOedvaFi8ou3ZQ",
+    "type": "WHITE",
+    "message": "Cavalheirismo."
+  },
+  {
+    "id": "NHJR4ZH6SUURAGnYrJMh",
+    "type": "WHITE",
+    "message": "Ser fabuloso."
+  },
+  {
+    "id": "nhNr0rAgYusLyRRydkea",
+    "type": "BLACK",
+    "message": "Historiadores encontram dezenas de cadernos de Picasso com esboços de [?]."
+  },
+  {
+    "id": "njpuTAx9fMNuhdVNEyB8",
+    "type": "BLACK",
+    "message": "Capitão Nascimento descobre que os milicianos estavam usando [?] para [?]."
+  },
+  {
+    "id": "Nk4TUlcIVV9T4gByFLnj",
+    "type": "BLACK",
+    "message": "Vem aí o novo livro de J. K. Rowling: Harry Potter e a câmara de [?]."
+  },
+  {
+    "id": "NnxaoxoTFFtdieZcav6b",
+    "type": "WHITE",
+    "message": "A carreira de ator do Shaquille O'Neal."
+  },
+  {
+    "id": "NoT1U0FIHssQ5nkGTArv",
+    "type": "WHITE",
+    "message": "O Übermensch."
+  },
+  {
+    "id": "nSszXnLTFWTu97fA3lqN",
+    "type": "WHITE",
+    "message": "Erva para aumentar a libido."
+  },
+  {
+    "id": "nuhwa4Vk7dSeMASlHxxQ",
+    "type": "WHITE",
+    "message": "Caras que não telefonam."
+  },
+  {
+    "id": "NXJYpspUBK1w6bvnIhsn",
+    "type": "BLACK",
+    "message": "E o Oscar de melhor [?] vai para [?]."
+  },
+  {
+    "id": "nxVYuOjkttgospnu6ibx",
+    "type": "BLACK",
+    "message": "Resolução da ANAC agora proíbe [?] em aeronaves."
+  },
+  {
+    "id": "NyfR9YeG52Vm83hE3eNf",
+    "type": "WHITE",
+    "message": "Minha vida sexual."
+  },
+  {
+    "id": "nytMP0P53U2IjzTPzJXy",
+    "type": "WHITE",
+    "message": "Tensão sexual."
+  },
+  {
+    "id": "NzBCpCbN36hLa3uB0Ph4",
+    "type": "BLACK",
+    "message": "Em uma epidemia de [?], o ideal seria [?]."
+  },
+  {
+    "id": "nZDvddLTAhBERj4iY3jT",
+    "type": "WHITE",
+    "message": "Bananas."
+  },
+  {
+    "id": "O01QtttmTKvQWVuKbu2e",
+    "type": "WHITE",
+    "message": "Empanturrar-se e purgar-se."
+  },
+  {
+    "id": "O1U4b1joELnj5c0Dmt1h",
+    "type": "WHITE",
+    "message": "Arremesso de anão."
+  },
+  {
+    "id": "O4D6qP86zA2LUEijdOqx",
+    "type": "WHITE",
+    "message": "Ódio contra minorias."
+  },
+  {
+    "id": "O6cDlA4DeascHVcprxSl",
+    "type": "WHITE",
+    "message": "Pegar de volta o que foi dado."
+  },
+  {
+    "id": "o8YAA1h66zviIxI57WT5",
+    "type": "WHITE",
+    "message": "Um feto."
+  },
+  {
+    "id": "O99rzYrEqobuSRVRcEsX",
+    "type": "WHITE",
+    "message": "O Monark."
+  },
+  {
+    "id": "o9gNOtknibT5XhrhHoTF",
+    "type": "WHITE",
+    "message": "Seppuku."
+  },
+  {
+    "id": "o9vx2k3LCbHhEq9OsGOy",
+    "type": "WHITE",
+    "message": "Clareamento anal."
+  },
+  {
+    "id": "OBaX3CkNCLK0CGhmodVm",
+    "type": "BLACK",
+    "message": "[?] + [?] = [?]."
+  },
+  {
+    "id": "OBqi9hwKi7346F0csGEN",
+    "type": "WHITE",
+    "message": "Nazistas."
+  },
+  {
+    "id": "obRVJ0iJODx4tEHsIqMe",
+    "type": "WHITE",
+    "message": "Aves que não voam."
+  },
+  {
+    "id": "OE5UPghKGOmR9w5igf6r",
+    "type": "WHITE",
+    "message": "Masturbação."
+  },
+  {
+    "id": "oKlTZJgQokx2UjHZ5qFQ",
+    "type": "WHITE",
+    "message": "Herpes bucal."
+  },
+  {
+    "id": "oqoxgRJoFx8qcrxHhVy6",
+    "type": "WHITE",
+    "message": "Ronald Reagan."
+  },
+  {
+    "id": "OTCe04KIETxRzxe3EGHX",
+    "type": "WHITE",
+    "message": "Uma maldição cigana."
+  },
+  {
+    "id": "OVe97M6bw439S6fmoWnz",
+    "type": "WHITE",
+    "message": "Aquecimento global."
+  },
+  {
+    "id": "OVwYFxZDJK9DhusareM2",
+    "type": "BLACK",
+    "message": "Em um mundo devastado por [?], nosso único consolo é [?]."
+  },
+  {
+    "id": "oz9WUeWHcHkCA56AHpvd",
+    "type": "WHITE",
+    "message": "Dar 110% de si."
+  },
+  {
+    "id": "OzWM5vDMlxICKSwsRDMD",
+    "type": "WHITE",
+    "message": "Assistir ao Cartoon Network pelado(a)."
+  },
+  {
+    "id": "P22yVaW2NSv5oojfDJ8p",
+    "type": "WHITE",
+    "message": "Sean Penn."
+  },
+  {
+    "id": "p79HgTaJk3dzaF5uE5ds",
+    "type": "WHITE",
+    "message": "Amizade colorida."
+  },
+  {
+    "id": "p8lmPsDdtMhxkqT0qhgS",
+    "type": "WHITE",
+    "message": "Um momento de silêncio."
+  },
+  {
+    "id": "pAaT9T4RR27wngzMYKYj",
+    "type": "WHITE",
+    "message": "Polegares opositores."
+  },
+  {
+    "id": "PCIpzRg7CJmOjzicSsFI",
+    "type": "BLACK",
+    "message": "Por que não existe flor preta?"
+  },
+  {
+    "id": "pgdIEx5eHsyXcv6anKrM",
+    "type": "WHITE",
+    "message": "Incesto."
+  },
+  {
+    "id": "PHGL9LU68EIp2DHv6and",
+    "type": "WHITE",
+    "message": "O mexicano que trabalha duro."
+  },
+  {
+    "id": "pHhgVVV3V1waTv74U7Cv",
+    "type": "WHITE",
+    "message": "Torção testicular."
+  },
+  {
+    "id": "PLtS8fH18e4EGAUzO5VP",
+    "type": "WHITE",
+    "message": "Questões racistas em vestibular."
+  },
+  {
+    "id": "PnXt8WXgfABXg1agGcds",
+    "type": "WHITE",
+    "message": "Republicanos."
+  },
+  {
+    "id": "pqPJ1mQN8rCymGFLVTY7",
+    "type": "WHITE",
+    "message": "Escuta ativa."
+  },
+  {
+    "id": "PqwHNinHALpzXmSuIUMk",
+    "type": "BLACK",
+    "message": "Por que P. Diddy foi preso?"
+  },
+  {
+    "id": "PrNExvGrcdPAyYox2MJf",
+    "type": "WHITE",
+    "message": "Mulheres em comerciais de iogurte."
+  },
+  {
+    "id": "pT8zsXXSr2Xaz5splnvU",
+    "type": "WHITE",
+    "message": "A voz do Morgan Freeman."
+  },
+  {
+    "id": "ptqswYkUc6Uz0sMwg7oS",
+    "type": "WHITE",
+    "message": "Brutalidade policial."
+  },
+  {
+    "id": "PuKy8E7Ve2CsOIW34BjR",
+    "type": "WHITE",
+    "message": "A Bíblia Sagrada."
+  },
+  {
+    "id": "PUomGo3U9R7FUPB9I7iQ",
+    "type": "WHITE",
+    "message": "Piadas inoportunas sobre o holocausto."
+  },
+  {
+    "id": "PY48ro5IjlEVvBQhKQzV",
+    "type": "BLACK",
+    "message": "Quando eu estava viajando no LSD, [?] se transformou em [?]."
+  },
+  {
+    "id": "PyuHgVhvnsm7HMpDitq0",
+    "type": "BLACK",
+    "message": "Mas, antes de matá-lo, Sr. Bond, preciso lhe mostrar [?]."
+  },
+  {
+    "id": "pZRXMFF98kFksh4I06wK",
+    "type": "WHITE",
+    "message": "Esperar até o casamento."
+  },
+  {
+    "id": "Q05sibjR4c2OM0hCFD6g",
+    "type": "WHITE",
+    "message": "Negros."
+  },
+  {
+    "id": "Q2HO5xQDPtxxQSvOnL1H",
+    "type": "BLACK",
+    "message": "Antropólogos recentemente descobriram uma tribo primitiva que cultuava [?]."
+  },
+  {
+    "id": "qa3OaFnoTHcUFzh6plfp",
+    "type": "WHITE",
+    "message": "O Sonho Americano."
+  },
+  {
+    "id": "QbgjH6R2Sb7ExKDy1j0e",
+    "type": "WHITE",
+    "message": "Axé Music."
+  },
+  {
+    "id": "qCLktOYz7gB05anBxjCL",
+    "type": "WHITE",
+    "message": "Judia lésbica nas ideias."
+  },
+  {
+    "id": "qDgLo8mQsfZyLylO8CSq",
+    "type": "WHITE",
+    "message": "Uma coçadinha discreta na bunda."
+  },
+  {
+    "id": "qeCsFP1SjOSdQAd4m7O0",
+    "type": "WHITE",
+    "message": "Lobotomia."
+  },
+  {
+    "id": "Qene7MpEyVPjvO8IKPOJ",
+    "type": "BLACK",
+    "message": "Eu gostaria que [?] fosse a causa da minha morte."
+  },
+  {
+    "id": "qGLRXl3KL9GndglXzez4",
+    "type": "WHITE",
+    "message": "Lamber coisas para estabelecer que são propriedade sua."
+  },
+  {
+    "id": "Qif5yNN1QbyxGZtDkpwz",
+    "type": "WHITE",
+    "message": "Fantasmas."
+  },
+  {
+    "id": "qJZqRFN7YBizbqxmbpKI",
+    "type": "WHITE",
+    "message": "Homicídio no trânsito."
+  },
+  {
+    "id": "qlebqwOb87uVqvxcQFhn",
+    "type": "BLACK",
+    "message": "[?] é um caminho sem volta que leva a [?]."
+  },
+  {
+    "id": "qLYSWikIVOFVGfoTJK26",
+    "type": "WHITE",
+    "message": "Dançar no gelo com parceiro do mesmo sexo."
+  },
+  {
+    "id": "qnK2RsiwDNzVVXb7eKuX",
+    "type": "WHITE",
+    "message": "RoboCop."
+  },
+  {
+    "id": "QPG0CglzhMciFPGu8BDA",
+    "type": "WHITE",
+    "message": "Uma carícia suave na parte interna da coxa."
+  },
+  {
+    "id": "QpK01iBTO17Z41u8bOD4",
+    "type": "WHITE",
+    "message": "Homens."
+  },
+  {
+    "id": "qQXNCkVUdpGsY39W4W8D",
+    "type": "BLACK",
+    "message": "Novo reality show da MTV apresenta oito celebridades decadentes morando com [?]."
+  },
+  {
+    "id": "QUeLLNLPKmKtGPgtVCiA",
+    "type": "WHITE",
+    "message": "Moradores de rua."
+  },
+  {
+    "id": "QwHqUUlLR8tlGCf0YNiz",
+    "type": "WHITE",
+    "message": "Vestir roupa íntima ao avesso pra economizar uma lavada."
+  },
+  {
+    "id": "qxUJjCkTYjeX9TbHnGkR",
+    "type": "WHITE",
+    "message": "Uma masturbação triste."
+  },
+  {
+    "id": "QYqeDJkyJWkida71jpqJ",
+    "type": "WHITE",
+    "message": "A dança da Fada Açucarada."
+  },
+  {
+    "id": "r3VeBn97TGk9PxfjVkQ4",
+    "type": "BLACK",
+    "message": "O que os EUA jogaram de avião para as crianças do Afeganistão?"
+  },
+  {
+    "id": "r8kj1eKEw40H6GXOlNye",
+    "type": "WHITE",
+    "message": "Rinha de galo."
+  },
+  {
+    "id": "RB4BlK0u9YeYlID1EMaZ",
+    "type": "WHITE",
+    "message": "Deixar uma mensagem de voz esquisita."
+  },
+  {
+    "id": "RbkvQXUpQyALqk1jKPsc",
+    "type": "WHITE",
+    "message": "Deixar escapar uma risadinha à menção de Tutsis e Hutus."
+  },
+  {
+    "id": "RChEItytvjmy8y7UgDVw",
+    "type": "BLACK",
+    "message": "Quando eu for presidente, criarei o Departamento de [?]."
+  },
+  {
+    "id": "rCqbPmMcDQnDmTHFY4gn",
+    "type": "BLACK",
+    "message": "Do que o Lula gosta mais que de pinga?"
+  },
+  {
+    "id": "RE0y4j4IP2xa59wW1QwG",
+    "type": "WHITE",
+    "message": "Aaron Burr."
+  },
+  {
+    "id": "RHRhGIkdLN6EaXXALgMO",
+    "type": "WHITE",
+    "message": "A vagina da Toni Morrison."
+  },
+  {
+    "id": "rIBOiKG7HCZECxYucMkS",
+    "type": "WHITE",
+    "message": "Afogamento simulado."
+  },
+  {
+    "id": "RjYrKNv9hUbAxdrfLcGB",
+    "type": "WHITE",
+    "message": "Paz mundial."
+  },
+  {
+    "id": "RM4g25E8Io2ffr1FatCY",
+    "type": "WHITE",
+    "message": "Ficar bêbado ao bochechar antisséptico bucal."
+  },
+  {
+    "id": "rNL2kevj8O6hSzjPR4rm",
+    "type": "WHITE",
+    "message": "Distribuir camisinhas em porta de igreja."
+  },
+  {
+    "id": "RO2YI9Q9FPJnSR7dAjrQ",
+    "type": "WHITE",
+    "message": "Fogo amigo."
+  },
+  {
+    "id": "rQGU1zbOnmiAx0tqzWik",
+    "type": "WHITE",
+    "message": "Heteronormatividade."
+  },
+  {
+    "id": "rRGU9VbsMgBTaMU01VPI",
+    "type": "BLACK",
+    "message": "O que eu trouxe do Paraguai?"
+  },
+  {
+    "id": "RrLxi59iPfBsJBdPAhZY",
+    "type": "WHITE",
+    "message": "Cálculo renal."
+  },
+  {
+    "id": "rVy5hT7mjK5gPbUqHfKY",
+    "type": "BLACK",
+    "message": "Gente velha tem cheiro de [?]."
+  },
+  {
+    "id": "RWZXg6rG4kTfrq14PHOn",
+    "type": "WHITE",
+    "message": "Nickelback."
+  },
+  {
+    "id": "rXgOt1neoKoJHRh9qzYl",
+    "type": "BLACK",
+    "message": "Que som é esse?"
+  },
+  {
+    "id": "RzwIrJKzbfCweGLSyMc6",
+    "type": "WHITE",
+    "message": "Lobista."
+  },
+  {
+    "id": "s6sFRDiXNvVKuMYLq3uV",
+    "type": "BLACK",
+    "message": "Buscando aumentar seu público, o Museu de História Natural abriu uma exposição sobre [?]."
+  },
+  {
+    "id": "S6vHQkqwKUhCWhgO5OkH",
+    "type": "WHITE",
+    "message": "Estupro."
+  },
+  {
+    "id": "S8gLXJF2TAWvU1ZTP2lW",
+    "type": "WHITE",
+    "message": "Euphoria, por Calvin Klein."
+  },
+  {
+    "id": "s9te25lrfNV00HNhgk3j",
+    "type": "BLACK",
+    "message": "Sim, eu matei [?]. Como? [?]."
+  },
+  {
+    "id": "sASLjGbw79U29oGqmYI7",
+    "type": "WHITE",
+    "message": "Kim Jong-il."
+  },
+  {
+    "id": "Sd2JWoq0XZ8vwYST7VL8",
+    "type": "WHITE",
+    "message": "Toddynho."
+  },
+  {
+    "id": "sFajNXOylLdg1X9MwMjf",
+    "type": "WHITE",
+    "message": "Amigos que comem todo o lanche."
+  },
+  {
+    "id": "SIPV1miR3aVflf48FQfM",
+    "type": "WHITE",
+    "message": "Racismo."
+  },
+  {
+    "id": "SitxOvb0YFjAf9YbVthJ",
+    "type": "WHITE",
+    "message": "Troca de gentilezas."
+  },
+  {
+    "id": "SiW1Z94UebLsY2W4fqUO",
+    "type": "WHITE",
+    "message": "Necrofilia."
+  },
+  {
+    "id": "SPx5Hmb06YOXJhBHjrtj",
+    "type": "WHITE",
+    "message": "O sangue de Cristo."
+  },
+  {
+    "id": "SqcDwP2MBwGjKc3LlH3m",
+    "type": "BLACK",
+    "message": "Homem branco gosta de [?]."
+  },
+  {
+    "id": "sRyu3IXEyLzB2FcXPTPL",
+    "type": "WHITE",
+    "message": "Sexo oral na direção."
+  },
+  {
+    "id": "sue0I8DNGhnoAM3DQGGn",
+    "type": "WHITE",
+    "message": "O apocalipse."
+  },
+  {
+    "id": "sUWeNWP7CD6pmB6bNqgD",
+    "type": "WHITE",
+    "message": "Tom Cruise."
+  },
+  {
+    "id": "SWDA89k8jFpGnazNOKl7",
+    "type": "WHITE",
+    "message": "Dizer o que pensa."
+  },
+  {
+    "id": "SwXX92X42JWJNU6pnvY0",
+    "type": "WHITE",
+    "message": "O Doce Veneno do Escorpião."
+  },
+  {
+    "id": "t0qcpwOh2gg0yw83lq00",
+    "type": "BLACK",
+    "message": "[?]? Tem um app pra isso."
+  },
+  {
+    "id": "t1o01pksosFKTxZdShyu",
+    "type": "WHITE",
+    "message": "Barriga tanquinho."
+  },
+  {
+    "id": "t5MNFxAscyEpCyMD6vnO",
+    "type": "WHITE",
+    "message": "Concursos de beleza para crianças."
+  },
+  {
+    "id": "T5vsE12x3bneBA11YfCO",
+    "type": "WHITE",
+    "message": "Não dar a mínima para o terceiro mundo."
+  },
+  {
+    "id": "T7bWiS3hNqfuO4CEiZ1l",
+    "type": "BLACK",
+    "message": "A prima do Silvano viu [?] e desmaiou."
+  },
+  {
+    "id": "Tb3V0UmyZet1hPEdsmBQ",
+    "type": "BLACK",
+    "message": "[?]: testado pelas crianças, aprovado pelas mães."
+  },
+  {
+    "id": "tb5YpLkrdJfsDYyPecPw",
+    "type": "WHITE",
+    "message": "Peidar e se mandar."
+  },
+  {
+    "id": "Tbwrk6zSunPPYreSUmbA",
+    "type": "WHITE",
+    "message": "Notas passivo-agressivas no trabalho."
+  },
+  {
+    "id": "TeQAi84XTOqbYpKwE4pH",
+    "type": "WHITE",
+    "message": "Ter medo de si próprio."
+  },
+  {
+    "id": "TGf9r3xpW4q4ZQfFEbKn",
+    "type": "WHITE",
+    "message": "Explosões."
+  },
+  {
+    "id": "TiqGEfuG79O9qA9Zb6rQ",
+    "type": "WHITE",
+    "message": "Amostras grátis."
+  },
+  {
+    "id": "TIRZVgR592n2dAjTrtr0",
+    "type": "WHITE",
+    "message": "PEDE PRA SAIR!"
+  },
+  {
+    "id": "tjPdBdAvwbqhQTSrd0IA",
+    "type": "WHITE",
+    "message": "Mijar um pouco."
+  },
+  {
+    "id": "TlCRp5HE58tC4OYNFFwG",
+    "type": "BLACK",
+    "message": "O que ajuda o Obama a relaxar depois do trabalho?"
+  },
+  {
+    "id": "TMBsnw9uxSta95ITX5FJ",
+    "type": "WHITE",
+    "message": "Quando você peida e sai mais do que devia."
+  },
+  {
+    "id": "tMlhnUBLNeQp17pNTF8R",
+    "type": "WHITE",
+    "message": "O testículo que falta no Lance Armstrong."
+  },
+  {
+    "id": "tMvenuwd8DWt90CwHI1Y",
+    "type": "BLACK",
+    "message": "Por que estou todo doido?"
+  },
+  {
+    "id": "Tn8C9fsbqJadQQPAzDo3",
+    "type": "WHITE",
+    "message": "O Caminho de Santiago."
+  },
+  {
+    "id": "tq7iLjegpYNU3YvULVsU",
+    "type": "WHITE",
+    "message": "Doce, doce vingança."
+  },
+  {
+    "id": "tQvYlMqaFUkAhPhhB8CH",
+    "type": "WHITE",
+    "message": "Desodorante AXE."
+  },
+  {
+    "id": "tR48ShdZrU5aRPsiHHeW",
+    "type": "WHITE",
+    "message": "Cena de \"bukkake\" em baixa resolução."
+  },
+  {
+    "id": "tufeMfWhKckmp3RBdkPa",
+    "type": "BLACK",
+    "message": "Qual é o meu antidroga?"
+  },
+  {
+    "id": "twI12qnN9NINcrDnEiQC",
+    "type": "WHITE",
+    "message": "Gostosas."
+  },
+  {
+    "id": "twV9F0FtjYvzLaLnpu2V",
+    "type": "WHITE",
+    "message": "Uma festa de aniversário decepcionante."
+  },
+  {
+    "id": "TyaSgLgLgD1ZCgNEsXkD",
+    "type": "WHITE",
+    "message": "Carne de cavalo."
+  },
+  {
+    "id": "u2mG1ya6Witty3gqVUsg",
+    "type": "WHITE",
+    "message": "Viagra."
+  },
+  {
+    "id": "U8cYB5lvdDofGVcbrUzL",
+    "type": "WHITE",
+    "message": "Dinheiro na cueca."
+  },
+  {
+    "id": "uAdFjEWz0scKvLOu4xhB",
+    "type": "BLACK",
+    "message": "Como estou mantendo minha atual relação amorosa?"
+  },
+  {
+    "id": "UBITICg7CiLfhWitSwBU",
+    "type": "BLACK",
+    "message": "O que a vovó acharia perturbador, mas estranhamente charmoso?"
+  },
+  {
+    "id": "UgXWqCBzTYxDSNeEv1bn",
+    "type": "WHITE",
+    "message": "Uma surpresa desagradável."
+  },
+  {
+    "id": "UhtGqN1nTmM9Rjk6F6G5",
+    "type": "BLACK",
+    "message": "O que vou deixar de fazer na quaresma?"
+  },
+  {
+    "id": "Uki55fsQH3nzONbBxhS0",
+    "type": "BLACK",
+    "message": "A Xuxa trocou [?] por [?]."
+  },
+  {
+    "id": "ukytOfBmTo4hTM4f3KG9",
+    "type": "WHITE",
+    "message": "Sexo com anões."
+  },
+  {
+    "id": "UMOG0pa7T2Jw34kPa3S5",
+    "type": "WHITE",
+    "message": "Barack Obama."
+  },
+  {
+    "id": "unLQGVLSeEYTFKtT2POF",
+    "type": "WHITE",
+    "message": "Darth Vader."
+  },
+  {
+    "id": "uNtmEsGJ9G0SHH7Y13xG",
+    "type": "WHITE",
+    "message": "Estraga-festa."
+  },
+  {
+    "id": "UOQc7zeBlyM46A3GKKLI",
+    "type": "WHITE",
+    "message": "Furacão Katrina."
+  },
+  {
+    "id": "uppKcIhPR9QlsT6B4AjU",
+    "type": "WHITE",
+    "message": "200 gramas de doce heroína preta mexicana."
+  },
+  {
+    "id": "UQd7DDVgDNgb0QfVdem0",
+    "type": "WHITE",
+    "message": "Consultores."
+  },
+  {
+    "id": "uQRgfOxJv1up93n6JHo5",
+    "type": "WHITE",
+    "message": "Vítimas civis."
+  },
+  {
+    "id": "ut4msc2OPeU07gV6kF3I",
+    "type": "WHITE",
+    "message": "Sem-vergonhice."
+  },
+  {
+    "id": "UTPXyBBypry3GGOjw6zx",
+    "type": "WHITE",
+    "message": "Acordar seminu num estacionamento a céu aberto."
+  },
+  {
+    "id": "uUAuNDZvyWHVjokFarTL",
+    "type": "WHITE",
+    "message": "A placenta."
+  },
+  {
+    "id": "UVNDpd2qxYhyf35igdKn",
+    "type": "WHITE",
+    "message": "A agenda homossexual."
+  },
+  {
+    "id": "UxBB7BxzFLjrYrJwdY65",
+    "type": "WHITE",
+    "message": "Meio metro de pica."
+  },
+  {
+    "id": "uyExmrN56GempaIRpVIE",
+    "type": "WHITE",
+    "message": "Sobrecompensação."
+  },
+  {
+    "id": "UZxhjQ9hKaKETPSaB56v",
+    "type": "WHITE",
+    "message": "Gardenal."
+  },
+  {
+    "id": "V67hlmrC7PzGpwJybSvJ",
+    "type": "BLACK",
+    "message": "Guerra! Pra que serve?"
+  },
+  {
+    "id": "v8wTc2lm61wJnIa6SUbv",
+    "type": "BLACK",
+    "message": "O que os meus pais estão escondendo de mim?"
+  },
+  {
+    "id": "vB9xVcphIz4GVjhTfQbt",
+    "type": "WHITE",
+    "message": "Fazer beicinho."
+  },
+  {
+    "id": "vBElCdxdgqq95E2TiKo4",
+    "type": "WHITE",
+    "message": "Um leão de zoológico deprimido."
+  },
+  {
+    "id": "vbrUXrBuQbHpLhQXH2OL",
+    "type": "WHITE",
+    "message": "Células tronco."
+  },
+  {
+    "id": "vDNRJwcz5Z8yhZdZLvk6",
+    "type": "WHITE",
+    "message": "Repassar o presente."
+  },
+  {
+    "id": "VGhUArsODNWYUFLCs6zZ",
+    "type": "BLACK",
+    "message": "Qual é o próximo brinde do McLanche Feliz?"
+  },
+  {
+    "id": "vinnYxQBwV2ekEeuToZw",
+    "type": "WHITE",
+    "message": "AIDS."
+  },
+  {
+    "id": "VKnZAFZRn84w3q6SVths",
+    "type": "WHITE",
+    "message": "Centauros."
+  },
+  {
+    "id": "Vl90Xq4QX5b9dMbRDRiQ",
+    "type": "WHITE",
+    "message": "Esperança."
+  },
+  {
+    "id": "vmLRRsXOsdUSDazZ4Z8l",
+    "type": "WHITE",
+    "message": "Abelhas?"
+  },
+  {
+    "id": "vmSJd1iizyQFWZx5RWDj",
+    "type": "WHITE",
+    "message": "O sul."
+  },
+  {
+    "id": "vNB4u4TfhuXjXiLJCHWA",
+    "type": "WHITE",
+    "message": "Dívida monstruosa."
+  },
+  {
+    "id": "vPm28khmRSQRBbUigTw7",
+    "type": "WHITE",
+    "message": "Pistola d'água cheia de urina de gato."
+  },
+  {
+    "id": "vQpkuEejwGm27L7F3ITC",
+    "type": "WHITE",
+    "message": "Urofilia."
+  },
+  {
+    "id": "vSfpC7kk6OcxRM7q35Vu",
+    "type": "WHITE",
+    "message": "Fazer aquilo na bunda."
+  },
+  {
+    "id": "VZENRxM7m90862Wb2p1D",
+    "type": "WHITE",
+    "message": "Períneo."
+  },
+  {
+    "id": "w0PEx7nTOX08kmoxlElh",
+    "type": "WHITE",
+    "message": "Falar abobrinha."
+  },
+  {
+    "id": "w0RoUzknZIxXA7hJikjQ",
+    "type": "WHITE",
+    "message": "Asiáticos que não são bons em matemática."
+  },
+  {
+    "id": "w2gQs3WHVh6EbqvpVRMf",
+    "type": "WHITE",
+    "message": "Justamente o que você esperaria."
+  },
+  {
+    "id": "W4CwnAWWVCogoZ2zpHHy",
+    "type": "WHITE",
+    "message": "Pedófilos."
+  },
+  {
+    "id": "W4uLZXAeG6iC2Dt80Pn1",
+    "type": "WHITE",
+    "message": "Inundação."
+  },
+  {
+    "id": "W80ofmvZqxlGv4FPZ5FR",
+    "type": "WHITE",
+    "message": "Evacuação dolorosa."
+  },
+  {
+    "id": "W9MBXuia1Uyt0K3GjMdj",
+    "type": "WHITE",
+    "message": "Italianos."
+  },
+  {
+    "id": "waKI307I7e74AZ06IsWv",
+    "type": "BLACK",
+    "message": "O que é mais EMO?"
+  },
+  {
+    "id": "Wb2XWhLZzlB9cV7gtSnk",
+    "type": "WHITE",
+    "message": "Repórteres de programa humorístico."
+  },
+  {
+    "id": "WbKZRDwa0KSLrT4JfxuG",
+    "type": "WHITE",
+    "message": "Kid Bengala."
+  },
+  {
+    "id": "WdVS2nvOINL7mX1NUtGh",
+    "type": "WHITE",
+    "message": "Vovó."
+  },
+  {
+    "id": "WF54VK7KrzdgvjTCorvc",
+    "type": "WHITE",
+    "message": "Silvano careca."
+  },
+  {
+    "id": "WLdYErHkht8hggzxQDkb",
+    "type": "WHITE",
+    "message": "Barriga de chopp."
+  },
+  {
+    "id": "wMsgMlGA1acMhTrUv82J",
+    "type": "WHITE",
+    "message": "Eugenia."
+  },
+  {
+    "id": "wOmfn46lyiBp5K6F8Vre",
+    "type": "WHITE",
+    "message": "Pornografia envolvendo tentáculos."
+  },
+  {
+    "id": "WrraOKTPUe54m6BKsSuG",
+    "type": "WHITE",
+    "message": "Fazer a coisa certa."
+  },
+  {
+    "id": "wRydqdOGk01rUoyCXi1i",
+    "type": "BLACK",
+    "message": "Quando eu for bilionário, mandarei fazer uma estátua de 15 metros de altura para celebrar [?]."
+  },
+  {
+    "id": "wshU47TSNQQ3wweQ6BNT",
+    "type": "BLACK",
+    "message": "Globo Filmes apresenta [?]: a história de [?]."
+  },
+  {
+    "id": "WSWga1kf7RY4hjO84xeS",
+    "type": "WHITE",
+    "message": "Violação dos nossos direitos humanos mais básicos."
+  },
+  {
+    "id": "WtKdFQe41dDYSPWNGLTq",
+    "type": "WHITE",
+    "message": "A crônica."
+  },
+  {
+    "id": "WtKFWqz9lvYTjwOrCxbw",
+    "type": "WHITE",
+    "message": "Atrizes pornô."
+  },
+  {
+    "id": "WVVHsK0k2DcIGDbHw3Ed",
+    "type": "BLACK",
+    "message": "O prato predileto do Putin é [?] recheado com [?]."
+  },
+  {
+    "id": "wx99LsbcauEfRBEFeZIg",
+    "type": "WHITE",
+    "message": "O perigo de falar com estranhos."
+  },
+  {
+    "id": "X5WKonOFKOMkR20sRw1M",
+    "type": "BLACK",
+    "message": "[?]. É assim que eu espero morrer."
+  },
+  {
+    "id": "x8lqQ4frXJOx5GZk6Xbx",
+    "type": "WHITE",
+    "message": "Carisma."
+  },
+  {
+    "id": "Xev3U3hbeTEqavOwNP5D",
+    "type": "WHITE",
+    "message": "Michael Jackson."
+  },
+  {
+    "id": "xfbA5IdcPmSTtFq7SDq0",
+    "type": "WHITE",
+    "message": "Uma viagem para Pelotas."
+  },
+  {
+    "id": "XhYyuwvaFXUMB3jkXlRB",
+    "type": "WHITE",
+    "message": "Sujar-se."
+  },
+  {
+    "id": "xhZ7ksYop2t2fy6Zojmx",
+    "type": "WHITE",
+    "message": "Rezar pra curar homossexualismo."
+  },
+  {
+    "id": "xiP0z3CR7lPqUUCeWRGy",
+    "type": "BLACK",
+    "message": "Um jantar romântico à luz de velas seria incompleto sem [?]."
+  },
+  {
+    "id": "xJBJy2melUulsK9RVcNg",
+    "type": "BLACK",
+    "message": "No lugar de dinheiro, os argentinos vão utilizar [?] como moeda."
+  },
+  {
+    "id": "Xjwh65CHwu5RzBkZkg5e",
+    "type": "WHITE",
+    "message": "Sonhos molhados."
+  },
+  {
+    "id": "xKbh87QpW70HtQoEnEJG",
+    "type": "WHITE",
+    "message": "Obesidade."
+  },
+  {
+    "id": "XLMFMfOa3Ipn5pSNgO7E",
+    "type": "WHITE",
+    "message": "Piercings genitais."
+  },
+  {
+    "id": "xo8hCaXhem79smGL2yLX",
+    "type": "BLACK",
+    "message": "O que o Dick Cheney prefere?"
+  },
+  {
+    "id": "xoAUnVU3zQ9Uh5cjvLjj",
+    "type": "WHITE",
+    "message": "Passar o rodo."
+  },
+  {
+    "id": "XoGzBsU3qfsE1vnhDID3",
+    "type": "WHITE",
+    "message": "Fuzilamento."
+  },
+  {
+    "id": "xOHOpvLR5LfXOwsXiwH6",
+    "type": "BLACK",
+    "message": "CBF proíbe [?] por proporcionar vantagem desleal aos jogadores."
+  },
+  {
+    "id": "XPHijXHnY6qvTJKhwyzc",
+    "type": "BLACK",
+    "message": "[?]. É uma cilada, Bino!"
+  },
+  {
+    "id": "xQygoRioFktB6zxsdbYf",
+    "type": "BLACK",
+    "message": "LIGUE AGORA PARA 011-1406 E ADQUIRA JÁ O SEU [?]! SÓ NA POLISHOP!"
+  },
+  {
+    "id": "xTSuWhr6hSyZnT1V3vFn",
+    "type": "WHITE",
+    "message": "Coçar sob as dobras da pele."
+  },
+  {
+    "id": "XVSciLPw5M0nzy6HEAyV",
+    "type": "WHITE",
+    "message": "Disparar uma espingarda para o alto enquanto trepa com uma cabra que está aos berros."
+  },
+  {
+    "id": "xZ76zB2Xo7B8Q7IyaIfV",
+    "type": "WHITE",
+    "message": "Crianças na coleira."
+  },
+  {
+    "id": "YAdgMKAamlMo8LP2nZCP",
+    "type": "WHITE",
+    "message": "Gandhi."
+  },
+  {
+    "id": "YeaPcdp2UwSQytn0v1sC",
+    "type": "WHITE",
+    "message": "Autocanibalismo."
+  },
+  {
+    "id": "YehlOv2pwUFeHSkcC3oN",
+    "type": "WHITE",
+    "message": "Bebês mortos."
+  },
+  {
+    "id": "YhoV7SBjLceMagjSlX1P",
+    "type": "BLACK",
+    "message": "Fui convidado para visitar a ilha de um cara chamado [?]."
+  },
+  {
+    "id": "YOKV7fHARwEWvyd04dZP",
+    "type": "WHITE",
+    "message": "Esconder uma ereção."
+  },
+  {
+    "id": "yPxdOMFk4NvYcswRzpz9",
+    "type": "WHITE",
+    "message": "Deus."
+  },
+  {
+    "id": "YqtUI9Sxl13Q3dx14KnY",
+    "type": "WHITE",
+    "message": "Um grande estardalhaço por nada."
+  },
+  {
+    "id": "YV9sEKSpsbg8ZrvKLzWt",
+    "type": "WHITE",
+    "message": "Os raios de sentimentos bons dos Ursinhos Carinhosos."
+  },
+  {
+    "id": "yWLA30ZLK1Sro8KvVhIt",
+    "type": "WHITE",
+    "message": "Os hackers do sul."
+  },
+  {
+    "id": "YxtP2ZDuZOIO0agMzDEf",
+    "type": "BLACK",
+    "message": "A vida dos índios americanos mudou para sempre quando o homem branco lhes apresentou [?]."
+  },
+  {
+    "id": "Z0vkQfo0J042LXy33Fbg",
+    "type": "BLACK",
+    "message": "O que o MEC deve dar aos alunos de escolas públicas para estimulá-los?"
+  },
+  {
+    "id": "z0XZNBlx85S8w8NJ4lSW",
+    "type": "WHITE",
+    "message": "Funk Proibidão."
+  },
+  {
+    "id": "z4YRA6D21yj0AnmHRRqi",
+    "type": "WHITE",
+    "message": "Masturbar-se em uma poça de lágrimas de crianças."
+  },
+  {
+    "id": "Z79Qn2IeGLDZdYayz018",
+    "type": "WHITE",
+    "message": "O verdadeiro significado do Natal."
+  },
+  {
+    "id": "Z7Pw4BqMTpt47v9MS5h0",
+    "type": "WHITE",
+    "message": "Nudez frontal."
+  },
+  {
+    "id": "ZbOTSdysq2GI7WGjMHze",
+    "type": "WHITE",
+    "message": "Esmegma."
+  },
+  {
+    "id": "ZBpNSkb4k6s4dHYmadFF",
+    "type": "WHITE",
+    "message": "Aquele negócio que eletrocuta o abdômen."
+  },
+  {
+    "id": "zdEt1YiPpBYbmdfAwsHm",
+    "type": "WHITE",
+    "message": "Uma camisinha usada."
+  },
+  {
+    "id": "ZDjn8tiZXgePUQcWHkwC",
+    "type": "WHITE",
+    "message": "Travestis que não parecem."
+  },
+  {
+    "id": "zDTrkzntz02Ze3pUIMpS",
+    "type": "WHITE",
+    "message": "Judeu de cabelo afro."
+  },
+  {
+    "id": "zEyc2DQzv17mqIG6qsma",
+    "type": "BLACK",
+    "message": "[?]. É o lado bom das guerras."
+  },
+  {
+    "id": "zFFBCskStzj2lgQtw631",
+    "type": "WHITE",
+    "message": "Palma."
+  },
+  {
+    "id": "zfUxGud5kEuPtWgSfsXF",
+    "type": "WHITE",
+    "message": "Pirulitos gigantes."
+  },
+  {
+    "id": "ZIbrErv08ezzqyImO4AA",
+    "type": "BLACK",
+    "message": "Agora um poema: Rosas são vermelhas, violetas são azuis. [?]. [?]."
+  },
+  {
+    "id": "zIoxLLeMRbgJE8yY5qeD",
+    "type": "WHITE",
+    "message": "Ficar completamente dopado."
+  },
+  {
+    "id": "zJLgWXuPowQqBs0ktqZp",
+    "type": "WHITE",
+    "message": "Comer todos os doces que deveriam ser vendidos na campanha de caridade."
+  },
+  {
+    "id": "zl9a50R16ozaDM62ofVV",
+    "type": "WHITE",
+    "message": "Problemas com o pai na infância."
+  },
+  {
+    "id": "ZlJPsx2uZJV7Et7LWqfc",
+    "type": "BLACK",
+    "message": "Durante o sexo, gosto de pensar em [?]."
+  },
+  {
+    "id": "zlQ3mNlBjzm9KZm8kPgw",
+    "type": "BLACK",
+    "message": "Que cheiro é esse?"
+  },
+  {
+    "id": "ZoBKHd532HcJ7xpOFAwa",
+    "type": "BLACK",
+    "message": "Como perdi a virgindade?"
+  },
+  {
+    "id": "zp5LaG9hm8wDb77DRj9f",
+    "type": "WHITE",
+    "message": "Luciano Huck."
+  },
+  {
+    "id": "zPsaOBbnE7i3VAHCu9Be",
+    "type": "WHITE",
+    "message": "Cerveja quente."
+  },
+  {
+    "id": "zpUY36Gbu4wnDomfmx0i",
+    "type": "BLACK",
+    "message": "É uma pena que as crianças hoje em dia estejam todas envolvidas em [?]."
+  },
+  {
+    "id": "zVQDNeE80HIY3XFPwjyM",
+    "type": "WHITE",
+    "message": "Um antílope flatulento."
+  },
+  {
+    "id": "zw0RoOZlsEQyJCJnXzYu",
+    "type": "BLACK",
+    "message": "O que é que fica melhor quando envelhece?"
+  },
+  {
+    "id": "zwtxNLd5lY1fcfAtIEfp",
+    "type": "WHITE",
+    "message": "Destruição Mútua Assegurada (MAD)."
+  },
+  {
+    "id": "zwx4eUe32cdIHTzgTV6u",
+    "type": "WHITE",
+    "message": "Um clipe homoerótico sobre voleibol."
+  },
+  {
+    "id": "zxLq12bi06qYAq46vTZC",
+    "type": "WHITE",
+    "message": "Prima do CJ."
+  }
+]
