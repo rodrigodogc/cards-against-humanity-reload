@@ -5,6 +5,7 @@ import { Card } from '@/components/Card';
 import { GoBack } from '@/components/GoBack';
 import { SomeLoading } from '@/components/SomeLoading';
 import { PlayerAvatar } from '@/components/player-avatar';
+import { SoundMenu } from '@/components/sound-menu';
 import { useAuth } from '@/contexts/AuthContext';
 import {
   changeCardsPerPlayer,
@@ -47,6 +48,7 @@ import { CardsToPlay } from './CardsToPlay';
 import { SettingsDrawer, SettingsDrawerHandles } from './SettingsDrawer';
 import { MatchLinkInput } from './match-link-input';
 import { Scoreboard } from './scoreboard';
+import { useMatchSounds } from './useMatchSounds';
 import { useSetupMatch } from './useSetupMatch';
 
 import styles from './styles.module.scss';
@@ -65,6 +67,8 @@ export function Match() {
     setHasNewMessases,
     newCardIds,
   } = useSetupMatch(id);
+
+  useMatchSounds(match, user);
 
   const navigate = useNavigate();
 
@@ -121,10 +125,6 @@ export function Match() {
           playersInRound.length
         } votos.`
       : '';
-
-    if (!userAlreadyPlayed) {
-      return 'Escolha a resposta mais engraçada que você tiver.';
-    }
 
     if (!allPlayersPlayed) {
       const missing = playersInRound.length - playersWhoPlayed;
@@ -238,6 +238,8 @@ export function Match() {
                 ))}
               </AvatarGroup>
 
+              <SoundMenu />
+
               <Box pos="relative">
                 <IconButton
                   aria-label="Abrir menu da partida"
@@ -264,9 +266,11 @@ export function Match() {
 
           {matchStarted && (
             <Flex as="main" flex="1" direction="column" align="center" gap="3">
-              <Text fontWeight="bold" textAlign="center" role="status">
-                {getRoundStatus()}
-              </Text>
+              {userAlreadyPlayed && (
+                <Text fontWeight="bold" textAlign="center" role="status">
+                  {getRoundStatus()}
+                </Text>
+              )}
 
               {/* Depois de jogar, a pergunta vai para o lado e deixa a largura
                   da tela para as respostas. */}

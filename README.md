@@ -8,6 +8,7 @@
 - Partidas em tempo real, com convite por link e chat.
 - Tema claro, escuro e automático, com quatro temas de cor.
 - Ranking de vitórias, suporte a celular e instalação como app (PWA).
+- Música e efeitos sonoros sintetizados no navegador, sem arquivos de áudio.
 
 Feito com React, Vite, Chakra UI e Firebase (Firestore e Auth anônimo).
 

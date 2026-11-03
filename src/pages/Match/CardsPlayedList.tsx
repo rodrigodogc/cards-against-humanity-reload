@@ -19,6 +19,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useBoolean } from '@/hooks/useBoolean';
 import { setVoteToActiveRound } from '@/services/matches';
 import { getErrorMessage } from '@/utils/get-error-message';
+import { playEffect } from '@/utils/sound';
 import { FaStar, FaVoteYea } from 'react-icons/fa';
 import styles from './styles.module.scss';
 
@@ -66,6 +67,8 @@ export function CardsPlayedList({ match }: CardsPlayedListProps) {
       };
 
       await setVoteToActiveRound(match.id, data);
+
+      playEffect('vote');
     } catch (error) {
       console.error('error', error);
 

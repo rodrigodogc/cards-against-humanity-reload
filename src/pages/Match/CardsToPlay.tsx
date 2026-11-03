@@ -6,6 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useBoolean } from '@/hooks/useBoolean';
 import { setAnswerToActiveRound } from '@/services/matches';
 import { countString } from '@/utils/count-string';
+import { playEffect } from '@/utils/sound';
 
 import { Box, Button, Flex, Icon, Text, useToast } from '@chakra-ui/react';
 import { FaCheck, FaCheckCircle } from 'react-icons/fa';
@@ -53,8 +54,11 @@ export function CardsToPlay({
         );
 
         setSelectedCardsId(newSelectedCardsId);
+        playEffect('deselect');
         return;
       }
+
+      playEffect('select');
 
       if (selectedCardsId.length === totalOfPlays) {
         const [, ...otherCardsId] = selectedCardsId;
@@ -78,6 +82,8 @@ export function CardsToPlay({
       };
 
       await setAnswerToActiveRound(match.id, data);
+
+      playEffect('confirm');
 
       setSelectedCardsId([]);
     } catch (error) {
